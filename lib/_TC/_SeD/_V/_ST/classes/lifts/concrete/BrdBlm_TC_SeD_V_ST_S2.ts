@@ -104,13 +104,13 @@ export class BrdBlm_TC_SeD_V_ST_S2 extends BrdBlm_TC_SeD_V_ST_NormalLift {
             BrdBlm_TC_SeD_V_ST_RULES.FIRST_VERTICAL_TRACK_FLOOR_DISTANCE -
             BrdBlm_TC_SeD_V_ST_RULES.FIRST_VERTICAL_TRACK_DIMINISH_S2;
 
-        const rotationOnX =
+        const rxValue =
             -this.RAD_90 +
             this.getVerticalTrackFirstStretchAngleInRadians(
                 this.params.type,
                 r.length
             );
-        r.rotateX(rotationOnX, 0);
+        r.addRotateXOp(rxValue, false, 0);
 
         return r;
     }
@@ -142,15 +142,14 @@ export class BrdBlm_TC_SeD_V_ST_S2 extends BrdBlm_TC_SeD_V_ST_NormalLift {
         stretch.outlineType = BrdBlm_TC_SeD_eSlidingTracksOutlineType.C_PROFILE;
         stretch.length = this.getCProfileLength();
 
-        stretch.translateX(
-            this.params.width / 2 +
+        const txValue = this.params.width / 2 +
             BrdBlm_TC_SeD_V_ST_RULES.REAR_TEMPLATE_TOTAL_RAISE / 2 +
             BrdBlm_TC_SeD_V_ST_RULES.SHEET_METAL_LIGHT_WIDTH
-        );
-        stretch.translateY(
-            this.params.height +
+        stretch.addTranslateXOp(txValue, true);
+
+        const tyValue = this.params.height +
             BrdBlm_TC_SeD_V_ST_RULES.ANGLE_BAR_RAISE_S2
-        );
+        stretch.addTranslateYOp(tyValue, false);
 
         this.profiledParts.set(
             stretch.name,
@@ -174,19 +173,18 @@ export class BrdBlm_TC_SeD_V_ST_S2 extends BrdBlm_TC_SeD_V_ST_NormalLift {
             BrdBlm_TC_SeD_V_ST_RULES.CURVE_380_HORIZONTAL_SPACE -
             BrdBlm_TC_SeD_V_ST_RULES.LOWER_HORIZONTAL_TRACK_BACK_SPACE;
 
-        stretch.translateX(
-            this.params.width / 2 +
-            BrdBlm_TC_SeD_V_ST_RULES.REAR_TEMPLATE_TOTAL_RAISE / 2
-        );
-        stretch.translateY(
-            this.params.height +
-            BrdBlm_TC_SeD_V_ST_RULES.ANGLE_BAR_RAISE_S2
-        );
-        stretch.translateZ(
-            BrdBlm_TC_SeD_V_ST_RULES.CURVE_380_HORIZONTAL_SPACE +
+        const txValue = this.params.width / 2 +
+            BrdBlm_TC_SeD_V_ST_RULES.REAR_TEMPLATE_TOTAL_RAISE / 2;
+        stretch.addTranslateXOp(txValue, true);
+
+        const tyValue = this.params.height +
+            BrdBlm_TC_SeD_V_ST_RULES.ANGLE_BAR_RAISE_S2;
+        stretch.addTranslateYOp(tyValue, false);
+
+        const tzValue = BrdBlm_TC_SeD_V_ST_RULES.CURVE_380_HORIZONTAL_SPACE +
             BrdBlm_TC_SeD_V_ST_RULES.SHEET_METAL_LIGHT_WIDTH +
-            BrdBlm_TC_SeD_V_ST_RULES.FIRST_VERTICAL_TRACK_UPPER_APERTURE
-        );
+            BrdBlm_TC_SeD_V_ST_RULES.FIRST_VERTICAL_TRACK_UPPER_APERTURE;
+        stretch.addTranslateZOp(tzValue, false);
 
         this.profiledParts.set(
             stretch.name,
@@ -209,16 +207,15 @@ export class BrdBlm_TC_SeD_V_ST_S2 extends BrdBlm_TC_SeD_V_ST_NormalLift {
             BrdBlm_TC_SeD_V_ST_RULES.REAR_TEMPLATE_TOTAL_RAISE / 2;
 
         // TODO modificare quando è inclinato -- APG 20231213
-        stretch.rotateX(
-            this.params.inclinationInDegrees * this._TO_RAD
-        );
-        stretch.translateY(
-            this.params.height +
-            BrdBlm_TC_SeD_V_ST_RULES.ANGLE_BAR_RAISE_S2
-        );
-        stretch.translateZ(
-            this.getCProfileLength()
-        );
+        const rxValue = this.params.inclinationInDegrees * this._TO_RAD;
+        stretch.addRotateXOp(rxValue, false);
+
+        const tyValue = this.params.height +
+            BrdBlm_TC_SeD_V_ST_RULES.ANGLE_BAR_RAISE_S2;
+        stretch.addTranslateYOp(tyValue, true);
+
+        const tzValue = this.getCProfileLength()
+        stretch.addTranslateZOp(tzValue, false);
 
         this.profiledParts.set(
             stretch.name,
@@ -233,15 +230,16 @@ export class BrdBlm_TC_SeD_V_ST_S2 extends BrdBlm_TC_SeD_V_ST_NormalLift {
 
         const r = super.getRegularCurve();
 
-        r.translateY(
+        const tyValue =
             this.params.height +
             BrdBlm_TC_SeD_V_ST_RULES.ANGLE_BAR_RAISE_S2 -
-            BrdBlm_TC_SeD_V_ST_RULES.ANGLE_BAR_FIRST_VERTICAL_TRACK_JUNCTION_S2
-        );
-        r.translateZ(
+            BrdBlm_TC_SeD_V_ST_RULES.ANGLE_BAR_FIRST_VERTICAL_TRACK_JUNCTION_S2;
+        r.addTranslateYOp(tyValue, false);
+
+        const tzValue =
             r.sheetMetalWidth +
-            BrdBlm_TC_SeD_V_ST_RULES.FIRST_VERTICAL_TRACK_UPPER_APERTURE
-        );
+            BrdBlm_TC_SeD_V_ST_RULES.FIRST_VERTICAL_TRACK_UPPER_APERTURE;
+        r.addTranslateZOp(tzValue, false);
 
         return r;
     }

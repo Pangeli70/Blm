@@ -19,10 +19,10 @@ import {
 } from "../../../../../Glb/lib/services/BrdGlb_UVRemapperService.ts";
 import {
     Brd3Dv_AssetsServer
-} from "../../../../../V3d/srv/assets/ts/Brd3Dv_AssetsServer.ts";
+} from "../../../../../V3d/lib/Brd3Dv_AssetsServer.ts";
 import {
     THREE
-} from "../../../../../V3d/srv/assets/ts/Brd3Dv_Deps.ts";
+} from "../../../../../V3d/lib/Brd3Dv_Deps.ts";
 import {
     BrdUts_Logger
 } from "../../../../../Uts/lib/classes/BrdUts_Logger.ts";

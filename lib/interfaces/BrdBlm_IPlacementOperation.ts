@@ -30,6 +30,6 @@ export interface BrdBlm_IPlacementOperation {
    * al secondo oggetto della coppia semplicemente invertendo il segno del 
    * valore numerico al campo precedente.
    */
-  isFlippable?: boolean;
+  isFlippable: boolean;
   
 }

@@ -145,8 +145,8 @@ export class BrdBlm_TC_SeD_V_ST_GenericLift {
 
         r.outlineType = BrdBlm_TC_SeD_eSlidingTracksOutlineType.ANGLE_BAR;
 
-        r.rotateX(-this.RAD_90);
-        r.translateX(this.params.width / 2)
+        r.addRotateXOp(-this.RAD_90, false);
+        r.addTranslateXOp(this.params.width / 2, true)
 
         this.profiledParts.set(r.name, r);
 
@@ -169,16 +169,19 @@ export class BrdBlm_TC_SeD_V_ST_GenericLift {
         r.outlineType = BrdBlm_TC_SeD_eSlidingTracksOutlineType.TRACK;
 
 
-        r.translateX(
+        r.addTranslateXOp(
             this.params.width / 2 +
-            BrdBlm_TC_SeD_V_ST_RULES.REAR_TEMPLATE_TOTAL_RAISE / 2
+            BrdBlm_TC_SeD_V_ST_RULES.REAR_TEMPLATE_TOTAL_RAISE / 2,
+            true
         );
-        r.translateY(
-            BrdBlm_TC_SeD_V_ST_RULES.FIRST_VERTICAL_TRACK_FLOOR_DISTANCE
+        r.addTranslateYOp(
+            BrdBlm_TC_SeD_V_ST_RULES.FIRST_VERTICAL_TRACK_FLOOR_DISTANCE,
+            false
         );
-        r.translateZ(
+        r.addTranslateZOp(
             r.sheetMetalWidth +
-            BrdBlm_TC_SeD_V_ST_RULES.FIRST_VERTICAL_TRACK_BASE_APERTURE
+            BrdBlm_TC_SeD_V_ST_RULES.FIRST_VERTICAL_TRACK_BASE_APERTURE,
+            false
         );
 
         this.profiledParts.set(r.name, r);

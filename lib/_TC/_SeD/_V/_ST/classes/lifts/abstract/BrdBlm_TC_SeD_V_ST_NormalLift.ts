@@ -76,7 +76,7 @@ export class BrdBlm_TC_SeD_V_ST_NormalLift extends BrdBlm_TC_SeD_V_ST_GenericLif
                 break;
             default:
                 rotationAlongXInRadians =
-                    -BrdBlm_TC_SeD_V_ST_RULES.REGULAR_CURVE_DEFAULT_ANGLE_IN_DEGREES * this._TO_RAD;
+                    -(2 + BrdBlm_TC_SeD_V_ST_RULES.REGULAR_CURVE_DEFAULT_ANGLE_IN_DEGREES) * this._TO_RAD;
                 r.angleInDegrees =
                     BrdBlm_TC_SeD_V_ST_RULES.REGULAR_CURVE_DEFAULT_ANGLE_IN_DEGREES;
                 break;
@@ -94,12 +94,14 @@ export class BrdBlm_TC_SeD_V_ST_NormalLift extends BrdBlm_TC_SeD_V_ST_GenericLif
 
         r.path = this.#buildExtrusionPath(r, pathRadious);
 
-        r.rotateX(rotationAlongXInRadians);
+        r.addRotateXOp(rotationAlongXInRadians, false);
 
-        r.translateX(
+        r.addRotateZOp(2 * this.RAD_90, true);
+
+        const txValue =
             this.params.width / 2 +
-            BrdBlm_TC_SeD_V_ST_RULES.REAR_TEMPLATE_TOTAL_RAISE / 2
-        );
+            BrdBlm_TC_SeD_V_ST_RULES.REAR_TEMPLATE_TOTAL_RAISE / 2;
+        r.addTranslateXOp(txValue, true);
 
         this.profiledParts.set(r.name, r);
 
@@ -108,10 +110,10 @@ export class BrdBlm_TC_SeD_V_ST_NormalLift extends BrdBlm_TC_SeD_V_ST_GenericLif
     }
 
 
+
     /**
      * Get the extrusion path of the curve
      */
-
     #buildExtrusionPath(
         curve: BrdBlm_TC_SeD_V_ST_RegularCurve,
         pathRadious: number

@@ -6,4 +6,4 @@
  */
 
 // Local repo
-export * from "../../Uts/mod.ts";
+export * from "../../Uts/modBrowser.ts";

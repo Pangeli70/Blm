@@ -16,10 +16,12 @@ export * from "./enums/BrdBlm_TC_SeD_eFinishVariant.ts";
 export * from "./enums/BrdBlm_TC_SeD_eInsertFrameColor.ts";
 export * from "./enums/BrdBlm_TC_SeD_eInsertHoleType.ts";
 export * from "./enums/BrdBlm_TC_SeD_eSectionFamily.ts";
+export * from "./enums/BrdBlm_TC_SeD_eSectionsPartNames.ts"
 export * from "./enums/BrdBlm_TC_SeD_eSectionType.ts";
 export * from "./enums/BrdBlm_TC_SeD_eSlidingTrackFinish.ts"
 export * from "./enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts"
 export * from "./enums/BrdBlm_TC_SeD_eVisaType.ts";
+
 
 export * from "./interfaces/BrdBlm_TC_SeD_IInsert.ts"
 export * from "./interfaces/BrdBlm_TC_SeD_IInsertHole.ts"

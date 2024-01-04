@@ -54,6 +54,21 @@ import {
 export interface BrdBlm_TC_SeD_V_IDoorConfig {
 
   /**
+   * Nome del file originale 
+   */
+  file?: string;
+
+  /**
+   * Contenuto del file originale
+   */
+  data?: string;
+
+  /**
+   * Versione del file originale
+   */
+  version?: string;
+
+  /**
    * Marchio del portone (Breda, Bremet, Personalizzato, ecc.)
    */
   brand: BrdBlm_eBrand;

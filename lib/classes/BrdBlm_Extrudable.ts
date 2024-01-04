@@ -46,78 +46,90 @@ export class BrdBlm_Extrudable {
 
 
 
-    rotateX(
+    addRotateXOp(
         aradians: number,
+        aisFlippable: boolean,
         aindex = -1
     ) {
-        const op = {
+        const op: BrdBlm_IPlacementOperation = {
             operation: BrdBlm_ePlacementOperation.ROTATE_X_IN_RAD,
-            value: aradians
+            value: aradians,
+            isFlippable: aisFlippable
         }
         this.#addOp(op, aindex);
     }
 
 
 
-    rotateY(
+    addRotateYOp(
         aradians: number,
+        aisFlippable: boolean,
         aindex = -1
     ) {
-        const op = {
+        const op: BrdBlm_IPlacementOperation = {
             operation: BrdBlm_ePlacementOperation.ROTATE_Y_IN_RAD,
-            value: aradians
+            value: aradians,
+            isFlippable: aisFlippable
         }
         this.#addOp(op, aindex);
     }
 
 
 
-    rotateZ(
+    addRotateZOp(
         aradians: number,
+        aisFlippable: boolean,
         aindex = -1
     ) {
-        const op = {
+        const op: BrdBlm_IPlacementOperation = {
             operation: BrdBlm_ePlacementOperation.ROTATE_Z_IN_RAD,
-            value: aradians
+            value: aradians,
+            isFlippable: aisFlippable
         }
         this.#addOp(op, aindex);
     }
 
 
 
-    translateX(
+    addTranslateXOp(
         amillimeters: number,
+        aisFlippable: boolean,
         aindex = -1
     ) {
-        const op = {
+        const op: BrdBlm_IPlacementOperation = {
             operation: BrdBlm_ePlacementOperation.TRANSLATE_X_IN_MM,
-            value: amillimeters
+            value: amillimeters,
+            isFlippable: aisFlippable
         }
         this.#addOp(op, aindex);
     }
 
 
 
-    translateY(
+    addTranslateYOp(
         amillimeters: number,
+        aisFlippable: boolean,
         aindex = -1
     ) {
-        const op = {
+        const op: BrdBlm_IPlacementOperation = {
             operation: BrdBlm_ePlacementOperation.TRANSLATE_Y_IN_MM,
-            value: amillimeters
+            value: amillimeters,
+            isFlippable: aisFlippable
         }
         this.#addOp(op, aindex);
     }
 
 
 
-    translateZ(
+    addTranslateZOp(
         amillimeters: number,
+        aisFlippable: boolean,
         aindex = -1
     ) {
-        const op = {
-            operation: BrdBlm_ePlacementOperation.TRANSLATE_X_IN_MM,
-            value: amillimeters
+        const op: BrdBlm_IPlacementOperation = {
+            operation: BrdBlm_ePlacementOperation.TRANSLATE_Z_IN_MM,
+            value: amillimeters,
+            isFlippable: aisFlippable
         }
         this.#addOp(op, aindex);
     }
