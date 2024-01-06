@@ -1,0 +1,14 @@
+<% extends("/master/BrdTng_Master.html") %>
+
+    <section id="Menu">
+
+        <h3> REST API</h3>
+
+        <% for(const link of links) { %>
+            <p>
+                <a href="<% link.url %>" role="button">></a>
+                &nbsp;&nbsp;<% link.caption %>
+            </p>
+        <% } %>
+        
+    </section>

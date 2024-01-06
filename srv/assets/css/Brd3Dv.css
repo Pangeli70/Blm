@@ -1,0 +1,108 @@
+/* ------------------------------------------------- */
+/* https://picocss.com/docs/customization.html */
+/* ------------------------------------------------- */
+
+/* Green Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #43a047;
+  --primary-hover: #388e3c;
+  --primary-focus: rgba(67, 160, 71, 0.125);
+  --primary-inverse: #FFF;
+
+  /* Breda customization */
+  --modal-overlay-background-color: rgba(44, 127, 28, 0.1);
+}
+
+/* Green Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --primary: #43a047;
+    --primary-hover: #4caf50;
+    --primary-focus: rgba(67, 160, 71, 0.25);
+    --primary-inverse: #FFF;
+
+    /* Breda customization */
+    --modal-overlay-background-color: rgba(44, 127, 28, 0.1);
+  }
+}
+
+/* Green Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --primary: #43a047;
+  --primary-hover: #4caf50;
+  --primary-focus: rgba(67, 160, 71, 0.25);
+  --primary-inverse: #FFF;
+
+  /* Breda customization */
+  --modal-overlay-background-color: rgba(44, 127, 28, 0.1);
+}
+
+/* Green (Common styles) */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+  /* Breda customization */
+  --modal-overlay-background-color: rgba(44, 127, 28, 0.1);
+}
+
+
+
+/* ------------------------------------------------- */
+/* Breda customizations */
+/* ------------------------------------------------- */
+
+:root {
+  --modal-overlay-backdrop-filter: blur(0);
+
+}
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Ubuntu:wght@300&display=swap");
+
+
+* {
+  font-family: "PT Sans";
+}
+
+.Brd3DvGuiButton {
+  max-width: 5rem;
+  position: fixed;
+  bottom: 0;
+  right: 1rem;
+}
+
+.Brd3DvGuiLabel {
+  position: fixed;
+  background-color: var(--primary-focus);
+  border-radius: var(--border-radius);
+  padding: 0.25rem;
+  top: 1rem;
+  left: 1rem;
+}
+
+.Brd3DvGuiBredaLogo {
+  position: fixed;
+  width: 250px;
+  height: 70px;
+  background-color: var(--primary-focus);
+  border-radius: var(--border-radius);
+  padding: 0.25rem;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.Brd3DvGuiCustomerLogo {
+  position: fixed;
+  width: 250px;
+  height: 70px;
+  background-color: var(--primary-focus);
+  border-radius: var(--border-radius);
+  padding: 0.25rem;
+  top: 1rem;
+  right: 1rem;
+}
