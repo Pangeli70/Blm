@@ -13,57 +13,14 @@ import {
 
 
 
-const TEST_NAME_QSP = 'TestName';
-const MODE_QSP = 'Mode';
-
-const MODE_HELP = "Help";
-const MODE_PARAMS = "Params";
-const MODE_RESULT = "Result";
-
-const PARAMS_BP = 'params';
-
-
-const RouteHelp = {
-    GET: {
-        qsParams: [
-            {
-                name: MODE_QSP,
-                values: `${MODE_HELP}, ${MODE_PARAMS}, ${MODE_RESULT}`
-            },
-            {
-                name: TEST_NAME_QSP,
-                values: [
-                    "Url encoded name of one of the tests in the BrdBlm_TC_SeD_Se_FP_Tests list.",
-                    "Use ? or any other invalid value to get the list ot the names of the possible tests"
-                ]
-            }
-        ],
-        payload: {
-            type: "BrdBlm_TC_SeD_Se_FP",
-            description: "Foamed panel for the specified section params"
-        }
-    },
-    POST: {
-        bodyParams: [
-            {
-                name: PARAMS_BP,
-                type: "BrdBlm_TC_SeD_ISectionParams"
-            }
-        ],
-        payload: {
-            type: "BrdBlm_TC_SeD_Se_FP",
-            description: "Foamed panel for the specified section params"
-        }
-    }
-}
-
 /**
  * Route per ottenere e testare i pannelli schiumati per i portoni sezionali
  */
-export class BrdBlm_TC_SeD_Se_FP_RestResource extends Edr.Drash.Resource {
+export class BrdBlm_TC_SeD_Se_FP_RestResource extends Edr.BrdEdr_Base_RestResource {
 
 
-    public paths = ["/Brd/Blm/TC/SeD/Se/FP"];
+    static ROUTE = "/Brd/Blm/TC/SeD/Se/FP"
+    public paths = [BrdBlm_TC_SeD_Se_FP_RestResource.ROUTE];
 
 
 
@@ -72,89 +29,41 @@ export class BrdBlm_TC_SeD_Se_FP_RestResource extends Edr.Drash.Resource {
         response: Edr.Drash.Response
     ) {
 
-        const r = new Uts.BrdUts_RestResult(BrdBlm_Microservice.name);
-        const startTime = performance.now();
+        const r = this.begin(BrdBlm_Microservice.name, request);
 
-        let mode = MODE_RESULT;
-        const rawMode = request.queryParam(MODE_QSP);
-        if (rawMode == MODE_PARAMS) {
-            mode = rawMode;
-        }
+        const mode = this.GET_mode(request);
 
-        if (rawMode == MODE_HELP) {
-            r.ok = false;
-            r.message = 'Look at the payload to have hints about how to use this route.'
-            r.payload = RouteHelp;
-            this.#terminate(startTime, r, response);
+        if (this.GET_isHelpMode(mode, r, response))
             return;
-        }
+
+        const rawTestName = request.queryParam(BrdBlm_TC_SeD_Se_FP_RestResource.GET_QSP_TEST_NAME);
+
+        if (this.GET_testNameIsMissing(rawTestName, r, response))
+            return;
 
         const testsParams = Blm.TC.SeD.BrdBlm_TC_SeD_Se_FP_Tests;
-        const ids: string[] = [];
+        const names: string[] = [];
         for (const test of testsParams) {
-            ids.push(encodeURIComponent(test.name));
+            names.push(encodeURIComponent(test.name));
         }
-
-        const rawTestName = request.queryParam(TEST_NAME_QSP);
-
-        if (!rawTestName) {
-            r.ok = false;
-            r.message = 'Look at the payload to have hints about how to use this route.'
-            r.payload = RouteHelp;
-            this.#terminate(startTime, r, response);
-            return;
-        }
-
+        const testName = rawTestName!;
         const testIndex = testsParams.findIndex((v) => v.name == rawTestName)
 
-        if (testIndex == -1) {
-            r.ok = false;
-            r.message = [
-                `The name of the test [${rawTestName}] specified for the parameter ` +
-                `[${TEST_NAME_QSP}] of the querystring is not valid.`,
-                `The available names are listed in the payload.`
-            ]
-            r.payload = ids;
-            this.#terminate(startTime, r, response);
+        if (this.GET_testWasNotFound(testIndex, testName, names, r, response))
             return;
-        }
 
         const params = testsParams[testIndex];
 
-        if (mode == MODE_PARAMS) {
-            r.message = `The parameters associated to the test [${rawTestName}] `;
-            r.payload = params;
-            this.#terminate(startTime, r, response);
+        if (this.GET_isParamsMode(mode, testName, params, r, response))
             return;
-        }
 
-        const rawPayload = this.#getFoamedPanel(params);
+        const result = this.#processRequest(params);
 
-        if (Object.keys(rawPayload).length == 0) {
-            r.ok = false;
-            r.message = [
-                `L'elaborazione dei compomenti per il test ` +
-                `[${rawTestName}] specificato per il parametro ` +
-                `[${TEST_NAME_QSP}] della querystring non ha dato nessun risultato.`,
-                `Probabilmente il servizio di elaborazione per lo scorrimento ` +
-                `[${params.type}] non è stato ancora implementato.`
-            ]
-            this.#terminate(startTime, r, response);
+        if (this.#processHadErrors(result, params, r, response))
             return;
-        }
 
-        r.payload = rawPayload;
-
-        this.#terminate(startTime, r, response);
-    }
-
-
-
-    #terminate(startTime: number, r: Uts.BrdUts_RestResult, response: Edr.Drash.Response) {
-        const totalTime = ((performance.now() - startTime) / 1000).toFixed(4);
-        r.totalTime = totalTime;
-
-        response.json(r);
+        r.payload = result;
+        this.end(r, response);
     }
 
 
@@ -165,45 +74,77 @@ export class BrdBlm_TC_SeD_Se_FP_RestResource extends Edr.Drash.Resource {
     ) {
 
 
-        const startTime = performance.now();
+        const r = this.begin(BrdBlm_Microservice.name, request);
 
-        const r = new Uts.BrdUts_RestResult(BrdBlm_Microservice.name);
+        const rawParams = request.bodyParam(BrdBlm_TC_SeD_Se_FP_RestResource.POST_BP_PARAMS);
 
-        const rawParams = request.bodyParam(PARAMS_BP);
-
-        if (!rawParams) {
-            r.ok = false;
-            r.message = [
-                `Parametri per il calcolo mancanti nel [body] della richiesta in [POST]. ` +
-                `Specificare un oggetto denominato [${PARAMS_BP}].`,
-                `Questo oggetto deve soddisfare l'interfaccia [BrdBlm_TC_SeD_V_ST_IParams].`
-            ]
-            this.#terminate(startTime, r, response);
+        if (this.POST_paramsAreMissing(rawParams, BrdBlm_TC_SeD_Se_FP_RestResource.POST_BP_PARAMS, 'BrdEdr_ITest', r, response))
             return;
-        }
 
         const params = rawParams as Blm.TC.SeD.BrdBlm_TC_SeD_ISectionParams;
-        const rawComponents = this.#getFoamedPanel(params);
 
-        if (Object.keys(rawComponents).length == 0) {
-            r.ok = false;
-            r.message =
-                `L'elaborazione dei componenti per la richiesta ` +
-                `[${params.name}] non ha dato nessun risultato.`
-            this.#terminate(startTime, r, response);
+        const result = this.#processRequest(params);
+
+        if (this.#processHadErrors(result, params, r, response))
             return;
-        }
 
-        r.payload = rawComponents;
-        this.#terminate(startTime, r, response);
+        r.payload = result;
+        this.end(r, response);
     }
 
 
 
-    #getFoamedPanel(aparams: Blm.TC.SeD.BrdBlm_TC_SeD_ISectionParams) {
+    #processRequest(aparams: Blm.TC.SeD.BrdBlm_TC_SeD_ISectionParams) {
 
         const r = new Blm.TC.SeD.BrdBlm_TC_SeD_Se_FP(aparams);
 
+        return r;
+    }
+
+
+
+    #processHadErrors(
+        apanel: Blm.TC.SeD.BrdBlm_TC_SeD_Se_FP,
+        aparams: Blm.TC.SeD.BrdBlm_TC_SeD_ISectionParams,
+        aresult: Uts.BrdUts_RestResult,
+        response: Edr.Drash.Response
+    ) { 
+        let r = false;
+        if (!apanel.status.ok) {
+            aresult.ok = false;
+            aresult.message = [
+                `The processing of the params name [${aparams.name}] resulted in errors.`,
+                `Check the payload to get the status of the panel creation`
+            ];
+            aresult.payload = apanel.status;
+            this.end(aresult, response);
+            r = true;
+        }
+        return r;
+    }
+
+
+
+    routeHelp() {
+        const r = super.routeHelp();
+
+        r.route = BrdBlm_TC_SeD_Se_FP_RestResource.ROUTE;
+        r.description = [
+            "Use this route to get a foamed panel for sectional doors"
+        ]
+        r.payload.type = "BrdBlm_TC_SeD_Se_FP";
+        r.payload.description.push(
+            "Foamed panel data for the specified section params"
+        )
+
+        r.GET!.qsParams[1].values.push(
+            'Refer to the [BrdBlm_TC_SeD_Se_FP_Tests] list.'
+        )
+
+        r.POST!.bodyParams[0].type = "BrdBlm_TC_SeD_ISectionParam";
+        r.POST!.bodyParams[0].description.push(
+            "Section params for foamed panel of sectional door"
+        )
         return r;
     }
 }
