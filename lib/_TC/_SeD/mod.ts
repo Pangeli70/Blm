@@ -7,6 +7,7 @@
  * @version 0.3 APG 20231226 Ristrutturato tutta la libreria
  * ----------------------------------------------------------------------------
  */
+export * from "./classes/sections/abstract/BrdBlm_TC_SeD_Se_FP.ts"
 
 export * from "./enums/BrdBlm_TC_SeD_eConfiguration.ts";
 export * from "./enums/BrdBlm_TC_SeD_eDesign.ts";
@@ -42,6 +43,8 @@ export * from "./services/BrdBlm_TC_SeD_FoamedPanelsOutlines_Service.ts"
 export * from "./services/BrdBlm_TC_SeD_HoleOutlinesService.ts"
 export * from "./services/BrdBlm_TC_SeD_SlidingTracksOutlines_Service.ts"
 //export * from "./services/BrdBlm_TC_SeD_VisaSectionsOutlines_Service.ts"
+
+export * from "./tests/BrdBlm_TC_SeD_Se_FP_Tests.ts"
 
 export * from "./types/BrdBlm_TC_SeD_TSlidingTracksOutlines_Recordset.ts";
 

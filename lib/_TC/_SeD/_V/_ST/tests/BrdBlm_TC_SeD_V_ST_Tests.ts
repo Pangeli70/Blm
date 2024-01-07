@@ -19,7 +19,7 @@ import {
 
 export const BrdBlm_TC_SeD_V_ST_Tests: BrdBlm_TC_SeD_V_ST_IParams[] = [
     {
-        name: "Prova S1-1",
+        name: "S1-1",
         type: BrdBlm_TC_SeD_V_eSlidingSystem.S1,
         width: 3500,
         height: 2500,
@@ -31,7 +31,7 @@ export const BrdBlm_TC_SeD_V_ST_Tests: BrdBlm_TC_SeD_V_ST_IParams[] = [
         finish: BrdBlm_TC_SeD_eSlidingTrackFinish.GALVANIZED
     } as const,
     {
-        name: "Prova S2-1",
+        name: "S2-1",
         type: BrdBlm_TC_SeD_V_eSlidingSystem.S2,
         width: 3000,
         height: 4700,
@@ -43,7 +43,7 @@ export const BrdBlm_TC_SeD_V_ST_Tests: BrdBlm_TC_SeD_V_ST_IParams[] = [
         finish: BrdBlm_TC_SeD_eSlidingTrackFinish.WHITE
     } as const,
     {
-        name: "Prova S2-2",
+        name: "S2-2",
         type: BrdBlm_TC_SeD_V_eSlidingSystem.S2,
         width: 6000,
         height: 2250,
@@ -55,7 +55,7 @@ export const BrdBlm_TC_SeD_V_ST_Tests: BrdBlm_TC_SeD_V_ST_IParams[] = [
         finish: BrdBlm_TC_SeD_eSlidingTrackFinish.GALVANIZED
     } as const,
     {
-        name: "Prova S2I-1",
+        name: "S2I-1",
         type: BrdBlm_TC_SeD_V_eSlidingSystem.S2I,
         width: 3000,
         height: 4700,
@@ -67,7 +67,19 @@ export const BrdBlm_TC_SeD_V_ST_Tests: BrdBlm_TC_SeD_V_ST_IParams[] = [
         finish: BrdBlm_TC_SeD_eSlidingTrackFinish.BLACK
     } as const,
     {
-        name: "Prova S3I-1",
+        name: "S3-1",
+        type: BrdBlm_TC_SeD_V_eSlidingSystem.S3,
+        width: 4500,
+        height: 3500,
+        lintel: 2200,
+        inclinationInDegrees: 0,
+        isHeavySheetMetal: false,
+        hasLateralPullingMotor: false,
+        hasSommerPullingMotor: false,
+        finish: BrdBlm_TC_SeD_eSlidingTrackFinish.GALVANIZED
+    } as const,
+    {
+        name: "S3I-1",
         type: BrdBlm_TC_SeD_V_eSlidingSystem.S3I,
         width: 3500,
         height: 2500,

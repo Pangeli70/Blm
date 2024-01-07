@@ -1,7 +1,7 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdBlm]
  * @author [APG] Angeli Paolo Giusto
- * @version 0.1 APG 20240105
+ * @version 0.1 APG 202401056
  * ----------------------------------------------------------------------------
  */
 
@@ -32,35 +32,38 @@ const RouteHelp = {
             },
             {
                 name: TEST_NAME_QSP,
-                values: "Query string ready name of one of the tests in the BrdBlm_TC_SeD_V_ST_Tests list"
+                values: [
+                    "Url encoded name of one of the tests in the BrdBlm_TC_SeD_Se_FP_Tests list.",
+                    "Use ? or any other invalid value to get the list ot the names of the possible tests"
+                ]
             }
         ],
         payload: {
-            type: "BrdBlm_TC_SeD_V_ST_IProfiledSheetMetal[]",
-            description: "Sheet metal profiles for the specified slyding system params"
+            type: "BrdBlm_TC_SeD_Se_FP",
+            description: "Foamed panel for the specified section params"
         }
     },
     POST: {
         bodyParams: [
             {
                 name: PARAMS_BP,
-                type: "BrdBlm_TC_SeD_V_ST_IParams"
+                type: "BrdBlm_TC_SeD_ISectionParams"
             }
         ],
         payload: {
-            type: "BrdBlm_TC_SeD_V_ST_IProfiledSheetMetal[]",
-            description: "Sheet metal profiles for the specified slyding system params"
+            type: "BrdBlm_TC_SeD_Se_FP",
+            description: "Foamed panel for the specified section params"
         }
     }
 }
 
 /**
- * Genera la pagina di test per il servizio di gestione guide di scorrimento
+ * Route per ottenere e testare i pannelli schiumati per i portoni sezionali
  */
-export class BrdBlm_TC_SeD_V_ST_RestResource extends Edr.Drash.Resource {
+export class BrdBlm_TC_SeD_Se_FP_RestResource extends Edr.Drash.Resource {
 
 
-    public paths = ["/Brd/Blm/TC/SeD/V/ST"];
+    public paths = ["/Brd/Blm/TC/SeD/Se/FP"];
 
 
 
@@ -86,7 +89,7 @@ export class BrdBlm_TC_SeD_V_ST_RestResource extends Edr.Drash.Resource {
             return;
         }
 
-        const testsParams = Blm.TC.SeD.V.ST.BrdBlm_TC_SeD_V_ST_Tests;
+        const testsParams = Blm.TC.SeD.BrdBlm_TC_SeD_Se_FP_Tests;
         const ids: string[] = [];
         for (const test of testsParams) {
             ids.push(encodeURIComponent(test.name));
@@ -125,7 +128,7 @@ export class BrdBlm_TC_SeD_V_ST_RestResource extends Edr.Drash.Resource {
             return;
         }
 
-        const rawPayload = this.#getComponents(params);
+        const rawPayload = this.#getFoamedPanel(params);
 
         if (Object.keys(rawPayload).length == 0) {
             r.ok = false;
@@ -154,6 +157,8 @@ export class BrdBlm_TC_SeD_V_ST_RestResource extends Edr.Drash.Resource {
         response.json(r);
     }
 
+
+
     public POST(
         request: Edr.Drash.Request,
         response: Edr.Drash.Response
@@ -170,15 +175,15 @@ export class BrdBlm_TC_SeD_V_ST_RestResource extends Edr.Drash.Resource {
             r.ok = false;
             r.message = [
                 `Parametri per il calcolo mancanti nel [body] della richiesta in [POST]. ` +
-                `Specificare un oggetto denominato [${PARAMS_BP}].` ,
+                `Specificare un oggetto denominato [${PARAMS_BP}].`,
                 `Questo oggetto deve soddisfare l'interfaccia [BrdBlm_TC_SeD_V_ST_IParams].`
             ]
             this.#terminate(startTime, r, response);
             return;
         }
 
-        const params = rawParams as Blm.TC.SeD.V.ST.BrdBlm_TC_SeD_V_ST_IParams;
-        const rawComponents = this.#getComponents(params);
+        const params = rawParams as Blm.TC.SeD.BrdBlm_TC_SeD_ISectionParams;
+        const rawComponents = this.#getFoamedPanel(params);
 
         if (Object.keys(rawComponents).length == 0) {
             r.ok = false;
@@ -195,18 +200,9 @@ export class BrdBlm_TC_SeD_V_ST_RestResource extends Edr.Drash.Resource {
 
 
 
-    #getComponents(aparams: Blm.TC.SeD.V.ST.BrdBlm_TC_SeD_V_ST_IParams) {
+    #getFoamedPanel(aparams: Blm.TC.SeD.BrdBlm_TC_SeD_ISectionParams) {
 
-
-        const service = Blm.TC.SeD.V.ST.BrdBlm_TC_SeD_V_ST_Service;
-        const components = service.GetComponents(aparams);
-
-        const r: any = {};
-        if (components) {
-            for (const [key, value] of components) {
-                r[key] = value;
-            }
-        }
+        const r = new Blm.TC.SeD.BrdBlm_TC_SeD_Se_FP(aparams);
 
         return r;
     }

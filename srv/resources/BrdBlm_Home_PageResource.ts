@@ -42,7 +42,11 @@ export class BrdBlm_Home_PageResource extends Edr.Drash.Resource {
         const r = [
             {
                 url: "/Brd/Blm/TC/SeD/V/ST",
-                caption: "Test calcoli costruzione guide"
+                caption: "Costruzione guide portone sezionale a corrimento verticale."
+            },
+            {
+                url: "/Brd/Blm/TC/SeD/Se/FP",
+                caption: "Costruzione pannello schiumato per portone sezionale."
             },
 
         ]

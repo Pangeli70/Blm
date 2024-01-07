@@ -28,12 +28,6 @@ export interface BrdBlm_TC_IInsertParams {
    */
   position: BrdBlm_IPoint2D;
 
-  /**
-   * Profilo di foratura dell'inserto.
-   * TODO Questo dovrebbe essere standardizzato e copiato da una libreria
-   * dei fori per gli inserti
-   */
-  holeProfile: BrdBlm_IPoint2D[];
 }
 
 /*! ---------------------------------------------------------------------------

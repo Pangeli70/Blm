@@ -27,6 +27,12 @@ import {
  */
 export interface BrdBlm_TC_SeD_ISectionParams {
 
+
+  /**
+   * Nome dei parametri. Viene usato per etichettare questo set di parametri.
+   */
+  name: string;
+
   /**
    * Numero di sequenza della sezione a partire dal basso
    */

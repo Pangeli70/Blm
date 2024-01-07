@@ -513,7 +513,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
      * Lo zero sull'asse delle ascisse è sull'esterno del pannello.
      * Attualmente il pannello è diviso pefettamente a metà.
      */
-    static getFoamedPanelOutlines(aparams: BrdBlm_TC_SeD_ISectionParams) {
+    static getOutlines(aparams: BrdBlm_TC_SeD_ISectionParams) {
 
         this.#init();
 

@@ -10,7 +10,7 @@ import { BrdBlm_Resources, BrdBlm_Services } from "./srv/mod.ts";
 
 
 // Setup Edr
-Edr.BrdEdrService.ClientCacheMaxAge = 1 * 60; // One minute 
+Edr.BrdEdr_Service.ClientCacheMaxAge = 1 * 60; // One minute 
 
 
 // Overwrite default Tengine settings
@@ -27,4 +27,4 @@ const server = new Edr.Drash.Server({
 
 server.run();
 
-Edr.BrdEdrService.ServerStartupResume(BrdBlm_Microservice, server.address);
+Edr.BrdEdr_Service.ServerStartupResume(BrdBlm_Microservice, server.address);

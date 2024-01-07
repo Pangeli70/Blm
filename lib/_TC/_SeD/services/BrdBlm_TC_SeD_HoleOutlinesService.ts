@@ -25,13 +25,13 @@ import {
 } from "../enums/BrdBlm_TC_SeD_eInsertHoleType.ts";
 
 
+const MODULE_NAME = import.meta.url;
 
 
 /**
- * Generatore di geometrie per operazioni booleane di sottrazione
- * Utilizzato per fare i fori degli inserti sui pannelli sia delle sezioni che delle ante.
- */
-export class BrdBlm_TC_SeD_HoleOutlinesService {
+ * Gestore delle sagome degli inserti per i fori nei pannelli coibentati
+  */
+export class BrdBlm_TC_SeD_HolesOutlinesService {
 
 
     /**
@@ -87,39 +87,44 @@ export class BrdBlm_TC_SeD_HoleOutlinesService {
         aposition: BrdBlm_IPoint2D
     ) {
 
-        let r: BrdBlm_IPoint2D[] = [];
+        let outline: BrdBlm_IPoint2D[] = [];
+        const r = new Uts.BrdUts_Result(MODULE_NAME)
+            
 
         const insertHoleType = this.#getInsertHoleTypeByArticleCode(ainsertCode);
-        // TODO remove asserts from server side. -- APG 20231231
-        Uts.BrdUts.Assert(
-            insertHoleType !== BrdBlm_TC_SeD_eInsertHoleType.ERROR,
-            `Codice inserto [${ainsertCode}] non trovato`
-        );
+        
+        if (insertHoleType == BrdBlm_TC_SeD_eInsertHoleType.ERROR) { 
+            r.ok = false;
+            r.message = `Codice inserto [${ainsertCode}] non trovato`;
+            return r;
+        }
 
         const index = BrdBlm_TC_SeD_InsertHoleDimensions_Table.findIndex(
             (a) => a.type == insertHoleType
         );
-        Uts.BrdUts.Assert(
-            index === -1,
-            `Dati foro per inserto non trovati per tipo foro [${insertHoleType}]`
-        );
+
+        if (index == -1) {
+            r.ok = false;
+            r.message = `${MODULE_NAME}: Dati foro per inserto non trovati per tipo foro [${insertHoleType}]`;
+            return r;
+        }
 
         const holeData = BrdBlm_TC_SeD_InsertHoleDimensions_Table[index];
 
         // Se ha una sagoma speciale
         if (holeData.outline != undefined) {
-            r = [...structuredClone(holeData.outline)];
+            outline = [...structuredClone(holeData.outline)];
         }
         // Se è un foro rettangolare
         else {
-            r = [
+            outline = [
                 { x: 0, y: 0 },
                 { x: 0, y: holeData.h },
                 { x: holeData.w, y: holeData.h },
                 { x: holeData.w, y: 0 },
             ];
         }
-        r = this.#moveHole(r, aposition);
+        outline = this.#moveHole(outline, aposition);
 
         return r;
 
