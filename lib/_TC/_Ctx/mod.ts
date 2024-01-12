@@ -21,6 +21,6 @@ export * from "./interfaces/BrdBlm_TC_Ctx_IParams.ts"
 
 export * from "./recordsets/BrdBlm_TC_Ctx_MaterialRecordset.ts"
 
-export * from "./services/BrdBlm_TC_Ctx_ContextService.ts"
+export * from "../../../../Glb/lib/_TC/_Ctx/BrdBlm_TC_Ctx_ContextService.ts"
 
 export * from "./types/BrdBlm_TC_Ctx_TMaterialRecordset.ts"
