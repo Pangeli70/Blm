@@ -14,12 +14,16 @@ import {
 import {
     BrdBlm_TC_SeD_V_ST_IParams
 } from "../interfaces/BrdBlm_TC_SeD_V_ST_IParams.ts";
+import {
+    BrdBlm_TC_SeD_V_ST_IParams_Signature
+} from "../mod.ts";
 
 
 
 export const BrdBlm_TC_SeD_V_ST_Tests: BrdBlm_TC_SeD_V_ST_IParams[] = [
     {
-        name: "S1-1",
+        signature: BrdBlm_TC_SeD_V_ST_IParams_Signature,
+        name: "Sliding tracks test S1-1",
         type: BrdBlm_TC_SeD_V_eSlidingSystem.S1,
         width: 3500,
         height: 2500,
@@ -31,6 +35,7 @@ export const BrdBlm_TC_SeD_V_ST_Tests: BrdBlm_TC_SeD_V_ST_IParams[] = [
         finish: BrdBlm_TC_SeD_eSlidingTrackFinish.GALVANIZED
     } as const,
     {
+        signature: BrdBlm_TC_SeD_V_ST_IParams_Signature,
         name: "S2-1",
         type: BrdBlm_TC_SeD_V_eSlidingSystem.S2,
         width: 3000,
@@ -43,6 +48,7 @@ export const BrdBlm_TC_SeD_V_ST_Tests: BrdBlm_TC_SeD_V_ST_IParams[] = [
         finish: BrdBlm_TC_SeD_eSlidingTrackFinish.WHITE
     } as const,
     {
+        signature: BrdBlm_TC_SeD_V_ST_IParams_Signature,
         name: "S2-2",
         type: BrdBlm_TC_SeD_V_eSlidingSystem.S2,
         width: 6000,
@@ -55,6 +61,7 @@ export const BrdBlm_TC_SeD_V_ST_Tests: BrdBlm_TC_SeD_V_ST_IParams[] = [
         finish: BrdBlm_TC_SeD_eSlidingTrackFinish.GALVANIZED
     } as const,
     {
+        signature: BrdBlm_TC_SeD_V_ST_IParams_Signature,
         name: "S2I-1",
         type: BrdBlm_TC_SeD_V_eSlidingSystem.S2I,
         width: 3000,
@@ -67,6 +74,7 @@ export const BrdBlm_TC_SeD_V_ST_Tests: BrdBlm_TC_SeD_V_ST_IParams[] = [
         finish: BrdBlm_TC_SeD_eSlidingTrackFinish.BLACK
     } as const,
     {
+        signature: BrdBlm_TC_SeD_V_ST_IParams_Signature,
         name: "S3-1",
         type: BrdBlm_TC_SeD_V_eSlidingSystem.S3,
         width: 4500,
@@ -79,6 +87,7 @@ export const BrdBlm_TC_SeD_V_ST_Tests: BrdBlm_TC_SeD_V_ST_IParams[] = [
         finish: BrdBlm_TC_SeD_eSlidingTrackFinish.GALVANIZED
     } as const,
     {
+        signature: BrdBlm_TC_SeD_V_ST_IParams_Signature,
         name: "S3I-1",
         type: BrdBlm_TC_SeD_V_eSlidingSystem.S3I,
         width: 3500,

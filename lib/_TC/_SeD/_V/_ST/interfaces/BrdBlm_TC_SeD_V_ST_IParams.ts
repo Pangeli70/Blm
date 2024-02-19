@@ -15,11 +15,18 @@ import {
 } from "../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
 
 
+export const BrdBlm_TC_SeD_V_ST_IParams_Signature = "BrdBlm_TC_SeD_V_ST_IParams_Signature_V1"
+
 /**
  * Descrittore dei parametri di configurazione delle tipologie di guide di
  * scorrimento del portone sezionale a scorrimento verticale
  */
 export interface BrdBlm_TC_SeD_V_ST_IParams {
+
+   /**
+    * Firma del record
+    */
+  signature: "BrdBlm_TC_SeD_V_ST_IParams_Signature_V1";
 
   /**
    * Nome dei parametri. Viene usato per etichettare questo set di parametri.
