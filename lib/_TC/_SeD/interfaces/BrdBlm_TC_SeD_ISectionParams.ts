@@ -11,6 +11,8 @@
 import {
   BrdBlm_TC_IInsertParams
 } from "../../interfaces/BrdBlm_TC_IInsertParams.ts";
+import { BrdBlm_TC_SeD_eFinish } from "../enums/BrdBlm_TC_SeD_eFinish.ts";
+import { BrdBlm_TC_SeD_eFinishVariant } from "../enums/BrdBlm_TC_SeD_eFinishVariant.ts";
 import {
   BrdBlm_TC_SeD_eSectionFamily
 } from "../enums/BrdBlm_TC_SeD_eSectionFamily.ts";
@@ -22,11 +24,18 @@ import {
 } from "./BrdBlm_TC_SeD_IVisaFillingParams.ts";
 
 
+export const BrdBlm_TC_SeD_ISectionParams_Signature = "BrdBlm_TC_SeD_ISectionParams_Signature_V1"
+
+
 /**
  * Parametri per la estrusione e lavorazione delle sezioni delle chiusure tecniche
  */
 export interface BrdBlm_TC_SeD_ISectionParams {
 
+  /**
+   * Firma di questa struttura dati
+   */
+  signature: "BrdBlm_TC_SeD_ISectionParams_Signature_V1";
 
   /**
    * Nome dei parametri. Viene usato per etichettare questo set di parametri.
@@ -44,7 +53,7 @@ export interface BrdBlm_TC_SeD_ISectionParams {
   family: BrdBlm_TC_SeD_eSectionFamily;
 
   /**
-   * Tipo di sezione.
+   * Tipo di sezione. 
    * Per il pannello coibentato è il disegno (es.: FLAT, SINGLE ecc.)
    * con le sue varianti (es. single alta, bassa, ecc.). Per le sezioni VISA è
    * il tipo (es.: LUXOR, LUX, ecc.) e varianti ( base, intermedio, alto).
@@ -74,9 +83,44 @@ export interface BrdBlm_TC_SeD_ISectionParams {
   bottomCut: number;
 
   /**
-   * Altezza da terra
+   * Altezza della sezione da terra per i portoni a con manto a sviluppo verticale,
+   * oppure distanza orizzontale dal piano di chiusura per i portoni  
+   * con manto a svlippo orizzontale.
    */
-  yDisplacement: number;
+  displacement: number;
+
+  /**
+   * Rotazione della sezione in gradi sessaggesimali.
+   * Nel caso dei portoni a sviluppo verticale è 0°. Per i portoni con
+   * sviluppo orizzontale a senso di apertura a destra è 90° mentre per 
+   * il senso di apertura a sinistra è -90°
+   */
+  rotationAlongZInDeg?: number;
+
+  /**
+   * Finitura esterna
+   */
+  extFinish: BrdBlm_TC_SeD_eFinish;
+
+  /**
+   * Finitura interna
+   */
+  intFinish?: BrdBlm_TC_SeD_eFinish;
+
+  /**
+   * Ral esterno se finitura RAL
+   */
+  extRal?: number;
+
+  /**
+   * Ral interno se finitura RAL
+   */
+  intRal?: number;
+
+  /**
+   * Variante della finitura
+   */
+  variant: BrdBlm_TC_SeD_eFinishVariant
 
 
   /**

@@ -67,7 +67,7 @@ export class BrdBlm_TC_SeD_Se_FP extends BrdBlm_Extrudable {
         const tz = -aparams.length / 2;
         this.addTranslateZOp(tz, false);
 
-        const ty = aparams.yDisplacement;
+        const ty = aparams.displacement;
         this.addTranslateYOp(ty, false);
 
         const nr = this.#getInsertsHolesOutlines(aparams);

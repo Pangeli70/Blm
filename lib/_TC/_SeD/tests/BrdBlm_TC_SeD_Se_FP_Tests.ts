@@ -29,7 +29,7 @@ export const BrdBlm_TC_SeD_Se_FP_Tests: BrdBlm_TC_SeD_ISectionParams[] = [
         height: 615,
         topCut: 0,
         bottomCut: 0,
-        yDisplacement: 0,
+        displacement: 0,
         inserts: [],
     } as const
 ];

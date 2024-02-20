@@ -11,8 +11,8 @@
  * Nomi delle parti estruse o generate dinamicamente dal visualizzatore
  */
 export enum BrdBlm_TC_SeD_eSectionsPartNames {
-  SECTION_OUTSIDE = "Brd3DvParts_ProductVSeD_SectionOutside",
-  SECTION_INSIDE = "Brd3DvParts_ProductVSeD_SectionInside",
+  FOAMED_PANEL = "Foamed Panel",
+  VISA_SECTION = "Visa section",
 }
 
 
