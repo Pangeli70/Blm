@@ -41,6 +41,10 @@ export class BrdBlm_Home_PageResource extends Edr.Drash.Resource {
 
         const r = [
             {
+                url: "/Brd/Blm/TC/Ctx",
+                caption: "Costruzione contesto installazione chiusure tecniche."
+            },
+            {
                 url: "/Brd/Blm/TC/SeD/V/ST",
                 caption: "Costruzione guide portone sezionale a corrimento verticale."
             },

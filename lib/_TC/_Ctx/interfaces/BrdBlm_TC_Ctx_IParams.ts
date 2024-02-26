@@ -13,6 +13,19 @@ import {
 import {
   BrdBlm_IRectangle
 } from "../../../interfaces/BrdBlm_IRectangle.ts";
+import { BrdBlm_TC_Ctx_eFacadeColor } from "../enums/BrdBlm_TC_Ctx_eFacadeColor.ts";
+import { BrdBlm_TC_Ctx_eFacadeFinish } from "../enums/BrdBlm_TC_Ctx_eFacadeFinish.ts";
+import { BrdBlm_TC_Ctx_eFloorColor } from "../enums/BrdBlm_TC_Ctx_eFloorColor.ts";
+import { BrdBlm_TC_Ctx_eFloorFinish } from "../enums/BrdBlm_TC_Ctx_eFloorFinish.ts";
+import { BrdBlm_TC_Ctx_ePavementColor } from "../enums/BrdBlm_TC_Ctx_ePavementColor.ts";
+import { BrdBlm_TC_Ctx_ePavementFinish } from "../enums/BrdBlm_TC_Ctx_ePavementFinish.ts";
+import { BrdBlm_TC_Ctx_eThresholdColor } from "../enums/BrdBlm_TC_Ctx_eThresholdColor.ts";
+import { BrdBlm_TC_Ctx_eThresholdFinish } from "../enums/BrdBlm_TC_Ctx_eThresholdFinish.ts";
+import { BrdBlm_TC_Ctx_eWallColor } from "../enums/BrdBlm_TC_Ctx_eWallColor.ts";
+import { BrdBlm_TC_Ctx_eWallFinish } from "../enums/BrdBlm_TC_Ctx_eWallFinish.ts";
+
+
+export const BrdBlm_TC_Ctx_IParams_Signature = "BrdBlm_TC_Ctx_IParams_Signature_V0"
 
 /**
  * Definizione delle caratteristiche geometriche del contesto per la chiusura
@@ -22,43 +35,82 @@ import {
  */
 export interface BrdBlm_TC_Ctx_IParams {
 
+  signature: "BrdBlm_TC_Ctx_IParams_Signature_V0";
+
+  name: string;
+  description: string;
+
+  facadeLeft?: number;
+  facadeRight?: number;
+  facadeTop?: number;
+  facadeThickness?: number;
+  facadeColor?: BrdBlm_TC_Ctx_eFacadeColor;
+  facadeFinish?: BrdBlm_TC_Ctx_eFacadeFinish;
+
+  hasExternFrame?: boolean;
+  externFrameWidth?: number;
+  externFrameThickness?: number;
+  externFrameColor?: BrdBlm_TC_Ctx_eFacadeColor;
+  externFrameFinish?: BrdBlm_TC_Ctx_eFacadeFinish;
+
+  pavementDepth?: number;
+  pavementThickness?: number;
+  pavementColor?: BrdBlm_TC_Ctx_ePavementColor;
+  pavementFinish?: BrdBlm_TC_Ctx_ePavementFinish;
+
+  hasThreshold?: boolean;
+  thresholdDepth?: number;
+  thresholdColor?: BrdBlm_TC_Ctx_eThresholdColor;
+  thresholdFinish?: BrdBlm_TC_Ctx_eThresholdFinish;
+
+  hasExternBaseBoard?: boolean;
+  externBaseboardHeight?: number;
+  externBaseboardThickness?: number;
+  externBaseboardColor?: BrdBlm_TC_Ctx_eFacadeColor;
+  externBaseboardFinish?: BrdBlm_TC_Ctx_eFacadeFinish;
+
+  hasSidewalk?: boolean;
+  sidewalkDepth?: number;
+  sidewalkHeight?: number;
+  sidewalkColor?: BrdBlm_TC_Ctx_ePavementColor;
+  sidewalkFinish?: BrdBlm_TC_Ctx_ePavementFinish;
+
   holeWidth: number;
-  
   holeHeight: number;
-  
-  holeLintel: number;
-  
-  
-  holeLintelAdditionalHeight: number;
-  
-  holeLintelAdditionalDepth: number;
-  
-  
-  rightEmbrasure: number;
-  
-  leftEmbrasure: number;
-  
-  
-  floorDepth: number;
-  
-  floorThickness: number;
-  
-  
-  ceilingProfile: BrdBlm_IPoint2D[];
-  
-  ceilingThickness: number;
-  
+  holeTopOutline?: BrdBlm_IPoint2D[];
 
-  rightWallProfile: BrdBlm_IPoint2D[];
-  
-  leftWallProfile: BrdBlm_IPoint2D[];
+  lintel: number;
+  lintelAdditionalHeight?: number;
+  lintelAdditionalDepth?: number;
 
-  wallThickness: number;
+  embrasureRight?: number;
+  embrasureLeft?: number;
 
+  roomDepth?: number;
+  floorThickness?: number;
+  floorColor?: BrdBlm_TC_Ctx_eFloorColor;
+  floorFinish?: BrdBlm_TC_Ctx_eFloorFinish;
 
-  columns: BrdBlm_IRectangle[];
-  
-  trasversalBeams: BrdBlm_IRectangle[];
+  hasInternBaseBoard?: boolean;
+  internBaseboardHeight?: number;
+  internBaseboardThickness?: number;
+  internBaseboardColor?: BrdBlm_TC_Ctx_eFloorColor;
+  internBaseboardFinish?: BrdBlm_TC_Ctx_eFloorFinish;
+
+  ceilingOutline?: BrdBlm_IPoint2D[];
+  ceilingThickness?: number;
+  ceilingColor?: BrdBlm_TC_Ctx_eWallColor;
+  ceilingFinish?: BrdBlm_TC_Ctx_eWallFinish;
+
+  wallRightOutline?: BrdBlm_IPoint2D[];
+  wallLeftOutline?: BrdBlm_IPoint2D[];
+  wallThickness?: number;
+  wallColor?: BrdBlm_TC_Ctx_eWallColor;
+  wallFinish?: BrdBlm_TC_Ctx_eWallFinish;
+
+  trasversalBeams?: BrdBlm_IRectangle[];
+
+  columns?: BrdBlm_IRectangle[];
 }
 
 /*! ---------------------------------------------------------------------------

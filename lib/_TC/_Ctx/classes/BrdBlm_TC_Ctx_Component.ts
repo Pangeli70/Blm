@@ -1,23 +1,38 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdBlm_TC_Ctx]
  * @author [APG] Angeli Paolo Giusto 
- * @version 0.1 APG 20230707
- * @version 0.2 APG 20231109 Pulizia e refactoring
- * @version 0.3 APG 20231227 Modulo BrdBlm server side
+ * @version 0.1 APG 20231227 Modulo BrdBlm server side
  * ----------------------------------------------------------------------------
  */
 
+import {
+    BrdBlm_Extrudable
+} from "../../../classes/BrdBlm_Extrudable.ts";
+import {
+    BrdBlm_IPoint2D
+} from "../../../interfaces/BrdBlm_IPoint2D.ts";
+import {
+    BrdBlm_TC_Ctx_ePartName
+} from "../enums/BrdBlm_TC_Ctx_ePartName.ts";
+
+
+
 /**
- * Colori predefiniti per le pareti interne
+ * Parte estrudibile e posizionabile per la creazione del contesto
  */
-export enum BrdBlm_TC_Ctx_eWallColor {
-    OLD_LACE = "#fdf5e6",
-    PALE_GOLDEN_ROD = "#eee8aa",
-    MINT_CREAM = "#f5fffa",
-    LEMON_CHIFFON = "#fffacd",
-    LAVENDER_BLUSH = "#fff0f5",
-    GHOST_WHITE = "	#f8f8ff",
-    AZURE = "#f0ffff"
+export class BrdBlm_TC_Ctx_Component extends BrdBlm_Extrudable {
+
+    
+    name: BrdBlm_TC_Ctx_ePartName;
+
+    outline: BrdBlm_IPoint2D[] = [];
+
+
+    constructor(aname: BrdBlm_TC_Ctx_ePartName) {
+        super();
+        this.name = aname;
+    }
+
 }
 
 /*! ---------------------------------------------------------------------------

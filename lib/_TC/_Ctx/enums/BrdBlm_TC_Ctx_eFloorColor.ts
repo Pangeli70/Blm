@@ -1,46 +1,15 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdBlm_TC_Ctx]
  * @author [APG] Angeli Paolo Giusto 
- * @version 0.1 APG 20230707
- * @version 0.2 APG 20231109 Pulizia e refactoring
- * @version 0.3 APG 20231227 Modulo BrdBlm server side
+ * @version 0.1 APG 20240225
  * ----------------------------------------------------------------------------
  */
 
 /**
- * Texture per le bumpmap della facciata
+ * Colori predefiniti per la il pavimento interno
  */
-export enum BrdBlm_TC_Ctx_eFacadeTexture {
-
-  /**
-   * Cemento un po' troppo ondulato (ruotabile )
-   */
-  CONCRETE = 'Facade_1_512_BumpMap.jpg',
-
-  /**
-   * Mah questo è brutto
-   */
-  UGLY_PLASTER = 'Facade_2_512_BumpMap.jpg',
-
-  /**
-   * Graffiato (ruotabile)
-   */
-  SCRATCHED_PLASTER = 'Facade_3_512_BumpMap.jpg',
-
-  /**
-   * Intonaco grezzo (ruotabile)
-   */
-  RAW_PLASTER = 'Facade_4_512_BumpMap.jpg',
-
-  /**
-   * Blocchi di cemento
-   */
-  FINE_BLOCKS = 'Facade_5_512_BumpMap.jpg',
-
-  /**
-   * Malta non tanto fina (ruotabile)
-   */
-  FINE_MORTAR = 'Facade_6_512_BumpMap.jpg'
+export enum BrdBlm_TC_Ctx_eFloorColor {
+  OLD_LACE = "#fdf5e6",
 }
 
 /*! ---------------------------------------------------------------------------

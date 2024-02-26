@@ -1,10 +1,7 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdBlm_TC_Ctx]
  * @author [APG] Angeli Paolo Giusto 
- * @version 0.1 DLV 20230626
- * @version 0.2 APG 20230707
- * @version 0.3 APG 20231109 Pulizia e refactoring
- * @version 0.4 APG 20231227 Modulo BrdBlm server side
+ * @version 0.1 APG 20240225
  * ----------------------------------------------------------------------------
  */
 
@@ -12,18 +9,18 @@ import {
     BrdBlm_IMaterialDef
 } from "../../../interfaces/BrdBlm_IMaterialDef.ts";
 import {
-    BrdBlm_TC_Ctx_ePartName
-} from "../enums/BrdBlm_TC_Ctx_ePartName.ts";
+    BrdBlm_TC_Ctx_eThresholdFinish
+} from "../enums/BrdBlm_TC_Ctx_eThresholdFinish.ts";
 
 
 
 /**
- * Definizione della struttura della tabella che contiene le definizioni dei
- * materiali per le mesh del contesto
+ * Definizione della struttura che contiene le definizioni delle finiture 
+ * per la soglia del foro
  */
-export type BrdBlm_TC_Ctx_TMaterialRecordset = Record<
-    BrdBlm_TC_Ctx_ePartName,
-    BrdBlm_IMaterialDef | null
+export type BrdBlm_TC_Ctx_TThresholdFinishRecordset = Record<
+    BrdBlm_TC_Ctx_eThresholdFinish,
+    BrdBlm_IMaterialDef
 >;
 
 /*! ---------------------------------------------------------------------------

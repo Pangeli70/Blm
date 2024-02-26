@@ -88,14 +88,16 @@ export class BrdBlm_TC_SeD_HolesOutlinesService {
     ) {
 
         let outline: BrdBlm_IPoint2D[] = [];
-        const r = new Uts.BrdUts_Result(MODULE_NAME)
-            
+        const r = new Uts.BrdUts_Result();
 
         const insertHoleType = this.#getInsertHoleTypeByArticleCode(ainsertCode);
         
         if (insertHoleType == BrdBlm_TC_SeD_eInsertHoleType.ERROR) { 
             r.ok = false;
-            r.message = `Codice inserto [${ainsertCode}] non trovato`;
+            r.addMessage(
+                this.getOutlineByInsertCode.name,
+                `Codice inserto [${ainsertCode}] non trovato`
+            );
             return r;
         }
 
@@ -105,7 +107,10 @@ export class BrdBlm_TC_SeD_HolesOutlinesService {
 
         if (index == -1) {
             r.ok = false;
-            r.message = `${MODULE_NAME}: Dati foro per inserto non trovati per tipo foro [${insertHoleType}]`;
+            r.addMessage(
+                this.getOutlineByInsertCode.name,
+                `${MODULE_NAME}: Dati foro per inserto non trovati per tipo foro [${insertHoleType}]`
+            );
             return r;
         }
 
@@ -125,6 +130,8 @@ export class BrdBlm_TC_SeD_HolesOutlinesService {
             ];
         }
         outline = this.#moveHole(outline, aposition);
+
+        r.setPayload(outline, 'BrdBlm_IPoint2D[]')
 
         return r;
 

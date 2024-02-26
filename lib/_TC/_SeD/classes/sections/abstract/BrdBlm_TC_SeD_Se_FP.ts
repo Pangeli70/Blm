@@ -47,7 +47,7 @@ export class BrdBlm_TC_SeD_Se_FP extends BrdBlm_Extrudable {
     /**
      * Stato di questo oggetto
      */
-    status = new Uts.BrdUts_Result(MODULE_NAME);
+    status = new Uts.BrdUts_Result();
 
 
     /**
@@ -60,8 +60,8 @@ export class BrdBlm_TC_SeD_Se_FP extends BrdBlm_Extrudable {
         this.length = aparams.length;
 
         this.panelOutlines = BrdBlm_TC_SeD_FoamedPanelsOutlines_Service.getOutlines(aparams);
-        
-        const ry = this.RAD_90;
+
+        const ry = Uts.BrdUts.RAD_90;
         this.addRotateYOp(ry, false);
 
         const tz = -aparams.length / 2;
@@ -71,7 +71,7 @@ export class BrdBlm_TC_SeD_Se_FP extends BrdBlm_Extrudable {
         this.addTranslateYOp(ty, false);
 
         const nr = this.#getInsertsHolesOutlines(aparams);
-        if (!nr.ok) { 
+        if (!nr.ok) {
             this.status = nr;
             return;
         }
@@ -80,17 +80,17 @@ export class BrdBlm_TC_SeD_Se_FP extends BrdBlm_Extrudable {
 
 
 
-    #getInsertsHolesOutlines(aparams: BrdBlm_TC_SeD_ISectionParams) { 
-        
-        let r = new Uts.BrdUts_Result(MODULE_NAME);
-        
-        const outlines: BrdBlm_IPoint2D[][] = []; 
-        if (!aparams.inserts) { 
-            r.payload = outlines;
+    #getInsertsHolesOutlines(aparams: BrdBlm_TC_SeD_ISectionParams) {
+
+        let r = new Uts.BrdUts_Result();
+
+        const outlines: BrdBlm_IPoint2D[][] = [];
+        if (!aparams.inserts) {
+            r.setPayload(outlines, "");
             return r;
         }
 
-        for (const insert of aparams.inserts) { 
+        for (const insert of aparams.inserts) {
 
             const nr = BrdBlm_TC_SeD_HolesOutlinesService.getOutlineByInsertCode(
                 insert.code,
@@ -100,12 +100,13 @@ export class BrdBlm_TC_SeD_Se_FP extends BrdBlm_Extrudable {
                 r = nr;
                 return r;
             }
-            else { 
+            else {
                 outlines.push(nr.payload as BrdBlm_IPoint2D[]);
             }
         }
 
-        r.payload = outlines;
+        r.setPayload(outlines, "");
+
         return r;
     }
 

@@ -12,20 +12,20 @@
  */
 export enum BrdBlm_TC_Ctx_eFacadeColor {
 
-  BURLY_WOOD = "#deb887",
-  BEIGE = "#d5d5dc",
-  DARK_GRAY = "#888888",
-  DARK_SALMON = "#e9967a",
-  LIGHT_GRAY = "#aaaaaa",
-  LIGHT_STEEL_BLUE = "#b0c4de",
-  LINEN = "#faf0e6",
-  MOCASSIN = "#ffe4b5",
-  PEACH_PUFF = "#ffdab9",
-  ROSY_BROWN = "#bc8f8f",
-  TAN = "#d2b48c",
-  THISTLE = "#d8bfd8",
-  SNOW = "#fffafa",
-  WHITE_SMOKE = "#f5f5f5"
+    BURLY_WOOD = "#deb887",
+    BEIGE = "#d5d5dc",
+    DARK_GRAY = "#888888",
+    DARK_SALMON = "#e9967a",
+    LIGHT_GRAY = "#aaaaaa",
+    LIGHT_STEEL_BLUE = "#b0c4de",
+    LINEN = "#faf0e6",
+    MOCASSIN = "#ffe4b5",
+    PEACH_PUFF = "#ffdab9",
+    ROSY_BROWN = "#bc8f8f",
+    TAN = "#d2b48c",
+    THISTLE = "#d8bfd8",
+    SNOW = "#fffafa",
+    WHITE_SMOKE = "#f5f5f5"
 
 }
 

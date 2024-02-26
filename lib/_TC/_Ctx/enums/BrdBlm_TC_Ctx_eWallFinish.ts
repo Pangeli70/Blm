@@ -1,22 +1,16 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdBlm_TC_Ctx]
  * @author [APG] Angeli Paolo Giusto 
- * @version 0.1 APG 20230707
- * @version 0.2 APG 20231109 Pulizia e refactoring
- * @version 0.3 APG 20231227 Modulo BrdBlm server side
+ * @version 0.1 APG 20240225
  * ----------------------------------------------------------------------------
  */
 
 /**
- * Texture per le bumpmap della pavimentazione esterna
+ * Texture per la bumpmap delle pareti interne
  */
-export enum BrdBlm_TC_Ctx_ePavementTexture {
-  PAV1 = 'Pavement_1_BumpMap_256.jpg',
-  PAV2 = 'Pavement_2_BumpMap_256.jpg',
-  PAV3 = 'Pavement_3_BumpMap_256.jpg',
-  PAV4 = 'Pavement_4_BumpMap_256.jpg',
-  PAV5 = 'Pavement_5_BumpMap_256.jpg',
-  PAV6 = 'Pavement_6_BumpMap_256.jpg'
+export enum BrdBlm_TC_Ctx_eWallFinish {
+  /** Malta fina */
+  SMOOTH_MORTAR = 'Walls_1_512.jpg'
 }
 
 /*! ---------------------------------------------------------------------------

@@ -7,24 +7,40 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-  BrdBlm_eGlossRoughness
-} from "../../../enums/BrdBlm_eGlossRoughness.ts";
-
 /**
- * Definizione del materiale del contesto:
- * TODO - Is it possible to merge or use IBrd3DvSectionMaterial + IBrd3DvSectionSurface?
- * -- APG 20230829
+ * Texture per le bumpmap della facciata
  */
-export interface BrdBlm_TC_Ctx_IMaterialDesc {
-  map: string;
-  u: number;
-  v: number;
-  bumpMap: string;
-  bumpU: number;
-  bumpV: number;
-  bumpHeight: number;
-  roughness: BrdBlm_eGlossRoughness;
+export enum BrdBlm_TC_Ctx_eFacadeFinish {
+
+    /**
+     * Cemento un po' troppo ondulato (ruotabile )
+     */
+    CONCRETE = 'Facade_1_512_BumpMap.jpg',
+
+    /**
+     * Mah questo è brutto
+     */
+    UGLY_PLASTER = 'Facade_2_512_BumpMap.jpg',
+
+    /**
+     * Graffiato (ruotabile)
+     */
+    SCRATCHED_PLASTER = 'Facade_3_512_BumpMap.jpg',
+
+    /**
+     * Intonaco grezzo (ruotabile)
+     */
+    RAW_PLASTER = 'Facade_4_512_BumpMap.jpg',
+
+    /**
+     * Blocchi di cemento
+     */
+    FINE_BLOCKS = 'Facade_5_512_BumpMap.jpg',
+
+    /**
+     * Malta non tanto fina (ruotabile)
+     */
+    FINE_MORTAR = 'Facade_6_512_BumpMap.jpg'
 }
 
 /*! ---------------------------------------------------------------------------

@@ -12,20 +12,29 @@
  */
 export enum BrdBlm_TC_Ctx_ePartName {
 
-  EXTERN_FACADE = "Context_Extern_Facade",
-  EXTERN_PAVEMENT = "Context_Extern_Pavement",
-  EXTERN_THRESHOLD = "Context_Extern_Threshold",
-  EXTERN_BASEBOARDS = "Context_Extern_Baseboards",
+  EXTERN_FACADE = "Context extern facade",
+  EXTERN_PAVEMENT = "Context extern pavement",
+  EXTERN_THRESHOLD = "Context extern threshold",
+  EXTERN_LEFT_BASEBOARD = "Context extern left baseboard",
+  EXTERN_RIGHT_BASEBOARD = "Context extern right baseboard",
 
-  EXTERN_SIDEWALKS = "Context_Extern_Sidewalks*",
-  EXTERN_CANOPY = "Context_Extern_Canopy*",
-  EXTERN_ROOF = "Context_Extern_Roof*",
-  EXTERN_FRAME = "Context_Extern_Frame*",
+  EXTERN_FRAME = "Context extern frame", // TBI
+  EXTERN_LEFT_SIDEWALK = "Context extern left sidewalk", // TBI
+  EXTERN_RIGHT_SIDEWALK = "Context extern right sidewalk", // TBI
+  EXTERN_CANOPY = "Context extern canopy", // TBI
+  EXTERN_ROOF = "Context extern roof", // TBI
 
-  INTERN_LEFT_WALL = "Context_Intern_LeftWall",
-  INTERN_RIGHT_WALL = "Context_Intern_RightWall",
-  INTERN_FLOOR = "Context_Intern_Floor",
-  INTERN_CEILING = "Context_Intern_Ceiling"
+  EXTERN_LEFT_LAMP = "Extern left lamp", // TBI
+  EXTERN_RIGHT_LAMP = "Extern right lamp", // TBI
+
+  INTERN_LEFT_WALL = "Context intern left wall",
+  INTERN_RIGHT_WALL = "Context intern right wall",
+  INTERN_LEFT_BASEBOARD = "Context intern left baseboard", // TBI
+  INTERN_RIGHT_BASEBOARD = "Context intern baseboard", // TBI
+  INTERN_FLOOR = "Context intern floor",
+  INTERN_CEILING = "Context intern ceiling",
+  INTERN_COLUMN = "Context intern column",// TBI
+  INTERN_BEAM = "Context intern beam"// TBI
 }
 
 /*! ---------------------------------------------------------------------------

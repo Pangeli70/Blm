@@ -16,12 +16,6 @@ import {
     BrdBlm_TC_SeD_V_ST_S2
 } from "../classes/lifts/concrete/BrdBlm_TC_SeD_V_ST_S2.ts";
 import {
-    BrdBlm_TC_SeD_V_ST_RULES
-} from "../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
-import {
-    BrdBlm_TC_SeD_V_ST_eUpperCurveType
-} from "../enums/BrdBlm_TC_SeD_V_ST_eUpperCurveType.ts";
-import {
     BrdBlm_TC_SeD_V_ST_IParams
 } from "../interfaces/BrdBlm_TC_SeD_V_ST_IParams.ts";
 

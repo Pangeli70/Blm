@@ -18,16 +18,6 @@ import {
  */
 export class BrdBlm_Extrudable {
 
-    /**
-     * 90 gradi sessaggesimali in radianti
-     */
-    protected readonly RAD_90 = Math.PI / 2;
-
-    /**
-     * Coefficiente di conversione da angoli sessaggesimali a radianti
-     */
-    protected readonly DEG_TO_RAD = 2 * Math.PI / 360;
-
 
     /**
      * Lunghezza dell'estruso prima dell'eventuale taglio

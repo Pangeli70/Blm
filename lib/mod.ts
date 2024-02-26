@@ -9,7 +9,7 @@
  */
 
 
-export * from "./classes/BrdBlm_Extrudable.ts"
+export * from "./classes/BrdBlm_Extrudable.ts";
 
 export * from "./enums/BrdBlm_eBrand.ts";
 export * from "./enums/BrdBlm_eGlossRoughness.ts";
@@ -17,14 +17,18 @@ export * from "./enums/BrdBlm_eMicaceousFinish.ts";
 export * from "./enums/BrdBlm_ePlacementOperation.ts";
 export * from "./enums/BrdBlm_eProductTypes.ts";
 
+export * from "./interfaces/BrdBlm_IBumpMapDef.ts";
+export * from "./interfaces/BrdBlm_IIntExtMaterialDef.ts";
 export * from "./interfaces/BrdBlm_IIntExtOutlines.ts";
-export * from "./interfaces/BrdBlm_IIntExtOutlinesGroups.ts"
-export * from "./interfaces/BrdBlm_IMultilanguage.ts"
+export * from "./interfaces/BrdBlm_IIntExtOutlinesGroups.ts";
+export * from "./interfaces/BrdBlm_IMaterialDef.ts";
+export * from "./interfaces/BrdBlm_IMultilanguage.ts";
 export * from "./interfaces/BrdBlm_IPlacementOperation.ts";
 export * from "./interfaces/BrdBlm_IPoint2D.ts";
 export * from "./interfaces/BrdBlm_IPoint3D.ts";
 export * from "./interfaces/BrdBlm_IRalColorDef.ts";
 export * from "./interfaces/BrdBlm_IRectangle.ts";
+export * from "./interfaces/BrdBlm_ITextureDef.ts";
 
 
 export * from "./recordsets/BrdBlm_MicaeousFinishes_MultilangRecordset.ts";

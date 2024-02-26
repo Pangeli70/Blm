@@ -1,18 +1,15 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdBlm_TC_Ctx]
  * @author [APG] Angeli Paolo Giusto 
- * @version 0.1 APG 20230707
- * @version 0.2 APG 20231109 Pulizia e refactoring
- * @version 0.3 APG 20231227 Modulo BrdBlm server side
+ * @version 0.1 APG 20240225
  * ----------------------------------------------------------------------------
  */
 
 /**
- * Texture per la bumpmap delle pareti interne
+ * Colori predefiniti per la soglia
  */
-export enum BrdBlm_TC_Ctx_eWallTexture {
-  /** Malta fina */
-  SMOOTH_MORTAR = 'Walls_1_512.jpg'
+export enum BrdBlm_TC_Ctx_eThresholdColor {
+  OLD_LACE = "#fdf5e6",
 }
 
 /*! ---------------------------------------------------------------------------

@@ -1,33 +1,43 @@
 /** ---------------------------------------------------------------------------
- * @module [BrdBlm_TC_Ctx]
- * @author [APG] Angeli Paolo Giusto 
+ * @module [BrdGlb]
+ * @author [APG] Angeli Paolo Giusto
  * @version 0.1 APG 20230707
- * @version 0.2 APG 20231109 Pulizia e refactoring
- * @version 0.3 APG 20231227 Modulo BrdBlm server side
+ * @version 0.2 APG 20231115 Spostato nel suo file dedicato + Commenti e refactoring
+ * @version 0.3 APG 20231227 Modulo BrdGlb server side
+ * @version 0.4 APG 20240225 Modulo BrdBlm server side
  * ----------------------------------------------------------------------------
  */
 
 /**
- * Tipi di finiture predefinite per il contesto
+ * Definizione dei dati di mappatura delle TEXTURE.
  */
-// TODO Implement this! -- APG 20230728
-export enum BrdBlm_TC_Ctx_eFinish {
-  EXT_WALL_A = "EWA",
-  EXT_WALL_B = "EWB",
-  EXT_WALL_C = "EWC",
-  EXT_WALL_D = "EWD",
-  INT_WALL_A = "IWA",
-  INT_WALL_B = "IWB",
-  CEILING_A = "CEA",
-  CEILING_B = "CEB",
-  INT_FLOOR_A = "IFA",
-  INT_FLOOR_B = "IFB",
-  INT_FLOOR_C = "IFC",
-  INT_FLOOR_D = "IFD",
-  EXT_PAVEMENT_A = "EFA",
-  EXT_PAVEMENT_B = "EFB",
-  EXT_PAVEMENT_C = "EFC",
-  EXT_PAVEMENT_D = "EFD"
+export interface BrdBlm_ITextureDef {
+
+  /**
+   * Nome della texture
+   */
+  texture: string;
+
+  /**
+   * Url per la texture
+   */
+  url: string;
+
+  /**
+   * Scala di mappatura orizzontale
+   */
+  uScale: number;
+
+  /**
+   * Scala di mappatura verticale
+   */
+  vScale: number;
+
+  /**
+   * Questa texture può essere ruotata
+   */
+  canRotate: boolean;
+
 }
 
 /*! ---------------------------------------------------------------------------
