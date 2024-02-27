@@ -14,14 +14,14 @@
 export interface BrdBlm_ITextureDef {
 
   /**
-   * Nome della texture
+   * Nome della texture come elencato nei CDN Assets
    */
   texture: string;
 
   /**
-   * Url per la texture
+   * Url per la texture viene compilato attingendo dai CDN Assets
    */
-  url: string;
+  url?: string;
 
   /**
    * Scala di mappatura orizzontale

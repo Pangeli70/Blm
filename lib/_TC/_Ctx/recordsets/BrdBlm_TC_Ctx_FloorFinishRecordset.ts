@@ -5,9 +5,13 @@
  * ----------------------------------------------------------------------------
  */
 
+
 import {
     BrdBlm_eGlossRoughness
-} from "../../../mod.ts";
+} from "../../../enums/BrdBlm_eGlossRoughness.ts";
+import {
+    BrdBlm_IMaterialDef_Signature
+} from "../../../interfaces/BrdBlm_IMaterialDef.ts";
 import {
     BrdBlm_TC_Ctx_eFloorFinish
 } from "../enums/BrdBlm_TC_Ctx_eFloorFinish.ts";
@@ -19,6 +23,7 @@ import {
 export const BrdBlm_TC_Ctx_FloorFinishRecordset: BrdBlm_TC_Ctx_TFloorFinishRecordset =
 {
     [BrdBlm_TC_Ctx_eFloorFinish.PAV1]: {
+        signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         texture: {
@@ -38,6 +43,7 @@ export const BrdBlm_TC_Ctx_FloorFinishRecordset: BrdBlm_TC_Ctx_TFloorFinishRecor
         }
     },
     [BrdBlm_TC_Ctx_eFloorFinish.PAV2]: {
+        signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         texture: {
@@ -57,6 +63,7 @@ export const BrdBlm_TC_Ctx_FloorFinishRecordset: BrdBlm_TC_Ctx_TFloorFinishRecor
         }
     },
     [BrdBlm_TC_Ctx_eFloorFinish.PAV3]: {
+        signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         texture: {
@@ -76,6 +83,7 @@ export const BrdBlm_TC_Ctx_FloorFinishRecordset: BrdBlm_TC_Ctx_TFloorFinishRecor
         }
     },
     [BrdBlm_TC_Ctx_eFloorFinish.PAV4]: {
+        signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         texture: {
@@ -95,6 +103,7 @@ export const BrdBlm_TC_Ctx_FloorFinishRecordset: BrdBlm_TC_Ctx_TFloorFinishRecor
         }
     },
     [BrdBlm_TC_Ctx_eFloorFinish.PAV5]: {
+        signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         texture: {
@@ -114,6 +123,7 @@ export const BrdBlm_TC_Ctx_FloorFinishRecordset: BrdBlm_TC_Ctx_TFloorFinishRecor
         }
     },
     [BrdBlm_TC_Ctx_eFloorFinish.PAV6]: {
+        signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         texture: {

@@ -14,13 +14,13 @@ import {
 } from "../interfaces/BrdBlm_TC_Ctx_IParams.ts";
 import {
     BrdBlm_TC_Ctx_Service
-} from "../services/BrdBlm_TC_Ctx_Service.ts";
+} from "../../interfaces/services/BrdBlm_TC_Ctx_Service.ts";
 import {
-    BrdBlm_TC_Ctx_TMaterialRecordset
-} from "../types/BrdBlm_TC_Ctx_TMaterialRecordset.ts";
+    BrdBlm_TC_Ctx_TMaterialDefRecordset
+} from "../types/BrdBlm_TC_Ctx_TMaterialDefRecordset.ts";
 import {
-    BrdBlm_TC_Ctx_TRecordset
-} from "../types/BrdBlm_TC_Ctx_TRecordset.ts";
+    BrdBlm_TC_Ctx_TComponentRecordset
+} from "../types/BrdBlm_TC_Ctx_TComponentRecordset.ts";
 
 
 
@@ -39,9 +39,9 @@ export class BrdBlm_TC_Ctx {
 
     params?: BrdBlm_TC_Ctx_IParams
 
-    components?: BrdBlm_TC_Ctx_TRecordset;
+    components?: BrdBlm_TC_Ctx_TComponentRecordset;
 
-    materialDefs?: BrdBlm_TC_Ctx_TMaterialRecordset
+    materialDefs?: BrdBlm_TC_Ctx_TMaterialDefRecordset
 
 
     constructor(

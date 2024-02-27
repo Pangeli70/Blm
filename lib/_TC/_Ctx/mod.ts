@@ -18,9 +18,9 @@ export * from "./enums/BrdBlm_TC_Ctx_eWallFinish.ts"
 
 export * from "./interfaces/BrdBlm_TC_Ctx_IParams.ts"
 
-export * from "./services/BrdBlm_TC_Ctx_Service.ts"
+export * from "../interfaces/services/BrdBlm_TC_Ctx_Service.ts"
 
-export * from "./types/BrdBlm_TC_Ctx_TMaterialRecordset.ts"
-export * from "./types/BrdBlm_TC_Ctx_TRecordset.ts"
+export * from "./types/BrdBlm_TC_Ctx_TMaterialDefRecordset.ts"
+export * from "./types/BrdBlm_TC_Ctx_TComponentRecordset.ts"
 
 export * from "./tests/BrdBlm_TC_Ctx_Tests.ts"

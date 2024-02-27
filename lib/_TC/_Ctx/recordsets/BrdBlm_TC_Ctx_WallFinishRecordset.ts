@@ -5,9 +5,13 @@
  * ----------------------------------------------------------------------------
  */
 
+
 import {
     BrdBlm_eGlossRoughness
-} from "../../../mod.ts";
+} from "../../../enums/BrdBlm_eGlossRoughness.ts";
+import {
+    BrdBlm_IMaterialDef_Signature
+} from "../../../interfaces/BrdBlm_IMaterialDef.ts";
 import {
     BrdBlm_TC_Ctx_eWallFinish
 } from "../enums/BrdBlm_TC_Ctx_eWallFinish.ts";
@@ -19,6 +23,7 @@ import {
 export const BrdBlm_TC_Ctx_WallFinishRecordset: BrdBlm_TC_Ctx_TWallFinishRecordset =
 {
     [BrdBlm_TC_Ctx_eWallFinish.SMOOTH_MORTAR]: {
+        signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         texture: {

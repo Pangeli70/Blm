@@ -14,14 +14,14 @@
 export interface BrdBlm_IBumpMapDef {
 
     /**
-     * Nome della texture in livelli di grigio
+     * Nome della texture in livelli di grigio come definito nei CDN Assets
      */
     bumpMap: string;
 
     /**
-     * Url per la bumpmap
+     * Url per la bumpmap viene compilato attingendo dai CDN Assets
      */
-    url: string;
+    url?: string;
 
     /**
      * Profondità dell'effetto di rugosità

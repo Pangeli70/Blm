@@ -5,9 +5,13 @@
  * ----------------------------------------------------------------------------
  */
 
+
 import {
     BrdBlm_eGlossRoughness
-} from "../../../mod.ts";
+} from "../../../enums/BrdBlm_eGlossRoughness.ts";
+import {
+    BrdBlm_IMaterialDef_Signature
+} from "../../../interfaces/BrdBlm_IMaterialDef.ts";
 import {
     BrdBlm_TC_Ctx_ePavementFinish
 } from "../enums/BrdBlm_TC_Ctx_ePavementFinish.ts";
@@ -16,123 +20,129 @@ import {
 } from "../types/BrdBlm_TC_Ctx_TPavementFinishRecordset.ts";
 
 
-export const BrdBlm_TC_Ctx_PavementFinishRecordset: BrdBlm_TC_Ctx_TPavementFinishRecordset = 
-    {
-        [BrdBlm_TC_Ctx_ePavementFinish.PAV1]: {
-            color: 0xffffff,
-            roughness: BrdBlm_eGlossRoughness.ROUGH,
-            texture: {
-                texture: "",
-                url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-                uScale: 1,
-                vScale: 1,
-                canRotate: true
-            },
-            bumpMap: {
-                bumpMap: "",
-                url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-                uScale: 1,
-                vScale: 1,
-                depth: 1,
-                canRotate: true
-            }
+export const BrdBlm_TC_Ctx_PavementFinishRecordset: BrdBlm_TC_Ctx_TPavementFinishRecordset =
+{
+    [BrdBlm_TC_Ctx_ePavementFinish.PAV1]: {
+        signature: BrdBlm_IMaterialDef_Signature,
+        color: 0xffffff,
+        roughness: BrdBlm_eGlossRoughness.ROUGH,
+        texture: {
+            texture: "",
+            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            uScale: 1,
+            vScale: 1,
+            canRotate: true
         },
-        [BrdBlm_TC_Ctx_ePavementFinish.PAV2]: {
-            color: 0xffffff,
-            roughness: BrdBlm_eGlossRoughness.ROUGH,
-            texture: {
-                texture: "",
-                url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-                uScale: 1,
-                vScale: 1,
-                canRotate: true
-            },
-            bumpMap: {
-                bumpMap: "",
-                url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-                uScale: 1,
-                vScale: 1,
-                depth: 1,
-                canRotate: true
-            }
+        bumpMap: {
+            bumpMap: "",
+            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            uScale: 1,
+            vScale: 1,
+            depth: 1,
+            canRotate: true
+        }
+    },
+    [BrdBlm_TC_Ctx_ePavementFinish.PAV2]: {
+        signature: BrdBlm_IMaterialDef_Signature,
+        color: 0xffffff,
+        roughness: BrdBlm_eGlossRoughness.ROUGH,
+        texture: {
+            texture: "",
+            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            uScale: 1,
+            vScale: 1,
+            canRotate: true
         },
-        [BrdBlm_TC_Ctx_ePavementFinish.PAV3]: {
-            color: 0xffffff,
-            roughness: BrdBlm_eGlossRoughness.ROUGH,
-            texture: {
-                texture: "",
-                url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-                uScale: 1,
-                vScale: 1,
-                canRotate: true
-            },
-            bumpMap: {
-                bumpMap: "",
-                url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-                uScale: 1,
-                vScale: 1,
-                depth: 1,
-                canRotate: true
-            }
+        bumpMap: {
+            bumpMap: "",
+            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            uScale: 1,
+            vScale: 1,
+            depth: 1,
+            canRotate: true
+        }
+    },
+    [BrdBlm_TC_Ctx_ePavementFinish.PAV3]: {
+        signature: BrdBlm_IMaterialDef_Signature,
+        color: 0xffffff,
+        roughness: BrdBlm_eGlossRoughness.ROUGH,
+        texture: {
+            texture: "",
+            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            uScale: 1,
+            vScale: 1,
+            canRotate: true
         },
-        [BrdBlm_TC_Ctx_ePavementFinish.PAV4]: {
-            color: 0xffffff,
-            roughness: BrdBlm_eGlossRoughness.ROUGH,
-            texture: {
-                texture: "",
-                url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-                uScale: 1,
-                vScale: 1,
-                canRotate: true
-            },
-            bumpMap: {
-                bumpMap: "",
-                url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-                uScale: 1,
-                vScale: 1,
-                depth: 1,
-                canRotate: true
-            }
+        bumpMap: {
+            bumpMap: "",
+            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            uScale: 1,
+            vScale: 1,
+            depth: 1,
+            canRotate: true
+        }
+    },
+    [BrdBlm_TC_Ctx_ePavementFinish.PAV4]: {
+        signature: BrdBlm_IMaterialDef_Signature,
+        color: 0xffffff,
+        roughness: BrdBlm_eGlossRoughness.ROUGH,
+        texture: {
+            texture: "",
+            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            uScale: 1,
+            vScale: 1,
+            canRotate: true
         },
-        [BrdBlm_TC_Ctx_ePavementFinish.PAV5]: {
-            color: 0xffffff,
-            roughness: BrdBlm_eGlossRoughness.ROUGH,
-            texture: {
-                texture: "",
-                url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-                uScale: 1,
-                vScale: 1,
-                canRotate: true
-            },
-            bumpMap: {
-                bumpMap: "",
-                url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-                uScale: 1,
-                vScale: 1,
-                depth: 1,
-                canRotate: true
-            }
+        bumpMap: {
+            bumpMap: "",
+            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            uScale: 1,
+            vScale: 1,
+            depth: 1,
+            canRotate: true
+        }
+    },
+    [BrdBlm_TC_Ctx_ePavementFinish.PAV5]: {
+        signature: BrdBlm_IMaterialDef_Signature,
+        color: 0xffffff,
+        roughness: BrdBlm_eGlossRoughness.ROUGH,
+        texture: {
+            texture: "",
+            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            uScale: 1,
+            vScale: 1,
+            canRotate: true
         },
-        [BrdBlm_TC_Ctx_ePavementFinish.PAV6]: {
-            color: 0xffffff,
-            roughness: BrdBlm_eGlossRoughness.ROUGH,
-            texture: {
-                texture: "",
-                url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-                uScale: 1,
-                vScale: 1,
-                canRotate: true
-            },
-            bumpMap: {
-                bumpMap: "",
-                url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-                uScale: 1,
-                vScale: 1,
-                depth: 1,
-                canRotate: true
-            }
+        bumpMap: {
+            bumpMap: "",
+            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            uScale: 1,
+            vScale: 1,
+            depth: 1,
+            canRotate: true
+        }
+    },
+    [BrdBlm_TC_Ctx_ePavementFinish.PAV6]: {
+        signature: BrdBlm_IMaterialDef_Signature,
+        color: 0xffffff,
+        roughness: BrdBlm_eGlossRoughness.ROUGH,
+        texture: {
+            texture: "",
+            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            uScale: 1,
+            vScale: 1,
+            canRotate: true
         },
-    }
+        bumpMap: {
+            bumpMap: "",
+            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            uScale: 1,
+            vScale: 1,
+            depth: 1,
+            canRotate: true
+        }
+    },
+}
 
 
 /*! ---------------------------------------------------------------------------

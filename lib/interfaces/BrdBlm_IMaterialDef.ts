@@ -20,10 +20,18 @@ import {
 } from "./BrdBlm_ITextureDef.ts";
 
 
+export const BrdBlm_IMaterialDef_Signature = "BrdBlm_IMaterialDef_Signature_V1";
+
+
 /**
  * Definizione del materiale per le mesh
  */
 export interface BrdBlm_IMaterialDef {
+
+  /**
+   * Firma della struttura dati
+   */
+  signature: "BrdBlm_IMaterialDef_Signature_V1"
 
   /**
    * Colore base del materiale

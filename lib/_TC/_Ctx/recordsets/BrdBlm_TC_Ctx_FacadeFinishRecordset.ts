@@ -5,9 +5,13 @@
  * ----------------------------------------------------------------------------
  */
 
+
 import {
     BrdBlm_eGlossRoughness
-} from "../../../mod.ts";
+} from "../../../enums/BrdBlm_eGlossRoughness.ts";
+import {
+    BrdBlm_IMaterialDef_Signature
+} from "../../../interfaces/BrdBlm_IMaterialDef.ts";
 import {
     BrdBlm_TC_Ctx_eFacadeFinish
 } from "../enums/BrdBlm_TC_Ctx_eFacadeFinish.ts";
@@ -18,120 +22,85 @@ import {
 
 export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRecordset =
 {
+    
     [BrdBlm_TC_Ctx_eFacadeFinish.CONCRETE]: {
+        signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/facade/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
         bumpMap: {
-            bumpMap: "",
-            url: "/assets/img/jpg/textures/context/outdoor/facade/",
+            bumpMap: "context_outdoor_facade_Concrete_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,
             canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_eFacadeFinish.FINE_BLOCKS]: {
-        color: 0xffffff,
-        roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/facade/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
-        bumpMap: {
-            bumpMap: "",
-            url: "/assets/img/jpg/textures/context/outdoor/facade/",
-            uScale: 1,
-            vScale: 1,
-            depth: 1,
-            canRotate: true
-        }
-    },
-    [BrdBlm_TC_Ctx_eFacadeFinish.FINE_MORTAR]: {
-        color: 0xffffff,
-        roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/facade/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
-        bumpMap: {
-            bumpMap: "",
-            url: "/assets/img/jpg/textures/context/outdoor/facade/",
-            uScale: 1,
-            vScale: 1,
-            depth: 1,
-            canRotate: true
-        }
-    },
-    [BrdBlm_TC_Ctx_eFacadeFinish.RAW_PLASTER]: {
-        color: 0xffffff,
-        roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/facade/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
-        bumpMap: {
-            bumpMap: "",
-            url: "/assets/img/jpg/textures/context/outdoor/facade/",
-            uScale: 1,
-            vScale: 1,
-            depth: 1,
-            canRotate: true
-        }
-    },
-    [BrdBlm_TC_Ctx_eFacadeFinish.SCRATCHED_PLASTER]: {
-        color: 0xffffff,
-        roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/facade/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
-        bumpMap: {
-            bumpMap: "",
-            url: "/assets/img/jpg/textures/context/outdoor/facade/",
-            uScale: 1,
-            vScale: 1,
-            depth: 1,
-            canRotate: true
-        }
-    },
+
     [BrdBlm_TC_Ctx_eFacadeFinish.UGLY_PLASTER]: {
+        signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/facade/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
         bumpMap: {
             bumpMap: "",
-            url: "/assets/img/jpg/textures/context/outdoor/facade/",
             uScale: 1,
             vScale: 1,
             depth: 1,
             canRotate: true
         }
     },
+
+    [BrdBlm_TC_Ctx_eFacadeFinish.SCRATCHED_PLASTER]: {
+        signature: BrdBlm_IMaterialDef_Signature,
+        color: 0xffffff,
+        roughness: BrdBlm_eGlossRoughness.ROUGH,
+        bumpMap: {
+            bumpMap: "context_outdoor_facade_ScratchedPlaster_BumpMap",
+            uScale: 1,
+            vScale: 1,
+            depth: 1,
+            canRotate: true
+        }
+    },
+
+    [BrdBlm_TC_Ctx_eFacadeFinish.RAW_PLASTER]: {
+        signature: BrdBlm_IMaterialDef_Signature,
+        color: 0xffffff,
+        roughness: BrdBlm_eGlossRoughness.ROUGH,
+        bumpMap: {
+            bumpMap: "context_outdoor_facade_RawPlaster_BumpMap",
+            uScale: 1,
+            vScale: 1,
+            depth: 1,
+            canRotate: true
+        }
+    },
+
+    [BrdBlm_TC_Ctx_eFacadeFinish.FINE_BLOCKS]: {
+        signature: BrdBlm_IMaterialDef_Signature,
+        color: 0xffffff,
+        roughness: BrdBlm_eGlossRoughness.ROUGH,
+        bumpMap: {
+            bumpMap: "context_outdoor_facade_FineBlocks_BumpMap",
+            uScale: 1,
+            vScale: 1,
+            depth: 1,
+            canRotate: false
+        }
+    },
+
+    [BrdBlm_TC_Ctx_eFacadeFinish.FINE_MORTAR]: {
+        signature: BrdBlm_IMaterialDef_Signature,
+        color: 0xffffff,
+        roughness: BrdBlm_eGlossRoughness.ROUGH,
+        bumpMap: {
+            bumpMap: "context_outdoor_facade_FineMortar_BumpMap",
+            uScale: 1,
+            vScale: 1,
+            depth: 1,
+            canRotate: true
+        }
+    },
+
 }
 
 

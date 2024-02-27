@@ -2,26 +2,26 @@
 import { Uts } from "../../../deps.ts";
 import { BrdBlm_IMaterialDef } from "../../../interfaces/BrdBlm_IMaterialDef.ts";
 import { BrdBlm_IPoint2D } from "../../../interfaces/BrdBlm_IPoint2D.ts";
-import { BrdBlm_TC_Ctx_Component } from "../classes/BrdBlm_TC_Ctx_Component.ts";
-import { BrdBlm_TC_Ctx_eFacadeColor } from "../enums/BrdBlm_TC_Ctx_eFacadeColor.ts";
-import { BrdBlm_TC_Ctx_eFacadeFinish } from "../enums/BrdBlm_TC_Ctx_eFacadeFinish.ts";
-import { BrdBlm_TC_Ctx_eFloorColor } from "../enums/BrdBlm_TC_Ctx_eFloorColor.ts";
-import { BrdBlm_TC_Ctx_eFloorFinish } from "../enums/BrdBlm_TC_Ctx_eFloorFinish.ts";
-import { BrdBlm_TC_Ctx_ePartName } from "../enums/BrdBlm_TC_Ctx_ePartName.ts";
-import { BrdBlm_TC_Ctx_ePavementColor } from "../enums/BrdBlm_TC_Ctx_ePavementColor.ts";
-import { BrdBlm_TC_Ctx_ePavementFinish } from "../enums/BrdBlm_TC_Ctx_ePavementFinish.ts";
-import { BrdBlm_TC_Ctx_eThresholdColor } from "../enums/BrdBlm_TC_Ctx_eThresholdColor.ts";
-import { BrdBlm_TC_Ctx_eThresholdFinish } from "../enums/BrdBlm_TC_Ctx_eThresholdFinish.ts";
-import { BrdBlm_TC_Ctx_eWallColor } from "../enums/BrdBlm_TC_Ctx_eWallColor.ts";
-import { BrdBlm_TC_Ctx_eWallFinish } from "../enums/BrdBlm_TC_Ctx_eWallFinish.ts";
-import { BrdBlm_TC_Ctx_IParams, BrdBlm_TC_Ctx_IParams_Signature } from "../interfaces/BrdBlm_TC_Ctx_IParams.ts";
-import { BrdBlm_TC_Ctx_FacadeFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_FacadeFinishRecordset.ts";
-import { BrdBlm_TC_Ctx_PavementFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_PavementFinishRecordset.ts";
-import { BrdBlm_TC_Ctx_FloorFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_FloorFinishRecordset.ts";
-import { BrdBlm_TC_Ctx_ThresholdFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_ThresholdFinishRecordset.ts";
-import { BrdBlm_TC_Ctx_WallFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_WallFinishRecordset.ts";
-import { BrdBlm_TC_Ctx_TMaterialRecordset } from "../types/BrdBlm_TC_Ctx_TMaterialRecordset.ts";
-import { BrdBlm_TC_Ctx_TRecordset } from "../types/BrdBlm_TC_Ctx_TRecordset.ts";
+import { BrdBlm_TC_Ctx_Component } from "../../_Ctx/classes/BrdBlm_TC_Ctx_Component.ts";
+import { BrdBlm_TC_Ctx_eFacadeColor } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eFacadeColor.ts";
+import { BrdBlm_TC_Ctx_eFacadeFinish } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eFacadeFinish.ts";
+import { BrdBlm_TC_Ctx_eFloorColor } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eFloorColor.ts";
+import { BrdBlm_TC_Ctx_eFloorFinish } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eFloorFinish.ts";
+import { BrdBlm_TC_Ctx_ePartName } from "../../_Ctx/enums/BrdBlm_TC_Ctx_ePartName.ts";
+import { BrdBlm_TC_Ctx_ePavementColor } from "../../_Ctx/enums/BrdBlm_TC_Ctx_ePavementColor.ts";
+import { BrdBlm_TC_Ctx_ePavementFinish } from "../../_Ctx/enums/BrdBlm_TC_Ctx_ePavementFinish.ts";
+import { BrdBlm_TC_Ctx_eThresholdColor } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eThresholdColor.ts";
+import { BrdBlm_TC_Ctx_eThresholdFinish } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eThresholdFinish.ts";
+import { BrdBlm_TC_Ctx_eWallColor } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eWallColor.ts";
+import { BrdBlm_TC_Ctx_eWallFinish } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eWallFinish.ts";
+import { BrdBlm_TC_Ctx_IParams, BrdBlm_TC_Ctx_IParams_Signature } from "../../_Ctx/interfaces/BrdBlm_TC_Ctx_IParams.ts";
+import { BrdBlm_TC_Ctx_FacadeFinishRecordset } from "../../_Ctx/recordsets/BrdBlm_TC_Ctx_FacadeFinishRecordset.ts";
+import { BrdBlm_TC_Ctx_PavementFinishRecordset } from "../../_Ctx/recordsets/BrdBlm_TC_Ctx_PavementFinishRecordset.ts";
+import { BrdBlm_TC_Ctx_FloorFinishRecordset } from "../../_Ctx/recordsets/BrdBlm_TC_Ctx_FloorFinishRecordset.ts";
+import { BrdBlm_TC_Ctx_ThresholdFinishRecordset } from "../../_Ctx/recordsets/BrdBlm_TC_Ctx_ThresholdFinishRecordset.ts";
+import { BrdBlm_TC_Ctx_WallFinishRecordset } from "../../_Ctx/recordsets/BrdBlm_TC_Ctx_WallFinishRecordset.ts";
+import { BrdBlm_TC_Ctx_TMaterialDefRecordset } from "../../_Ctx/types/BrdBlm_TC_Ctx_TMaterialDefRecordset.ts";
+import { BrdBlm_TC_Ctx_TComponentRecordset } from "../../_Ctx/types/BrdBlm_TC_Ctx_TComponentRecordset.ts";
 
 
 export const BrdBlm_TC_Ctx_Defaults = {
@@ -572,7 +572,7 @@ export class BrdBlm_TC_Ctx_Service {
         const floor = this.#getFloor(acontext);
 
 
-        const r: BrdBlm_TC_Ctx_TRecordset = {
+        const r: BrdBlm_TC_Ctx_TComponentRecordset = {
             [BrdBlm_TC_Ctx_ePartName.EXTERN_FACADE]: facade,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_PAVEMENT]: pavement,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_THRESHOLD]: threshold,
@@ -900,14 +900,14 @@ export class BrdBlm_TC_Ctx_Service {
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
 
-        const facade = this.#getFacadeMaterial(acontext);
-        const pavement = this.#getPavementMaterial(acontext);
-        const threshold = this.#getThresholdMaterial(acontext);
-        const floor = this.#getFloorMaterial(acontext);
-        const wall = this.#getWallMaterial(acontext);
-        const ceiling = this.#getCeilingMaterial(acontext);
+        const facade = this.#getFacadeMaterialDef(acontext);
+        const pavement = this.#getPavementMaterialDef(acontext);
+        const threshold = this.#getThresholdMaterialDef(acontext);
+        const floor = this.#getFloorMaterialDef(acontext);
+        const wall = this.#getWallMaterialDef(acontext);
+        const ceiling = this.#getCeilingMaterialDef(acontext);
 
-        const r: BrdBlm_TC_Ctx_TMaterialRecordset = {
+        const r: BrdBlm_TC_Ctx_TMaterialDefRecordset = {
             [BrdBlm_TC_Ctx_ePartName.EXTERN_FACADE]: facade,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_PAVEMENT]: pavement,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_THRESHOLD]: threshold,
@@ -939,7 +939,9 @@ export class BrdBlm_TC_Ctx_Service {
         return parseInt(t, 16);
     }
 
-    static #getFacadeMaterial(
+
+
+    static #getFacadeMaterialDef(
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
         const finish = acontext.facadeFinish! as BrdBlm_TC_Ctx_eFacadeFinish
@@ -952,7 +954,7 @@ export class BrdBlm_TC_Ctx_Service {
 
 
 
-    static #getPavementMaterial(
+    static #getPavementMaterialDef(
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
         const finish = acontext.pavementFinish! as BrdBlm_TC_Ctx_ePavementFinish
@@ -965,7 +967,7 @@ export class BrdBlm_TC_Ctx_Service {
 
 
 
-    static #getThresholdMaterial(
+    static #getThresholdMaterialDef(
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
         const finish = acontext.thresholdFinish! as BrdBlm_TC_Ctx_eThresholdFinish
@@ -978,7 +980,7 @@ export class BrdBlm_TC_Ctx_Service {
 
 
 
-    static #getFloorMaterial(
+    static #getFloorMaterialDef(
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
         const finish = acontext.floorFinish! as BrdBlm_TC_Ctx_eFloorFinish
@@ -991,7 +993,7 @@ export class BrdBlm_TC_Ctx_Service {
 
 
 
-    static #getWallMaterial(
+    static #getWallMaterialDef(
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
         const finish = acontext.wallFinish! as BrdBlm_TC_Ctx_eWallFinish
@@ -1004,7 +1006,7 @@ export class BrdBlm_TC_Ctx_Service {
 
 
 
-    static #getCeilingMaterial(
+    static #getCeilingMaterialDef(
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
         const finish = acontext.ceilingFinish! as BrdBlm_TC_Ctx_eWallFinish

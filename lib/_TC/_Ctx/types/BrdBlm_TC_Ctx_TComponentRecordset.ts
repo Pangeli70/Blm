@@ -15,7 +15,7 @@ import {
 /**
  * Definizione della struttura che contiene i componenti del contesto
  */
-export type BrdBlm_TC_Ctx_TRecordset = Record<
+export type BrdBlm_TC_Ctx_TComponentRecordset = Record<
     BrdBlm_TC_Ctx_ePartName,
     BrdBlm_TC_Ctx_Component | BrdBlm_TC_Ctx_Component[] | null
 >;

@@ -18,6 +18,7 @@ export * from "./enums/BrdBlm_ePlacementOperation.ts";
 export * from "./enums/BrdBlm_eProductTypes.ts";
 
 export * from "./interfaces/BrdBlm_IBumpMapDef.ts";
+export * from "./interfaces/BrdBlm_ICDNAsset.ts";
 export * from "./interfaces/BrdBlm_IIntExtMaterialDef.ts";
 export * from "./interfaces/BrdBlm_IIntExtOutlines.ts";
 export * from "./interfaces/BrdBlm_IIntExtOutlinesGroups.ts";
@@ -31,6 +32,7 @@ export * from "./interfaces/BrdBlm_IRectangle.ts";
 export * from "./interfaces/BrdBlm_ITextureDef.ts";
 
 
+export * from "./recordsets/BrdBlm_CDNAssets_Recordset.ts";
 export * from "./recordsets/BrdBlm_MicaeousFinishes_MultilangRecordset.ts";
 
 export * from "./services/BrdBlm_RalColorsService.ts";
