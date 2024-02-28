@@ -2,26 +2,26 @@
 import { Uts } from "../../../deps.ts";
 import { BrdBlm_IMaterialDef } from "../../../interfaces/BrdBlm_IMaterialDef.ts";
 import { BrdBlm_IPoint2D } from "../../../interfaces/BrdBlm_IPoint2D.ts";
-import { BrdBlm_TC_Ctx_Component } from "../../_Ctx/classes/BrdBlm_TC_Ctx_Component.ts";
-import { BrdBlm_TC_Ctx_eFacadeColor } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eFacadeColor.ts";
-import { BrdBlm_TC_Ctx_eFacadeFinish } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eFacadeFinish.ts";
-import { BrdBlm_TC_Ctx_eFloorColor } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eFloorColor.ts";
-import { BrdBlm_TC_Ctx_eFloorFinish } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eFloorFinish.ts";
-import { BrdBlm_TC_Ctx_ePartName } from "../../_Ctx/enums/BrdBlm_TC_Ctx_ePartName.ts";
-import { BrdBlm_TC_Ctx_ePavementColor } from "../../_Ctx/enums/BrdBlm_TC_Ctx_ePavementColor.ts";
-import { BrdBlm_TC_Ctx_ePavementFinish } from "../../_Ctx/enums/BrdBlm_TC_Ctx_ePavementFinish.ts";
-import { BrdBlm_TC_Ctx_eThresholdColor } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eThresholdColor.ts";
-import { BrdBlm_TC_Ctx_eThresholdFinish } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eThresholdFinish.ts";
-import { BrdBlm_TC_Ctx_eWallColor } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eWallColor.ts";
-import { BrdBlm_TC_Ctx_eWallFinish } from "../../_Ctx/enums/BrdBlm_TC_Ctx_eWallFinish.ts";
-import { BrdBlm_TC_Ctx_IParams, BrdBlm_TC_Ctx_IParams_Signature } from "../../_Ctx/interfaces/BrdBlm_TC_Ctx_IParams.ts";
-import { BrdBlm_TC_Ctx_FacadeFinishRecordset } from "../../_Ctx/recordsets/BrdBlm_TC_Ctx_FacadeFinishRecordset.ts";
-import { BrdBlm_TC_Ctx_PavementFinishRecordset } from "../../_Ctx/recordsets/BrdBlm_TC_Ctx_PavementFinishRecordset.ts";
-import { BrdBlm_TC_Ctx_FloorFinishRecordset } from "../../_Ctx/recordsets/BrdBlm_TC_Ctx_FloorFinishRecordset.ts";
-import { BrdBlm_TC_Ctx_ThresholdFinishRecordset } from "../../_Ctx/recordsets/BrdBlm_TC_Ctx_ThresholdFinishRecordset.ts";
-import { BrdBlm_TC_Ctx_WallFinishRecordset } from "../../_Ctx/recordsets/BrdBlm_TC_Ctx_WallFinishRecordset.ts";
-import { BrdBlm_TC_Ctx_TMaterialDefRecordset } from "../../_Ctx/types/BrdBlm_TC_Ctx_TMaterialDefRecordset.ts";
-import { BrdBlm_TC_Ctx_TComponentRecordset } from "../../_Ctx/types/BrdBlm_TC_Ctx_TComponentRecordset.ts";
+import { BrdBlm_TC_Ctx_Component } from "../classes/BrdBlm_TC_Ctx_Component.ts";
+import { BrdBlm_TC_Ctx_eFacadeColor } from "../enums/BrdBlm_TC_Ctx_eFacadeColor.ts";
+import { BrdBlm_TC_Ctx_eFacadeFinish } from "../enums/BrdBlm_TC_Ctx_eFacadeFinish.ts";
+import { BrdBlm_TC_Ctx_eFloorColor } from "../enums/BrdBlm_TC_Ctx_eFloorColor.ts";
+import { BrdBlm_TC_Ctx_eFloorFinish } from "../enums/BrdBlm_TC_Ctx_eFloorFinish.ts";
+import { BrdBlm_TC_Ctx_ePartName } from "../enums/BrdBlm_TC_Ctx_ePartName.ts";
+import { BrdBlm_TC_Ctx_ePavementColor } from "../enums/BrdBlm_TC_Ctx_ePavementColor.ts";
+import { BrdBlm_TC_Ctx_ePavementFinish } from "../enums/BrdBlm_TC_Ctx_ePavementFinish.ts";
+import { BrdBlm_TC_Ctx_eThresholdColor } from "../enums/BrdBlm_TC_Ctx_eThresholdColor.ts";
+import { BrdBlm_TC_Ctx_eThresholdFinish } from "../enums/BrdBlm_TC_Ctx_eThresholdFinish.ts";
+import { BrdBlm_TC_Ctx_eWallColor } from "../enums/BrdBlm_TC_Ctx_eWallColor.ts";
+import { BrdBlm_TC_Ctx_eWallFinish } from "../enums/BrdBlm_TC_Ctx_eWallFinish.ts";
+import { BrdBlm_TC_Ctx_IParams, BrdBlm_TC_Ctx_IParams_Signature } from "../interfaces/BrdBlm_TC_Ctx_IParams.ts";
+import { BrdBlm_TC_Ctx_FacadeFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_FacadeFinishRecordset.ts";
+import { BrdBlm_TC_Ctx_PavementFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_PavementFinishRecordset.ts";
+import { BrdBlm_TC_Ctx_FloorFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_FloorFinishRecordset.ts";
+import { BrdBlm_TC_Ctx_ThresholdFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_ThresholdFinishRecordset.ts";
+import { BrdBlm_TC_Ctx_WallFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_WallFinishRecordset.ts";
+import { BrdBlm_TC_Ctx_TMaterialDefRecordset } from "../types/BrdBlm_TC_Ctx_TMaterialDefRecordset.ts";
+import { BrdBlm_TC_Ctx_TComponentRecordset } from "../types/BrdBlm_TC_Ctx_TComponentRecordset.ts";
 
 
 export const BrdBlm_TC_Ctx_Defaults = {
@@ -483,6 +483,10 @@ export class BrdBlm_TC_Ctx_Service {
         ar: Uts.BrdUts_Result
     ) {
 
+        // NOTE Qui stianmo lavorando per l'estrusione su XY quindi
+        // siamo in vista in pianta con lato esterno verso il basso
+        // -- APG 20240227
+
         if (!aparams.wallRightOutline) {
             const totalRight = -aparams.holeWidth / 2 - aparams.embrasureRight!;
             aparams.wallRightOutline = [
@@ -496,7 +500,7 @@ export class BrdBlm_TC_Ctx_Service {
 
 
         if (!aparams.wallLeftOutline) {
-            const totalLeft = aparams.holeWidth / 2 - aparams.embrasureLeft!;
+            const totalLeft = aparams.holeWidth / 2 + aparams.embrasureLeft!;
             aparams.wallLeftOutline = [
                 { x: totalLeft, y: 0 },
                 { x: totalLeft, y: aparams.roomDepth! }
@@ -736,35 +740,38 @@ export class BrdBlm_TC_Ctx_Service {
             + acontext.wallThickness!
             + acontext.facadeRight!
 
-        const bbtkns = acontext.externBaseboardThickness!;
-        const wtkns = acontext.wallThickness!;
+        const bbThk = acontext.externBaseboardThickness!;
+        const fThk = acontext.facadeThickness!;
 
         r[0].outline = [
             { x: -halfWidth, y: 0 },
-            { x: -halfWidth + bbtkns, y: 0 },
-            { x: -halfWidth + bbtkns, y: -wtkns - bbtkns },
-            { x: totalLeftExternal, y: -wtkns - bbtkns },
-            { x: totalLeftExternal, y: -wtkns },
-            { x: -halfWidth, y: -wtkns },
+            { x: -halfWidth, y: fThk },
+            { x: -halfWidth + bbThk, y: fThk },
+            { x: -halfWidth + bbThk, y: -bbThk },
+            { x: totalLeftExternal, y: - bbThk },
+            { x: totalLeftExternal, y: 0 },
         ];
 
         r[1].outline = [
             { x: halfWidth, y: 0 },
-            { x: halfWidth - bbtkns, y: 0 },
-            { x: halfWidth - bbtkns, y: -wtkns - bbtkns },
-            { x: totalRightExternal, y: -wtkns - bbtkns },
-            { x: totalRightExternal, y: -wtkns },
-            { x: halfWidth, y: -wtkns },
+            { x: totalRightExternal, y: 0 },
+            { x: totalRightExternal, y: -bbThk },
+            { x: halfWidth - bbThk, y: -bbThk },
+            { x: halfWidth - bbThk, y: fThk },
+            { x: halfWidth, y: fThk },
         ];
 
         r[0].length = acontext.externBaseboardHeight!;
-        r[0].addRotateXOp(Uts.BrdUts.RAD_90, false);
+        r[0].addRotateXOp(-Uts.BrdUts.RAD_90, false);
+        r[0].addTranslateZOp(acontext.facadeThickness!, false);
 
         r[1].length = acontext.externBaseboardHeight!;
-        r[1].addRotateXOp(Uts.BrdUts.RAD_90, false);
+        r[1].addRotateXOp(-Uts.BrdUts.RAD_90, false);
+        r[1].addTranslateZOp(acontext.facadeThickness!, false);
 
         return r;
     }
+
 
 
     static #getInternLeftWall(
@@ -782,14 +789,14 @@ export class BrdBlm_TC_Ctx_Service {
             r.outline.push({ x: p.x, y: p.y })
         }
 
-        for (let i = lwo.length - 1; i > 0; i--) {
-            const p = lwo[i];
+        for (let i = lwo.length; i > 0; i--) {
+            const p = lwo[i - 1]
             r.outline.push({ x: p.x + acontext.wallThickness!, y: p.y })
         }
 
         r.length = this.#getMaxY(acontext.ceilingOutline!);
 
-        r.addRotateXOp(Uts.BrdUts.RAD_90, false);
+        r.addRotateXOp(-Uts.BrdUts.RAD_90, false);
 
         return r;
     }
@@ -812,14 +819,14 @@ export class BrdBlm_TC_Ctx_Service {
             r.outline.push({ x: p.x - acontext.wallThickness!, y: p.y })
         }
 
-        for (let i = rwo.length - 1; i > 0; i--) {
-            const p = rwo[i];
+        for (let i = rwo.length; i > 0; i--) {
+            const p = rwo[i - 1];
             r.outline.push({ x: p.x, y: p.y })
         }
 
         r.length = this.#getMaxY(acontext.ceilingOutline!);
 
-        r.addRotateXOp(Uts.BrdUts.RAD_90, false);
+        r.addRotateXOp(-Uts.BrdUts.RAD_90, false);
 
         return r;
     }

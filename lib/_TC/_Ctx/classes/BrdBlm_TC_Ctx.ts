@@ -14,7 +14,7 @@ import {
 } from "../interfaces/BrdBlm_TC_Ctx_IParams.ts";
 import {
     BrdBlm_TC_Ctx_Service
-} from "../../interfaces/services/BrdBlm_TC_Ctx_Service.ts";
+} from "../services/BrdBlm_TC_Ctx_Service.ts";
 import {
     BrdBlm_TC_Ctx_TMaterialDefRecordset
 } from "../types/BrdBlm_TC_Ctx_TMaterialDefRecordset.ts";
