@@ -27,7 +27,7 @@ export class BrdBlm_Extrudable {
     /**
      * Elenco delle operazioni di posizionamento ed orientamento
      */
-    placement: BrdBlm_IPlacementOperation[] = [];
+    placementOps: BrdBlm_IPlacementOperation[] = [];
 
 
 
@@ -36,11 +36,11 @@ export class BrdBlm_Extrudable {
         aindex: number
     ) {
         const i = Math.round(aindex);
-        if (i < 0 || i >= this.placement.length) {
-            this.placement.push(aop);
+        if (i < 0 || i >= this.placementOps.length) {
+            this.placementOps.push(aop);
         }
         else {
-            this.placement.splice(i, 0, aop);
+            this.placementOps.splice(i, 0, aop);
         }
 
     }

@@ -3,6 +3,7 @@ import { Uts } from "../../../deps.ts";
 import { BrdBlm_IMaterialDef } from "../../../interfaces/BrdBlm_IMaterialDef.ts";
 import { BrdBlm_IPoint2D } from "../../../interfaces/BrdBlm_IPoint2D.ts";
 import { BrdBlm_TC_Ctx_Component } from "../classes/BrdBlm_TC_Ctx_Component.ts";
+import { BrdBlm_TC_Ctx_DEFAULTS } from "../const/BrdBlm_TC_Ctx_DEFAULTS.ts";
 import { BrdBlm_TC_Ctx_eFacadeColor } from "../enums/BrdBlm_TC_Ctx_eFacadeColor.ts";
 import { BrdBlm_TC_Ctx_eFacadeFinish } from "../enums/BrdBlm_TC_Ctx_eFacadeFinish.ts";
 import { BrdBlm_TC_Ctx_eFloorColor } from "../enums/BrdBlm_TC_Ctx_eFloorColor.ts";
@@ -16,140 +17,12 @@ import { BrdBlm_TC_Ctx_eWallColor } from "../enums/BrdBlm_TC_Ctx_eWallColor.ts";
 import { BrdBlm_TC_Ctx_eWallFinish } from "../enums/BrdBlm_TC_Ctx_eWallFinish.ts";
 import { BrdBlm_TC_Ctx_IParams, BrdBlm_TC_Ctx_IParams_Signature } from "../interfaces/BrdBlm_TC_Ctx_IParams.ts";
 import { BrdBlm_TC_Ctx_FacadeFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_FacadeFinishRecordset.ts";
-import { BrdBlm_TC_Ctx_PavementFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_PavementFinishRecordset.ts";
 import { BrdBlm_TC_Ctx_FloorFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_FloorFinishRecordset.ts";
+import { BrdBlm_TC_Ctx_PavementFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_PavementFinishRecordset.ts";
 import { BrdBlm_TC_Ctx_ThresholdFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_ThresholdFinishRecordset.ts";
 import { BrdBlm_TC_Ctx_WallFinishRecordset } from "../recordsets/BrdBlm_TC_Ctx_WallFinishRecordset.ts";
-import { BrdBlm_TC_Ctx_TMaterialDefRecordset } from "../types/BrdBlm_TC_Ctx_TMaterialDefRecordset.ts";
 import { BrdBlm_TC_Ctx_TComponentRecordset } from "../types/BrdBlm_TC_Ctx_TComponentRecordset.ts";
-
-
-export const BrdBlm_TC_Ctx_Defaults = {
-
-    /**
-     * Spazio laterale aggiuntivo sulla facciata in mm
-     */
-    EXTRA_LATERAL_SPACE: 1000,
-
-    /**
-     * Spazio superiore aggintivo sulla facciata in mm
-     */
-    EXTRA_UPPER_SPACE: 1000,
-
-    /**
-     * Spessore del muro della facciata in mm
-     */
-    FACADE_THICKNESS: 300,
-
-    /**
-     * Lunghezza della pavimentazione esterna in mm
-     */
-    PAVEMENT_DEPTH: 5000,
-
-    /**
-     * Spessore della pavimentazione esterna in mm
-     */
-    PAVEMENT_THICKNESS: 40,
-
-
-    /**
-     * Probabilità di avere la soglia
-     */
-    HAS_THRESHOLD_CHANCE: 0.7,
-
-
-    /**
-     * Probabilità di avere la lo zoccolo esterno
-     */
-    HAS_EXTERN_BASEBOARD_CHANCE: 0.7,
-
-    /**
-     * Altezza massima battiscopa esterno in mm
-     */
-    EXTERN_BASEBOARD_MAX_HEIGHT: 250,
-
-    /**
-     * Spessore del battiscopa esterno in mm
-     */
-    EXTERN_BASEBOARD_THICKNESS: 15,
-
-    /**
-     * Probabilità di avere il marciapiede esterno
-     */
-    HAS_EXTERN_SIDEWALK_CHANCE: 0.5,
-
-    /**
-     * Profondità massima dei marciapiede in mm
-     */
-    EXTERN_SIDEWALK_MAX_DEPTH: 800,
-
-    /**
-     * Altezza del marciapiede in mm
-     */
-    EXTERN_SIDEWALK_HEIGHT: 150,
-
-    /**
-     * Probabilità di avere la cornice
-     */
-    HAS_EXTERN_FRAME_CHANCE: 0.7,
-
-    /**
-     * Larghezza massima della cornice in mm
-     */
-    EXTERN_FRAME_MAX_WIDTH: 150,
-
-    /**
-     * Spessore massimo della cornice in mm
-     */
-    EXTERN_FRAME_MAX_THICKNESS: 30,
-
-    /**
-     * Dimensione della spalletta interna in mm
-     */
-    EMBRASURE: 200,
-
-    /**
-     * Fattore di incremento della profondità interna della stanza rispetto 
-     * all'altezza del foro in mm
-     */
-    ROOM_DEPTH_INCREMENT: 1000,
-
-
-    /**
-     * Spessore della pavimentazione interna in mm
-     */
-    FLOOR_THICKNESS: 50,
-
-
-    /**
-     * Probabilità di avere la lo zoccolo interno
-     */
-    HAS_INTERN_BASEBOARD_CHANCE: 0.7,
-
-    /**
-     * Altezza massima battiscopa interno in mm
-     */
-    INTERN_BASEBOARD_MAX_HEIGHT: 150,
-
-    /**
-     * Spessore del battiscopa interno in mm
-     */
-    INTERN_BASEBOARD_THICKNESS: 10,
-
-
-
-    /**
-     * Spessore del soffitto in mm
-     */
-    CEILING_THICKNESS: 250,
-
-    /**
-     * Spessore delle pareti in mm
-     */
-    WALLS_THICKNESS: 200,
-
-
-} as const;
+import { BrdBlm_TC_Ctx_TMaterialDefRecordset } from "../types/BrdBlm_TC_Ctx_TMaterialDefRecordset.ts";
 
 
 const MODULE_NAME = "BrdBlm_TC_Ctx_Service";
@@ -211,16 +84,16 @@ export class BrdBlm_TC_Ctx_Service {
     static #validateFacade(aparams: BrdBlm_TC_Ctx_IParams) {
 
         if (!aparams.facadeLeft) {
-            aparams.facadeLeft = BrdBlm_TC_Ctx_Defaults.EXTRA_LATERAL_SPACE;
+            aparams.facadeLeft = BrdBlm_TC_Ctx_DEFAULTS.EXTRA_LATERAL_SPACE;
         }
         if (!aparams.facadeRight) {
-            aparams.facadeRight = BrdBlm_TC_Ctx_Defaults.EXTRA_LATERAL_SPACE;
+            aparams.facadeRight = BrdBlm_TC_Ctx_DEFAULTS.EXTRA_LATERAL_SPACE;
         }
         if (!aparams.facadeTop) {
-            aparams.facadeTop = BrdBlm_TC_Ctx_Defaults.EXTRA_UPPER_SPACE;
+            aparams.facadeTop = BrdBlm_TC_Ctx_DEFAULTS.EXTRA_UPPER_SPACE;
         }
         if (!aparams.facadeThickness) {
-            aparams.facadeThickness = BrdBlm_TC_Ctx_Defaults.FACADE_THICKNESS;
+            aparams.facadeThickness = BrdBlm_TC_Ctx_DEFAULTS.FACADE_THICKNESS;
         }
         if (!aparams.facadeColor) {
             aparams.facadeColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFacadeColor>(BrdBlm_TC_Ctx_eFacadeColor);
@@ -236,18 +109,18 @@ export class BrdBlm_TC_Ctx_Service {
     static #validateExternFrame(aparams: BrdBlm_TC_Ctx_IParams) {
 
         if (aparams.hasExternFrame == undefined) {
-            aparams.hasExternFrame = Math.random() < BrdBlm_TC_Ctx_Defaults.HAS_EXTERN_FRAME_CHANCE;
+            aparams.hasExternFrame = Math.random() < BrdBlm_TC_Ctx_DEFAULTS.HAS_EXTERN_FRAME_CHANCE;
         }
 
         if (aparams.hasExternFrame) {
             if (!aparams.externFrameWidth) {
                 const k = Uts.BrdUts.GetRandomInRange(0.5, 1, 1);
-                aparams.externFrameWidth = k * BrdBlm_TC_Ctx_Defaults.EXTERN_FRAME_MAX_WIDTH;
+                aparams.externFrameWidth = k * BrdBlm_TC_Ctx_DEFAULTS.EXTERN_FRAME_MAX_WIDTH;
             }
 
             if (!aparams.externFrameThickness) {
                 const k = Uts.BrdUts.GetRandomInRange(0.5, 1, 1);
-                aparams.externFrameThickness = k * BrdBlm_TC_Ctx_Defaults.EXTERN_FRAME_MAX_THICKNESS;
+                aparams.externFrameThickness = k * BrdBlm_TC_Ctx_DEFAULTS.EXTERN_FRAME_MAX_THICKNESS;
             }
 
             if (!aparams.externFrameColor) {
@@ -265,10 +138,10 @@ export class BrdBlm_TC_Ctx_Service {
     static #validatePavement(aparams: BrdBlm_TC_Ctx_IParams) {
 
         if (!aparams.pavementDepth) {
-            aparams.pavementDepth = BrdBlm_TC_Ctx_Defaults.PAVEMENT_DEPTH;
+            aparams.pavementDepth = BrdBlm_TC_Ctx_DEFAULTS.PAVEMENT_DEPTH;
         }
         if (!aparams.pavementThickness) {
-            aparams.pavementThickness = BrdBlm_TC_Ctx_Defaults.PAVEMENT_THICKNESS;
+            aparams.pavementThickness = BrdBlm_TC_Ctx_DEFAULTS.PAVEMENT_THICKNESS;
         }
         if (!aparams.pavementColor) {
             aparams.pavementColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_ePavementColor>(BrdBlm_TC_Ctx_ePavementColor);
@@ -283,7 +156,7 @@ export class BrdBlm_TC_Ctx_Service {
     static #validateThreshold(aparams: BrdBlm_TC_Ctx_IParams) {
 
         if (aparams.hasThreshold == undefined) {
-            aparams.hasThreshold = Math.random() < BrdBlm_TC_Ctx_Defaults.HAS_THRESHOLD_CHANCE;
+            aparams.hasThreshold = Math.random() < BrdBlm_TC_Ctx_DEFAULTS.HAS_THRESHOLD_CHANCE;
         }
 
         if (aparams.hasThreshold) {
@@ -306,17 +179,17 @@ export class BrdBlm_TC_Ctx_Service {
     static #validateExternBaseBoard(aparams: BrdBlm_TC_Ctx_IParams) {
 
         if (aparams.hasExternBaseBoard == undefined) {
-            aparams.hasExternBaseBoard = Math.random() < BrdBlm_TC_Ctx_Defaults.HAS_EXTERN_BASEBOARD_CHANCE;
+            aparams.hasExternBaseBoard = Math.random() < BrdBlm_TC_Ctx_DEFAULTS.HAS_EXTERN_BASEBOARD_CHANCE;
         }
 
         if (aparams.hasExternBaseBoard) {
 
             if (!aparams.externBaseboardHeight) {
                 const k = Uts.BrdUts.GetRandomInRange(0.5, 1, 1);
-                aparams.externBaseboardHeight = k * BrdBlm_TC_Ctx_Defaults.EXTERN_BASEBOARD_MAX_HEIGHT;
+                aparams.externBaseboardHeight = k * BrdBlm_TC_Ctx_DEFAULTS.EXTERN_BASEBOARD_MAX_HEIGHT;
             }
             if (!aparams.externBaseboardThickness) {
-                aparams.externBaseboardThickness = BrdBlm_TC_Ctx_Defaults.EXTERN_BASEBOARD_THICKNESS;
+                aparams.externBaseboardThickness = BrdBlm_TC_Ctx_DEFAULTS.EXTERN_BASEBOARD_THICKNESS;
             }
             if (!aparams.externBaseboardColor) {
                 aparams.externBaseboardColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFacadeColor>(BrdBlm_TC_Ctx_eFacadeColor);
@@ -332,17 +205,17 @@ export class BrdBlm_TC_Ctx_Service {
     static #validateSidewalk(aparams: BrdBlm_TC_Ctx_IParams) {
 
         if (aparams.hasSidewalk == undefined) {
-            aparams.hasSidewalk = Math.random() < BrdBlm_TC_Ctx_Defaults.HAS_EXTERN_SIDEWALK_CHANCE;
+            aparams.hasSidewalk = Math.random() < BrdBlm_TC_Ctx_DEFAULTS.HAS_EXTERN_SIDEWALK_CHANCE;
         }
 
         if (aparams.hasSidewalk) {
 
             if (!aparams.sidewalkDepth) {
                 const k = Uts.BrdUts.GetRandomInRange(0.5, 1, 1);
-                aparams.sidewalkDepth = k * BrdBlm_TC_Ctx_Defaults.EXTERN_SIDEWALK_MAX_DEPTH;
+                aparams.sidewalkDepth = k * BrdBlm_TC_Ctx_DEFAULTS.EXTERN_SIDEWALK_MAX_DEPTH;
             }
             if (!aparams.sidewalkHeight) {
-                aparams.sidewalkHeight = BrdBlm_TC_Ctx_Defaults.EXTERN_SIDEWALK_HEIGHT;
+                aparams.sidewalkHeight = BrdBlm_TC_Ctx_DEFAULTS.EXTERN_SIDEWALK_HEIGHT;
             }
             if (!aparams.sidewalkColor) {
                 aparams.sidewalkColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_ePavementColor>(BrdBlm_TC_Ctx_ePavementColor);
@@ -391,10 +264,10 @@ export class BrdBlm_TC_Ctx_Service {
     static #validateEmbrasures(aparams: BrdBlm_TC_Ctx_IParams) {
 
         if (!aparams.embrasureRight) {
-            aparams.embrasureRight = BrdBlm_TC_Ctx_Defaults.EMBRASURE;
+            aparams.embrasureRight = BrdBlm_TC_Ctx_DEFAULTS.EMBRASURE;
         }
         if (!aparams.embrasureLeft) {
-            aparams.embrasureLeft = BrdBlm_TC_Ctx_Defaults.EMBRASURE;
+            aparams.embrasureLeft = BrdBlm_TC_Ctx_DEFAULTS.EMBRASURE;
         }
     }
 
@@ -403,11 +276,11 @@ export class BrdBlm_TC_Ctx_Service {
     static #validateFloor(aparams: BrdBlm_TC_Ctx_IParams) {
 
         if (!aparams.roomDepth) {
-            aparams.roomDepth = aparams.holeHeight + BrdBlm_TC_Ctx_Defaults.ROOM_DEPTH_INCREMENT;
+            aparams.roomDepth = aparams.holeHeight + BrdBlm_TC_Ctx_DEFAULTS.ROOM_DEPTH_INCREMENT;
         }
 
         if (!aparams.floorThickness) {
-            aparams.floorThickness = BrdBlm_TC_Ctx_Defaults.FLOOR_THICKNESS;
+            aparams.floorThickness = BrdBlm_TC_Ctx_DEFAULTS.FLOOR_THICKNESS;
         }
         if (!aparams.floorColor) {
             aparams.floorColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFloorColor>(BrdBlm_TC_Ctx_eFloorColor);
@@ -423,17 +296,17 @@ export class BrdBlm_TC_Ctx_Service {
     static #validateInternBaseBoard(aparams: BrdBlm_TC_Ctx_IParams) {
 
         if (aparams.hasInternBaseBoard == undefined) {
-            aparams.hasInternBaseBoard = Math.random() < BrdBlm_TC_Ctx_Defaults.HAS_INTERN_BASEBOARD_CHANCE;
+            aparams.hasInternBaseBoard = Math.random() < BrdBlm_TC_Ctx_DEFAULTS.HAS_INTERN_BASEBOARD_CHANCE;
         }
 
         if (aparams.hasInternBaseBoard) {
 
             if (!aparams.internBaseboardHeight) {
                 const k = Uts.BrdUts.GetRandomInRange(0.7, 1, 1);
-                aparams.internBaseboardHeight = k * BrdBlm_TC_Ctx_Defaults.INTERN_BASEBOARD_MAX_HEIGHT;
+                aparams.internBaseboardHeight = k * BrdBlm_TC_Ctx_DEFAULTS.INTERN_BASEBOARD_MAX_HEIGHT;
             }
             if (!aparams.internBaseboardThickness) {
-                aparams.internBaseboardThickness = BrdBlm_TC_Ctx_Defaults.INTERN_BASEBOARD_THICKNESS;
+                aparams.internBaseboardThickness = BrdBlm_TC_Ctx_DEFAULTS.INTERN_BASEBOARD_THICKNESS;
             }
             if (!aparams.internBaseboardColor) {
                 aparams.internBaseboardColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFloorColor>(BrdBlm_TC_Ctx_eFloorColor);
@@ -465,7 +338,7 @@ export class BrdBlm_TC_Ctx_Service {
         }
 
         if (!aparams.ceilingThickness) {
-            aparams.ceilingThickness = BrdBlm_TC_Ctx_Defaults.CEILING_THICKNESS;
+            aparams.ceilingThickness = BrdBlm_TC_Ctx_DEFAULTS.CEILING_THICKNESS;
         }
 
         if (!aparams.ceilingColor) {
@@ -511,7 +384,7 @@ export class BrdBlm_TC_Ctx_Service {
         }
 
         if (!aparams.wallThickness) {
-            aparams.wallThickness = BrdBlm_TC_Ctx_Defaults.WALLS_THICKNESS;
+            aparams.wallThickness = BrdBlm_TC_Ctx_DEFAULTS.WALLS_THICKNESS;
         }
 
         if (!aparams.wallColor) {
@@ -566,10 +439,11 @@ export class BrdBlm_TC_Ctx_Service {
     ) {
 
 
-        const facade = this.#getFacade(acontext);
+        const extFacade = this.#getExternFacade(acontext);
         const pavement = this.#getPavement(acontext);
         const threshold = this.#getThreshold(acontext);
         const extBaseboards = this.#getExternBaseboards(acontext);
+        const intFacade = this.#getInternFacade(acontext);
         const leftWall = this.#getInternLeftWall(acontext);
         const rightWall = this.#getInternRightWall(acontext);
         const ceiling = this.#getCeiling(acontext);
@@ -577,7 +451,7 @@ export class BrdBlm_TC_Ctx_Service {
 
 
         const r: BrdBlm_TC_Ctx_TComponentRecordset = {
-            [BrdBlm_TC_Ctx_ePartName.EXTERN_FACADE]: facade,
+            [BrdBlm_TC_Ctx_ePartName.EXTERN_FACADE]: extFacade,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_PAVEMENT]: pavement,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_THRESHOLD]: threshold,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_LEFT_BASEBOARD]: extBaseboards[0],
@@ -589,6 +463,8 @@ export class BrdBlm_TC_Ctx_Service {
             [BrdBlm_TC_Ctx_ePartName.EXTERN_ROOF]: null,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_LEFT_LAMP]: null,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_RIGHT_LAMP]: null,
+
+            [BrdBlm_TC_Ctx_ePartName.INTERN_FACADE]: intFacade,
             [BrdBlm_TC_Ctx_ePartName.INTERN_RIGHT_WALL]: rightWall,
             [BrdBlm_TC_Ctx_ePartName.INTERN_LEFT_WALL]: leftWall,
             [BrdBlm_TC_Ctx_ePartName.INTERN_CEILING]: ceiling,
@@ -604,7 +480,7 @@ export class BrdBlm_TC_Ctx_Service {
 
 
 
-    static #getFacade(
+    static #getExternFacade(
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
 
@@ -642,7 +518,9 @@ export class BrdBlm_TC_Ctx_Service {
             { x: totalLeftExternal, y: -acontext.floorThickness! },
         ];
 
-        r.length = acontext.facadeThickness!;
+        r.length = acontext.facadeThickness! - BrdBlm_TC_Ctx_DEFAULTS.FACADE_INT_MORTAR_THICKNESS;
+
+        r.addTranslateZOp(BrdBlm_TC_Ctx_DEFAULTS.FACADE_INT_MORTAR_THICKNESS, false)
 
         return r;
     }
@@ -774,6 +652,23 @@ export class BrdBlm_TC_Ctx_Service {
 
 
 
+    static #getInternFacade(
+        acontext: BrdBlm_TC_Ctx_IParams
+    ) {
+
+        const r = this.#getExternFacade(acontext)
+
+        r.name = BrdBlm_TC_Ctx_ePartName.INTERN_FACADE
+
+        r.placementOps = [];
+
+        r.length = BrdBlm_TC_Ctx_DEFAULTS.FACADE_INT_MORTAR_THICKNESS;
+
+        return r;
+    }
+
+
+
     static #getInternLeftWall(
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
@@ -849,14 +744,19 @@ export class BrdBlm_TC_Ctx_Service {
             r.outline.push({ x: p.x, y: p.y + acontext.ceilingThickness! })
         }
 
-        for (let i = co.length - 1; i > 0; i--) {
-            const p = co[i];
+        for (let i = co.length; i > 0; i--) {
+            const p = co[i - 1];
             r.outline.push({ x: p.x, y: p.y })
         }
 
-        r.length = this.#getMaxY(acontext.ceilingOutline!);
+        // NOTE Ricrdiamoci sempre che i profili del contesto sono dalla vista in pianta con
+        // foro verso il basso --APG 20240228
+        const maxx = this.#getMaxX(acontext.wallLeftOutline!);
+        const minx = this.#getMinX(acontext.wallRightOutline!)
+        r.length = minx * -1 + maxx;
 
-        r.addRotateXOp(Uts.BrdUts.RAD_90, false);
+        r.addTranslateZOp(minx, false);
+        r.addRotateYOp(Uts.BrdUts.RAD_90, false);
 
         return r;
 
@@ -881,14 +781,15 @@ export class BrdBlm_TC_Ctx_Service {
             r.outline.push({ x: p.x, y: p.y })
         }
 
-        for (let i = wlo.length - 1; i > 0; i--) {
-            const p = wlo[i];
+        for (let i = wlo.length; i > 0; i--) {
+            const p = wlo[i - 1];
             r.outline.push({ x: p.x, y: p.y })
         }
 
         r.length = acontext.floorThickness!;
 
-        r.addRotateXOp(Uts.BrdUts.RAD_90, false);
+        r.addRotateXOp(-Uts.BrdUts.RAD_90, false);
+        r.addTranslateYOp(-acontext.floorThickness!, false);
 
         return r;
 
@@ -927,13 +828,20 @@ export class BrdBlm_TC_Ctx_Service {
             [BrdBlm_TC_Ctx_ePartName.EXTERN_ROOF]: null,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_LEFT_LAMP]: null,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_RIGHT_LAMP]: null,
+
+            [BrdBlm_TC_Ctx_ePartName.INTERN_FACADE]: wall,
             [BrdBlm_TC_Ctx_ePartName.INTERN_RIGHT_WALL]: wall,
             [BrdBlm_TC_Ctx_ePartName.INTERN_LEFT_WALL]: wall,
+
             [BrdBlm_TC_Ctx_ePartName.INTERN_CEILING]: ceiling,
+
             [BrdBlm_TC_Ctx_ePartName.INTERN_FLOOR]: floor,
+
             [BrdBlm_TC_Ctx_ePartName.INTERN_LEFT_BASEBOARD]: null,
             [BrdBlm_TC_Ctx_ePartName.INTERN_RIGHT_BASEBOARD]: null,
+
             [BrdBlm_TC_Ctx_ePartName.INTERN_COLUMN]: wall,
+
             [BrdBlm_TC_Ctx_ePartName.INTERN_BEAM]: ceiling,
         };
         return r;
