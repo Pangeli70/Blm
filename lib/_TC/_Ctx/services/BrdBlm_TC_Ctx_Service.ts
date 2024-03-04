@@ -276,7 +276,7 @@ export class BrdBlm_TC_Ctx_Service {
     static #validateFloor(aparams: BrdBlm_TC_Ctx_IParams) {
 
         if (!aparams.roomDepth) {
-            aparams.roomDepth = aparams.holeHeight + BrdBlm_TC_Ctx_DEFAULTS.ROOM_DEPTH_INCREMENT;
+            aparams.roomDepth = BrdBlm_TC_Ctx_DEFAULTS.ROOM_DEPTH;
         }
 
         if (!aparams.floorThickness) {
@@ -446,6 +446,7 @@ export class BrdBlm_TC_Ctx_Service {
         const intFacade = this.#getInternFacade(acontext);
         const leftWall = this.#getInternLeftWall(acontext);
         const rightWall = this.#getInternRightWall(acontext);
+        const backWall = this.#getInternBackWall(acontext);
         const ceiling = this.#getCeiling(acontext);
         const floor = this.#getFloor(acontext);
 
@@ -467,6 +468,7 @@ export class BrdBlm_TC_Ctx_Service {
             [BrdBlm_TC_Ctx_ePartName.INTERN_FACADE]: intFacade,
             [BrdBlm_TC_Ctx_ePartName.INTERN_RIGHT_WALL]: rightWall,
             [BrdBlm_TC_Ctx_ePartName.INTERN_LEFT_WALL]: leftWall,
+            [BrdBlm_TC_Ctx_ePartName.INTERN_BACK_WALL]: backWall,
             [BrdBlm_TC_Ctx_ePartName.INTERN_CEILING]: ceiling,
             [BrdBlm_TC_Ctx_ePartName.INTERN_FLOOR]: floor,
             [BrdBlm_TC_Ctx_ePartName.INTERN_LEFT_BASEBOARD]: null,
@@ -751,8 +753,8 @@ export class BrdBlm_TC_Ctx_Service {
 
         // NOTE Ricrdiamoci sempre che i profili del contesto sono dalla vista in pianta con
         // foro verso il basso --APG 20240228
-        const maxx = this.#getMaxX(acontext.wallLeftOutline!);
-        const minx = this.#getMinX(acontext.wallRightOutline!)
+        const maxx = this.#getMaxX(acontext.wallLeftOutline!) + acontext.wallThickness!;
+        const minx = this.#getMinX(acontext.wallRightOutline!) - acontext.wallThickness!
         r.length = minx * -1 + maxx;
 
         r.addTranslateZOp(minx, false);
@@ -796,6 +798,42 @@ export class BrdBlm_TC_Ctx_Service {
     }
 
 
+
+    static #getInternBackWall(
+        acontext: BrdBlm_TC_Ctx_IParams
+    ) {
+
+        const r = new BrdBlm_TC_Ctx_Component(
+            BrdBlm_TC_Ctx_ePartName.INTERN_BACK_WALL
+        );
+
+        r.outline = [];
+
+        // NOTE Ricrdiamoci sempre che i profili del contesto sono dalla vista in pianta con
+        // foro verso il basso --APG 20240228
+        const maxX = this.#getMaxX(acontext.wallLeftOutline!) + acontext.wallThickness!;
+        const minX = this.#getMinX(acontext.wallRightOutline!) - acontext.wallThickness!
+        const maxY = this.#getMaxY(acontext.ceilingOutline!) + acontext.ceilingThickness!;
+
+        r.outline.push({ x: minX, y: 0 })
+        r.outline.push({ x: minX, y: maxY })
+        r.outline.push({ x: maxX, y: maxY })
+        r.outline.push({ x: maxX, y: 0 })
+
+        let z = this.#getMaxY(acontext.wallLeftOutline!);
+        let maxZ = z;
+        z = this.#getMaxY(acontext.wallRightOutline!);
+        if (z > maxZ) maxZ = z;
+        z = this.#getMaxX(acontext.ceilingOutline!);
+        if (z > maxZ) maxZ = z;
+
+        r.addTranslateZOp(-maxZ, false);
+
+        return r;
+
+    }
+
+
     // #endregion
     //--------------------------------------------------------------------------
 
@@ -832,6 +870,7 @@ export class BrdBlm_TC_Ctx_Service {
             [BrdBlm_TC_Ctx_ePartName.INTERN_FACADE]: wall,
             [BrdBlm_TC_Ctx_ePartName.INTERN_RIGHT_WALL]: wall,
             [BrdBlm_TC_Ctx_ePartName.INTERN_LEFT_WALL]: wall,
+            [BrdBlm_TC_Ctx_ePartName.INTERN_BACK_WALL]: wall,
 
             [BrdBlm_TC_Ctx_ePartName.INTERN_CEILING]: ceiling,
 

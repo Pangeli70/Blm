@@ -30,6 +30,7 @@ export enum BrdBlm_TC_Ctx_ePartName {
   INTERN_FACADE = "Context intern facade",
   INTERN_LEFT_WALL = "Context intern left wall",
   INTERN_RIGHT_WALL = "Context intern right wall",
+  INTERN_BACK_WALL = "Context intern back wall",
   INTERN_LEFT_BASEBOARD = "Context intern left baseboard", // TBI
   INTERN_RIGHT_BASEBOARD = "Context intern baseboard", // TBI
   INTERN_FLOOR = "Context intern floor",

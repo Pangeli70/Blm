@@ -89,10 +89,9 @@ export const BrdBlm_TC_Ctx_DEFAULTS = {
   EMBRASURE: 200,
 
   /**
-   * Fattore di incremento della profondità interna della stanza rispetto
-   * all'altezza del foro in mm
+   * Profondità interna della stanza in mm
    */
-  ROOM_DEPTH_INCREMENT: 1000,
+  ROOM_DEPTH: 5000,
 
 
   /**
