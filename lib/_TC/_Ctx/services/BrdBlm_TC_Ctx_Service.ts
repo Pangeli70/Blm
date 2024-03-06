@@ -80,7 +80,6 @@ export class BrdBlm_TC_Ctx_Service {
 
 
 
-
     static #validateFacade(aparams: BrdBlm_TC_Ctx_IParams) {
 
         if (!aparams.facadeLeft) {

@@ -41,7 +41,7 @@ export class BrdBlm_TC_SeD_Se_FP_RestResource extends Edr.BrdEdr_Base_RestResour
         if (this.GET_testNameIsMissing(rawTestName, r, response))
             return;
 
-        const testsParams = Blm.TC.SeD.BrdBlm_TC_SeD_Se_FP_Tests;
+        const testsParams = Blm.TC.SeD.BrdBlm_TC_SeD_FP_Tests;
         const names: string[] = [];
         for (const test of testsParams) {
             names.push(encodeURIComponent(test.name));
@@ -96,7 +96,7 @@ export class BrdBlm_TC_SeD_Se_FP_RestResource extends Edr.BrdEdr_Base_RestResour
 
     #processRequest(aparams: Blm.TC.SeD.BrdBlm_TC_SeD_ISectionParams) {
 
-        const r = new Blm.TC.SeD.BrdBlm_TC_SeD_Se_FP(aparams);
+        const r = new Blm.TC.SeD.BrdBlm_TC_SeD_FP(aparams);
 
         return r;
     }
@@ -104,7 +104,7 @@ export class BrdBlm_TC_SeD_Se_FP_RestResource extends Edr.BrdEdr_Base_RestResour
 
 
     #processHadErrors(
-        apanel: Blm.TC.SeD.BrdBlm_TC_SeD_Se_FP,
+        apanel: Blm.TC.SeD.BrdBlm_TC_SeD_FP,
         aparams: Blm.TC.SeD.BrdBlm_TC_SeD_ISectionParams,
         aresult: Uts.BrdUts_RestResult,
         response: Edr.Drash.Response

@@ -7,32 +7,34 @@
 
 import {
     BrdBlm_Extrudable
-} from "../../../../../classes/BrdBlm_Extrudable.ts";
+} from "../../../../classes/BrdBlm_Extrudable.ts";
 import {
     Uts
-} from "../../../../../deps.ts";
+} from "../../../../deps.ts";
 import {
     BrdBlm_IIntExtOutlines
-} from "../../../../../interfaces/BrdBlm_IIntExtOutlines.ts";
+} from "../../../../interfaces/BrdBlm_IIntExtOutlines.ts";
 import {
     BrdBlm_IPoint2D
-} from "../../../../../interfaces/BrdBlm_IPoint2D.ts";
+} from "../../../../interfaces/BrdBlm_IPoint2D.ts";
 import {
     BrdBlm_TC_SeD_ISectionParams
-} from "../../../interfaces/BrdBlm_TC_SeD_ISectionParams.ts";
+} from "../../interfaces/BrdBlm_TC_SeD_ISectionParams.ts";
 import {
     BrdBlm_TC_SeD_FoamedPanelsOutlines_Service
-} from "../../../services/BrdBlm_TC_SeD_FoamedPanelsOutlines_Service.ts";
+} from "../../services/BrdBlm_TC_SeD_FoamedPanelsOutlines_Service.ts";
 import {
     BrdBlm_TC_SeD_HolesOutlinesService
-} from "../../../services/BrdBlm_TC_SeD_HoleOutlinesService.ts";
+} from "../../services/BrdBlm_TC_SeD_HoleOutlinesService.ts";
 
 const MODULE_NAME = import.meta.url;
+
+
 
 /**
  * Pannello coibentato per i portoni sezionali
  */
-export class BrdBlm_TC_SeD_Se_FP extends BrdBlm_Extrudable {
+export class BrdBlm_TC_SeD_FP extends BrdBlm_Extrudable {
 
     /**
      * Sagome di estrusione delle mesh esterna ed interna del pannello coibentato
