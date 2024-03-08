@@ -16,7 +16,7 @@ export interface BrdBlm_IBumpMapDef {
     /**
      * Nome della texture in livelli di grigio come definito nei CDN Assets
      */
-    bumpMap: string;
+    cdnAsset: string;
 
     /**
      * Url per la bumpmap viene compilato attingendo dai CDN Assets

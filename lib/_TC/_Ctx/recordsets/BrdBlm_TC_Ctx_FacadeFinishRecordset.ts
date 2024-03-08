@@ -28,7 +28,7 @@ export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRec
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
-            bumpMap: "context_outdoor_facade_Concrete_BumpMap",
+            cdnAsset: "context_outdoor_facade_Concrete_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -41,7 +41,7 @@ export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRec
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
-            bumpMap: "",
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -54,7 +54,7 @@ export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRec
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
-            bumpMap: "context_outdoor_facade_ScratchedPlaster_BumpMap",
+            cdnAsset: "context_outdoor_facade_ScratchedPlaster_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -67,7 +67,7 @@ export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRec
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
-            bumpMap: "context_outdoor_facade_RawPlaster_BumpMap",
+            cdnAsset: "context_outdoor_facade_RawPlaster_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -80,7 +80,7 @@ export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRec
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
-            bumpMap: "context_outdoor_facade_FineBlocks_BumpMap",
+            cdnAsset: "context_outdoor_facade_FineBlocks_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -93,7 +93,7 @@ export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRec
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
-            bumpMap: "context_outdoor_facade_FineMortar_BumpMap",
+            cdnAsset: "context_outdoor_facade_FineMortar_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,

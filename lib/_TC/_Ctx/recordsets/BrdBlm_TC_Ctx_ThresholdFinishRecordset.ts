@@ -34,7 +34,7 @@ export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFin
             canRotate: true
         },
         bumpMap: {
-            bumpMap: "",
+            cdnAsset: "",
             url: "/assets/img/jpg/textures/context/outdoor/threshold/",
             uScale: 1,
             vScale: 1,
@@ -54,7 +54,7 @@ export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFin
             canRotate: true
         },
         bumpMap: {
-            bumpMap: "",
+            cdnAsset: "",
             url: "/assets/img/jpg/textures/context/outdoor/threshold/",
             uScale: 1,
             vScale: 1,
@@ -74,7 +74,7 @@ export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFin
             canRotate: true
         },
         bumpMap: {
-            bumpMap: "",
+            cdnAsset: "",
             url: "/assets/img/jpg/textures/context/outdoor/threshold/",
             uScale: 1,
             vScale: 1,
@@ -94,7 +94,7 @@ export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFin
             canRotate: true
         },
         bumpMap: {
-            bumpMap: "",
+            cdnAsset: "",
             url: "/assets/img/jpg/textures/context/outdoor/threshold/",
             uScale: 1,
             vScale: 1,
@@ -114,7 +114,7 @@ export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFin
             canRotate: true
         },
         bumpMap: {
-            bumpMap: "",
+            cdnAsset: "",
             url: "/assets/img/jpg/textures/context/outdoor/threshold/",
             uScale: 1,
             vScale: 1,
@@ -134,7 +134,7 @@ export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFin
             canRotate: true
         },
         bumpMap: {
-            bumpMap: "",
+            cdnAsset: "",
             url: "/assets/img/jpg/textures/context/outdoor/threshold/",
             uScale: 1,
             vScale: 1,

@@ -22,120 +22,72 @@ import {
 
 export const BrdBlm_TC_Ctx_PavementFinishRecordset: BrdBlm_TC_Ctx_TPavementFinishRecordset =
 {
-    [BrdBlm_TC_Ctx_ePavementFinish.PAV1]: {
+    [BrdBlm_TC_Ctx_ePavementFinish.LBlocks]: {
         signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
         bumpMap: {
-            bumpMap: "",
-            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            cdnAsset: "context_outdoor_pavement_LBlocks_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,
             canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_ePavementFinish.PAV2]: {
+    [BrdBlm_TC_Ctx_ePavementFinish.MixedSquares]: {
         signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
         bumpMap: {
-            bumpMap: "",
-            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            cdnAsset: "context_outdoor_pavement_MixedSquares_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,
             canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_ePavementFinish.PAV3]: {
+    [BrdBlm_TC_Ctx_ePavementFinish.Octagons]: {
         signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
         bumpMap: {
-            bumpMap: "",
-            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            cdnAsset: "context_outdoor_pavement_Octagons_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,
             canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_ePavementFinish.PAV4]: {
+    [BrdBlm_TC_Ctx_ePavementFinish.LBlocksTwirled]: {
         signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
         bumpMap: {
-            bumpMap: "",
-            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            cdnAsset: "context_outdoor_pavement_LBlocksTwirled_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,
             canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_ePavementFinish.PAV5]: {
+    [BrdBlm_TC_Ctx_ePavementFinish.LBlocksSmall]: {
         signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
         bumpMap: {
-            bumpMap: "",
-            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            cdnAsset: "context_outdoor_pavement_LBlocksSmall_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,
             canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_ePavementFinish.PAV6]: {
+    [BrdBlm_TC_Ctx_ePavementFinish.MickeySquares]: {
         signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
         bumpMap: {
-            bumpMap: "",
-            url: "/assets/img/jpg/textures/context/outdoor/pavement/",
+            cdnAsset: "context_outdoor_pavement_MickeySquares_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,

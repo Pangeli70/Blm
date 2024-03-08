@@ -21,6 +21,7 @@ export enum BrdBlm_TC_Ctx_ePartName {
   EXTERN_FRAME = "Context extern frame", // TBI
   EXTERN_LEFT_SIDEWALK = "Context extern left sidewalk", // TBI
   EXTERN_RIGHT_SIDEWALK = "Context extern right sidewalk", // TBI
+  EXTERN_FRONT_SIDEWALK = "Context extern front sidewalk", // TBI
   EXTERN_CANOPY = "Context extern canopy", // TBI
   EXTERN_ROOF = "Context extern roof", // TBI
 

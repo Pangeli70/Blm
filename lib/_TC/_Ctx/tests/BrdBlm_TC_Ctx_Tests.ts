@@ -149,7 +149,7 @@ export const BrdBlm_TC_Ctx_Tests: BrdBlm_TC_Ctx_IParams[] = [
         pavementDepth: 2500,
         pavementThickness: 30,
         pavementColor: BrdBlm_TC_Ctx_ePavementColor.OLD_LACE,
-        pavementFinish: BrdBlm_TC_Ctx_ePavementFinish.PAV1,
+        pavementFinish: BrdBlm_TC_Ctx_ePavementFinish.LBlocks,
 
         hasThreshold: true,
         thresholdDepth: 220,

@@ -9,12 +9,12 @@
  * Texture per le bumpmap della pavimentazione esterna
  */
 export enum BrdBlm_TC_Ctx_ePavementFinish {
-  PAV1 = 'Pavement_1_BumpMap_256.jpg',
-  PAV2 = 'Pavement_2_BumpMap_256.jpg',
-  PAV3 = 'Pavement_3_BumpMap_256.jpg',
-  PAV4 = 'Pavement_4_BumpMap_256.jpg',
-  PAV5 = 'Pavement_5_BumpMap_256.jpg',
-  PAV6 = 'Pavement_6_BumpMap_256.jpg'
+  LBlocks = 'Pavement_1_BumpMap_256.jpg',
+  MixedSquares = 'Pavement_2_BumpMap_256.jpg',
+  Octagons = 'Pavement_3_BumpMap_256.jpg',
+  LBlocksTwirled = 'Pavement_4_BumpMap_256.jpg',
+  LBlocksSmall = 'Pavement_5_BumpMap_256.jpg',
+  MickeySquares = 'Pavement_6_BumpMap_256.jpg'
 }
 
 /*! ---------------------------------------------------------------------------

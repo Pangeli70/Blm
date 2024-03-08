@@ -26,16 +26,8 @@ export const BrdBlm_TC_Ctx_WallFinishRecordset: BrdBlm_TC_Ctx_TWallFinishRecords
         signature: BrdBlm_IMaterialDef_Signature,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/indoor/wall/",
-            uScale: 1,
-            vScale: 1,
-            canRotate: true
-        },
         bumpMap: {
-            bumpMap: "",
-            url: "/assets/img/jpg/textures/context/indoor/wall/",
+            cdnAsset: "context_indoor_walls_FineMortar_BumpMap",
             uScale: 1,
             vScale: 1,
             depth: 1,
