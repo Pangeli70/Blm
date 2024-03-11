@@ -188,13 +188,13 @@ export const BrdBlm_TC_Ctx_Tests: BrdBlm_TC_Ctx_IParams[] = [
         roomDepth: 4000,
         floorThickness: 50,
         floorColor: BrdBlm_TC_Ctx_eFloorColor.OLD_LACE,
-        floorFinish: BrdBlm_TC_Ctx_eFloorFinish.PAV5,
+        floorFinish: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_5,
 
         hasInternBaseBoard: true,
         internBaseboardHeight: 140,
         internBaseboardThickness: 15,
         internBaseboardColor: BrdBlm_TC_Ctx_eFloorColor.OLD_LACE,
-        internBaseboardFinish: BrdBlm_TC_Ctx_eFloorFinish.PAV6,
+        internBaseboardFinish: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_6,
 
         // ceilingOutline: [
         //     { x: 0, y: 2500 },
@@ -206,7 +206,7 @@ export const BrdBlm_TC_Ctx_Tests: BrdBlm_TC_Ctx_IParams[] = [
         // ],
         ceilingThickness: 250,
         ceilingColor: BrdBlm_TC_Ctx_eWallColor.MINT_CREAM,
-        ceilingFinish: BrdBlm_TC_Ctx_eWallFinish.SMOOTH_MORTAR,
+        ceilingFinish: BrdBlm_TC_Ctx_eWallFinish.CONTEXT_INDOOR_WALLS_FINE_MORTAR,
 
         // wallRightOutline: [
         //     { x: -1620, y: 0 },

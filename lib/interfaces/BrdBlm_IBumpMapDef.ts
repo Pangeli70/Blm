@@ -7,43 +7,20 @@
  * @version 0.4 APG 20240225 Modulo BrdBlm server side
  * ----------------------------------------------------------------------------
  */
+import {
+    BrdBlm_ITextureDef
+} from "./BrdBlm_ITextureDef.ts";
 
 /**
  * Definizione dei dati di mappatura delle BUMPMAP.
  */
-export interface BrdBlm_IBumpMapDef {
+export interface BrdBlm_IBumpMapDef extends BrdBlm_ITextureDef {
 
-    /**
-     * Nome della texture in livelli di grigio come definito nei CDN Assets
-     */
-    cdnAsset: string;
-
-    /**
-     * Url per la bumpmap viene compilato attingendo dai CDN Assets
-     */
-    url?: string;
 
     /**
      * Profondità dell'effetto di rugosità
      */
     depth: number;
-
-    /**
-     * Scala di mappatura orizzontale 
-     */
-    uScale: number;
-
-    /**
-     * Scala di mappatura verticale
-     */
-    vScale: number;
-
-    /**
-     * Questa texture può essere ruotata
-     */
-    canRotate: boolean;
-
-
 
 }
 

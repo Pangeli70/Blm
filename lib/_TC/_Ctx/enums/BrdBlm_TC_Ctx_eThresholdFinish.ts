@@ -9,12 +9,12 @@
  * Texture per le map della soglia
  */
 export enum BrdBlm_TC_Ctx_eThresholdFinish {
-  PAV1 = 'Pavement_1_BumpMap_256.jpg',
-  PAV2 = 'Pavement_2_BumpMap_256.jpg',
-  PAV3 = 'Pavement_3_BumpMap_256.jpg',
-  PAV4 = 'Pavement_4_BumpMap_256.jpg',
-  PAV5 = 'Pavement_5_BumpMap_256.jpg',
-  PAV6 = 'Pavement_6_BumpMap_256.jpg'
+    THRE_1 = 'context_outdoor_threshold_1',
+    THRE_2 = 'context_outdoor_threshold_2',
+    THRE_3 = 'context_outdoor_threshold_3',
+    THRE_4 = 'context_outdoor_threshold_4',
+    THRE_5 = 'context_outdoor_threshold_5',
+    THRE_6 = 'context_outdoor_threshold_6'
 }
 
 /*! ---------------------------------------------------------------------------

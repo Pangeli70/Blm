@@ -9,8 +9,8 @@
  * Texture per la bumpmap delle pareti interne
  */
 export enum BrdBlm_TC_Ctx_eWallFinish {
-  /** Malta fina */
-  SMOOTH_MORTAR = 'Walls_1_512.jpg'
+    /** Malta fina */
+    CONTEXT_INDOOR_WALLS_FINE_MORTAR = 'context_indoor_walls_fine_mortar'
 }
 
 /*! ---------------------------------------------------------------------------

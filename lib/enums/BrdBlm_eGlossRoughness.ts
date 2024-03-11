@@ -10,16 +10,16 @@
  * Tipi di lucentezza da abbinare ai materiali del visualizzatore
  */
 export enum BrdBlm_eGlossRoughness {
-  UNDEFINED = 0,
-  VERY_SHINIY = 0.02,
-  SHINY = 0.1,
-  ALU_POWDER = 0.2,
-  PRE_LAQ_25_35 = 0.4,
-  RAL_GLOSS_25_35 = 0.4,
-  RAL_GLOSS_10 = 0.6,
-  PRE_LAQ_SATIN = 0.9,
-  RAL_SATIN = 0.9,
-  ROUGH = 1
+    UNDEFINED = 0,
+    VERY_SHINIY = 0.02,
+    SHINY = 0.1,
+    ALU_POWDER = 0.2,
+    PRE_LAQ_25_35 = 0.4,
+    RAL_GLOSS_25_35 = 0.4,
+    RAL_GLOSS_10 = 0.6,
+    PRE_LAQ_SATIN = 0.9,
+    RAL_SATIN = 0.9,
+    ROUGH = 1
 }
 
 /*! ---------------------------------------------------------------------------

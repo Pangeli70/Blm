@@ -22,124 +22,106 @@ import {
 
 export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFinishRecordset =
 {
-    [BrdBlm_TC_Ctx_eThresholdFinish.PAV1]: {
+    [BrdBlm_TC_Ctx_eThresholdFinish.THRE_1]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_1,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/threshold/",
+        albedoMap: {
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
-            canRotate: true
         },
         bumpMap: {
             cdnAsset: "",
-            url: "/assets/img/jpg/textures/context/outdoor/threshold/",
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_eThresholdFinish.PAV2]: {
+    [BrdBlm_TC_Ctx_eThresholdFinish.THRE_2]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_2,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/threshold/",
+        albedoMap: {
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
-            canRotate: true
         },
         bumpMap: {
             cdnAsset: "",
-            url: "/assets/img/jpg/textures/context/outdoor/threshold/",
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_eThresholdFinish.PAV3]: {
+    [BrdBlm_TC_Ctx_eThresholdFinish.THRE_3]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_3,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/threshold/",
+        albedoMap: {
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
-            canRotate: true
         },
         bumpMap: {
             cdnAsset: "",
-            url: "/assets/img/jpg/textures/context/outdoor/threshold/",
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_eThresholdFinish.PAV4]: {
+    [BrdBlm_TC_Ctx_eThresholdFinish.THRE_4]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_4,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/threshold/",
+        albedoMap: {
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
-            canRotate: true
         },
         bumpMap: {
             cdnAsset: "",
-            url: "/assets/img/jpg/textures/context/outdoor/threshold/",
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_eThresholdFinish.PAV5]: {
+    [BrdBlm_TC_Ctx_eThresholdFinish.THRE_5]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_4,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/threshold/",
+        albedoMap: {
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
-            canRotate: true
         },
         bumpMap: {
             cdnAsset: "",
-            url: "/assets/img/jpg/textures/context/outdoor/threshold/",
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_eThresholdFinish.PAV6]: {
+    [BrdBlm_TC_Ctx_eThresholdFinish.THRE_6]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_6,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/outdoor/threshold/",
+        albedoMap: {
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
-            canRotate: true
         },
         bumpMap: {
             cdnAsset: "",
-            url: "/assets/img/jpg/textures/context/outdoor/threshold/",
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
 }

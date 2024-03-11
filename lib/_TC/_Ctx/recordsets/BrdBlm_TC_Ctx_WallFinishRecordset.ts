@@ -6,6 +6,7 @@
  */
 
 
+
 import {
     BrdBlm_eGlossRoughness
 } from "../../../enums/BrdBlm_eGlossRoughness.ts";
@@ -20,10 +21,12 @@ import {
 } from "../types/BrdBlm_TC_Ctx_TWallFinishRecordset.ts";
 
 
+
 export const BrdBlm_TC_Ctx_WallFinishRecordset: BrdBlm_TC_Ctx_TWallFinishRecordset =
 {
-    [BrdBlm_TC_Ctx_eWallFinish.SMOOTH_MORTAR]: {
+    [BrdBlm_TC_Ctx_eWallFinish.CONTEXT_INDOOR_WALLS_FINE_MORTAR]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eWallFinish.CONTEXT_INDOOR_WALLS_FINE_MORTAR,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
@@ -31,14 +34,13 @@ export const BrdBlm_TC_Ctx_WallFinishRecordset: BrdBlm_TC_Ctx_TWallFinishRecords
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
 }
 
 
 /*! ---------------------------------------------------------------------------
-* @copyright Breda Sistemi industriali S.p.A., 2023 - http://bredasys.com
+* @copyright Breda Sistemi industriali S.p.A., 2023-24 - http://bredasys.com
 * All rights reserved
 * @licence You cannot host, display, distribute or share this Work in any
 * form, both physical and digital. You cannot use this Work in any commercial

@@ -474,6 +474,7 @@ export class BrdBlm_TC_Ctx_Service {
             [BrdBlm_TC_Ctx_ePartName.INTERN_RIGHT_BASEBOARD]: null,
             [BrdBlm_TC_Ctx_ePartName.INTERN_COLUMN]: null,
             [BrdBlm_TC_Ctx_ePartName.INTERN_BEAM]: null,
+            [BrdBlm_TC_Ctx_ePartName.EXTERN_FRONT_SIDEWALK]: null
         };
         return r;
 
@@ -853,6 +854,7 @@ export class BrdBlm_TC_Ctx_Service {
         const ceiling = this.#getCeilingMaterialDef(acontext);
 
         const r: BrdBlm_TC_Ctx_TMaterialDefRecordset = {
+            
             [BrdBlm_TC_Ctx_ePartName.EXTERN_FACADE]: facade,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_PAVEMENT]: pavement,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_THRESHOLD]: threshold,
@@ -860,6 +862,7 @@ export class BrdBlm_TC_Ctx_Service {
             [BrdBlm_TC_Ctx_ePartName.EXTERN_RIGHT_BASEBOARD]: null,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_LEFT_SIDEWALK]: null,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_RIGHT_SIDEWALK]: null,
+            [BrdBlm_TC_Ctx_ePartName.EXTERN_FRONT_SIDEWALK]: null,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_FRAME]: null,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_CANOPY]: null,
             [BrdBlm_TC_Ctx_ePartName.EXTERN_ROOF]: null,

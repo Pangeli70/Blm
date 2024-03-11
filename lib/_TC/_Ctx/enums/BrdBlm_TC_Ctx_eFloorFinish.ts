@@ -9,12 +9,12 @@
  * Texture per le bumpmap del pavimento interno
  */
 export enum BrdBlm_TC_Ctx_eFloorFinish {
-  PAV1 = 'Pavement_1_BumpMap_256.jpg',
-  PAV2 = 'Pavement_2_BumpMap_256.jpg',
-  PAV3 = 'Pavement_3_BumpMap_256.jpg',
-  PAV4 = 'Pavement_4_BumpMap_256.jpg',
-  PAV5 = 'Pavement_5_BumpMap_256.jpg',
-  PAV6 = 'Pavement_6_BumpMap_256.jpg'
+    FLOOR_1 = 'context_indoor_floor_1',
+    FLOOR_2 = 'context_indoor_floor_2',
+    FLOOR_3 = 'context_indoor_floor_3',
+    FLOOR_4 = 'context_indoor_floor_4',
+    FLOOR_5 = 'context_indoor_floor_5',
+    FLOOR_6 = 'context_indoor_floor_6'
 }
 
 /*! ---------------------------------------------------------------------------

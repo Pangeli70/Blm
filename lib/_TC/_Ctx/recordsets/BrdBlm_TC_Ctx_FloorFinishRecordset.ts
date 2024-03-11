@@ -22,124 +22,106 @@ import {
 
 export const BrdBlm_TC_Ctx_FloorFinishRecordset: BrdBlm_TC_Ctx_TFloorFinishRecordset =
 {
-    [BrdBlm_TC_Ctx_eFloorFinish.PAV1]: {
+    [BrdBlm_TC_Ctx_eFloorFinish.FLOOR_1]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_1,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/indoor/floor/",
+        albedoMap: {
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
-            canRotate: true
         },
         bumpMap: {
             cdnAsset: "",
-            url: "/assets/img/jpg/textures/context/indoor/floor/",
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_eFloorFinish.PAV2]: {
+    [BrdBlm_TC_Ctx_eFloorFinish.FLOOR_2]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_2,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/indoor/floor/",
+        albedoMap: {
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
-            canRotate: true
         },
         bumpMap: {
             cdnAsset: "",
-            url: "/assets/img/jpg/textures/context/indoor/floor/",
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_eFloorFinish.PAV3]: {
+    [BrdBlm_TC_Ctx_eFloorFinish.FLOOR_3]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_3,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/indoor/floor/",
+        albedoMap: {
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
-            canRotate: true
         },
         bumpMap: {
             cdnAsset: "",
-            url: "/assets/img/jpg/textures/context/indoor/floor/",
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_eFloorFinish.PAV4]: {
+    [BrdBlm_TC_Ctx_eFloorFinish.FLOOR_4]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_4,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/indoor/floor/",
+        albedoMap: {
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
-            canRotate: true
         },
         bumpMap: {
             cdnAsset: "",
-            url: "/assets/img/jpg/textures/context/indoor/floor/",
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_eFloorFinish.PAV5]: {
+    [BrdBlm_TC_Ctx_eFloorFinish.FLOOR_5]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_5,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/indoor/floor/",
+        albedoMap: {
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
-            canRotate: true
         },
         bumpMap: {
             cdnAsset: "",
-            url: "/assets/img/jpg/textures/context/indoor/floor/",
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
-    [BrdBlm_TC_Ctx_eFloorFinish.PAV6]: {
+    [BrdBlm_TC_Ctx_eFloorFinish.FLOOR_6]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_6,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        texture: {
-            texture: "",
-            url: "/assets/img/jpg/textures/context/indoor/floor/",
+        albedoMap: {
+            cdnAsset: "",
             uScale: 1,
             vScale: 1,
-            canRotate: true
         },
         bumpMap: {
             cdnAsset: "",
-            url: "/assets/img/jpg/textures/context/indoor/floor/",
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
 }

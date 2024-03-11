@@ -123,6 +123,7 @@ export const BrdBlm_CDNAssets_Recordset: BrdBlm_TCDNAsset_Recordset = {
         remoteUrl_1: 'https://ibb.co/mF7HmVY',
         remote_1: 'https://i.ibb.co/QjG6Z3q/Pavement-5-Bump-Map-256.jpg',
     },
+
     context_outdoor_pavement_MickeySquares_BumpMap:
     {
         local: '/assets/img/jpg/textures/context/outdoor/pavement/Walls_6_256_BumpMap.jpg',
@@ -130,6 +131,17 @@ export const BrdBlm_CDNAssets_Recordset: BrdBlm_TCDNAsset_Recordset = {
         remote_1: 'https://i.ibb.co/JFCs0F7/Pavement-6-Bump-Map-256.jpg',
     },
 
+
+    context_outdoor_pavement_AsphaltCoarseGrayish_Map:
+    {
+        local: '/assets/img/jpg/textures/context/outdoor/pavement/Asphalt_Coarse_Greyish_512_map.jpg',
+    },
+
+
+    context_outdoor_pavement_AsphaltCoarseGrayish_NormalMap:
+    {
+        local: '/assets/img/jpg/textures/context/outdoor/pavement/Asphalt_Coarse_Greyish_512_normalmap.jpg',
+    },
 
     // #endregion
     //--------------------------------------------------------------------------

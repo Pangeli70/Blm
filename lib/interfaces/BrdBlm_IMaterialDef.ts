@@ -5,6 +5,7 @@
  * @version 0.2 APG 20231115 Spostato nel suo file dedicato + Commenti e refactoring
  * @version 0.3 APG 20231227 Modulo BrdGlb server side
  * @version 0.4 APG 20240225 Modulo BrdBlm server side
+ * @version 0.5 APG 20240309 Id + Normal maps + Signature_V2
  * ----------------------------------------------------------------------------
  */
 
@@ -16,11 +17,14 @@ import {
   BrdBlm_IBumpMapDef
 } from "./BrdBlm_IBumpMapDef.ts";
 import {
+  BrdBlm_INormalMapDef
+} from "./BrdBlm_INormalMapDef.ts";
+import {
   BrdBlm_ITextureDef
 } from "./BrdBlm_ITextureDef.ts";
 
 
-export const BrdBlm_IMaterialDef_Signature = "BrdBlm_IMaterialDef_Signature_V1";
+export const BrdBlm_IMaterialDef_Signature = "BrdBlm_IMaterialDef_Signature_V2";
 
 
 /**
@@ -31,7 +35,17 @@ export interface BrdBlm_IMaterialDef {
   /**
    * Firma della struttura dati
    */
-  signature: "BrdBlm_IMaterialDef_Signature_V1"
+  signature: "BrdBlm_IMaterialDef_Signature_V2"
+
+  /**
+   * Identificatore della definizione del materiale
+   */
+  id: string;
+
+  /**
+   * Nome in lingua del materiale
+   */
+  name?: string;
 
   /**
    * Colore base del materiale
@@ -39,26 +53,40 @@ export interface BrdBlm_IMaterialDef {
   color: number;
 
   /**
-   * Trasparenza base del materiale
-   */
-  trasparency?: number;
-
-  /**
    * Riflettività del materiale
    */
   roughness: BrdBlm_eGlossRoughness;
 
   /**
-   * Se il materiale ha una immagine ripetibile
+   * Trasparenza base del materiale
    */
-  texture?: BrdBlm_ITextureDef;
+  trasparency?: number;
 
   /**
-   * Se il materiale ha una mappa di rugosità
+   * Il materiale ha una immagine ripetibile
+   */
+  albedoMap?: BrdBlm_ITextureDef;
+
+  /**
+   * Il materiale ha una mappa di rugosità
    */
   bumpMap?: BrdBlm_IBumpMapDef;
 
+  /**
+   * Il materiale ha una mappa delle normali in alternativa alla mappa di rugosità
+   */
+  normalMap?: BrdBlm_INormalMapDef; //@V2
 
+  /**
+   * Le texture dei materiali hanno una rotazione in radianti
+   */
+  textureRotation?: number; //@V2
+
+  /**
+   * Le texture dei materiali hanno una rotazione random. Questa impostazione
+   * viene considerata solo se la rotazione precedente non è definita
+   */
+  hasRandomTextureRotation?: boolean; //@V2
 
 }
 

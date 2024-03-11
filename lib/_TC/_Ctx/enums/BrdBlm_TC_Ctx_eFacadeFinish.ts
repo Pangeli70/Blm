@@ -15,32 +15,32 @@ export enum BrdBlm_TC_Ctx_eFacadeFinish {
     /**
      * Cemento un po' troppo ondulato (ruotabile )
      */
-    CONCRETE = 'Facade_1_512_BumpMap.jpg',
+    CONCRETE = 'context_outdoor_facade_concrete',
 
     /**
      * Mah questo è brutto
      */
-    UGLY_PLASTER = 'Facade_2_512_BumpMap.jpg',
+    UGLY_PLASTER = 'context_outdoor_facade_ugly_plaster',
 
     /**
      * Graffiato (ruotabile)
      */
-    SCRATCHED_PLASTER = 'Facade_3_512_BumpMap.jpg',
+    SCRATCHED_PLASTER = 'context_outdoor_facade_scratched_plaster',
 
     /**
      * Intonaco grezzo (ruotabile)
      */
-    RAW_PLASTER = 'Facade_4_512_BumpMap.jpg',
+    RAW_PLASTER = 'context_outdoor_facade_raw_plaster',
 
     /**
      * Blocchi di cemento
      */
-    FINE_BLOCKS = 'Facade_5_512_BumpMap.jpg',
+    FINE_BLOCKS = 'context_outdoor_facade_fine_blocks',
 
     /**
      * Malta non tanto fina (ruotabile)
      */
-    FINE_MORTAR = 'Facade_6_512_BumpMap.jpg'
+    FINE_MORTAR = 'context_outdoor_facade_fine_mortar'
 }
 
 /*! ---------------------------------------------------------------------------

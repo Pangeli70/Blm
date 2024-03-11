@@ -24,6 +24,7 @@ export const BrdBlm_TC_Ctx_PavementFinishRecordset: BrdBlm_TC_Ctx_TPavementFinis
 {
     [BrdBlm_TC_Ctx_ePavementFinish.LBlocks]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_ePavementFinish.LBlocks,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
@@ -31,11 +32,11 @@ export const BrdBlm_TC_Ctx_PavementFinishRecordset: BrdBlm_TC_Ctx_TPavementFinis
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
     [BrdBlm_TC_Ctx_ePavementFinish.MixedSquares]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_ePavementFinish.MixedSquares,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
@@ -43,11 +44,11 @@ export const BrdBlm_TC_Ctx_PavementFinishRecordset: BrdBlm_TC_Ctx_TPavementFinis
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
     [BrdBlm_TC_Ctx_ePavementFinish.Octagons]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_ePavementFinish.Octagons,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
@@ -55,11 +56,11 @@ export const BrdBlm_TC_Ctx_PavementFinishRecordset: BrdBlm_TC_Ctx_TPavementFinis
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
     [BrdBlm_TC_Ctx_ePavementFinish.LBlocksTwirled]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_ePavementFinish.LBlocksTwirled,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
@@ -67,11 +68,11 @@ export const BrdBlm_TC_Ctx_PavementFinishRecordset: BrdBlm_TC_Ctx_TPavementFinis
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
     [BrdBlm_TC_Ctx_ePavementFinish.LBlocksSmall]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_ePavementFinish.LBlocksSmall,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
@@ -79,11 +80,11 @@ export const BrdBlm_TC_Ctx_PavementFinishRecordset: BrdBlm_TC_Ctx_TPavementFinis
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
     [BrdBlm_TC_Ctx_ePavementFinish.MickeySquares]: {
         signature: BrdBlm_IMaterialDef_Signature,
+        id: BrdBlm_TC_Ctx_ePavementFinish.MickeySquares,
         color: 0xffffff,
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMap: {
@@ -91,7 +92,6 @@ export const BrdBlm_TC_Ctx_PavementFinishRecordset: BrdBlm_TC_Ctx_TPavementFinis
             uScale: 1,
             vScale: 1,
             depth: 1,
-            canRotate: true
         }
     },
 }

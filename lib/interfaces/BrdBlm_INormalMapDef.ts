@@ -1,38 +1,27 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdGlb]
  * @author [APG] Angeli Paolo Giusto
- * @version 0.1 APG 20230707
- * @version 0.2 APG 20231115 Spostato nel suo file dedicato + Commenti e refactoring
- * @version 0.3 APG 20231227 Modulo BrdGlb server side
- * @version 0.4 APG 20240225 Modulo BrdBlm server side
+ * @version 0.1 APG 20240309
  * ----------------------------------------------------------------------------
  */
 
+import {
+  THREE
+} from "../../../Glb/lib/deps.ts";
+import {
+  BrdBlm_ITextureDef
+} from "./BrdBlm_ITextureDef.ts";
+
 /**
- * Definizione dei dati di mappatura delle TEXTURE.
+ * Definizione dei dati di mappatura delle NORMAL MAPS.
  */
-export interface BrdBlm_ITextureDef {
-
-  /**
-   * Nome della texture come elencato nei CDN Assets
-   */
-  cdnAsset: string;
+export interface BrdBlm_INormalMapDef extends BrdBlm_ITextureDef {
 
 
   /**
-   * Scala di mappatura orizzontale
+   * Scala di profondità della normal map
    */
-  uScale: number;
-
-  /**
-   * Scala di mappatura verticale
-   */
-  vScale: number;
-
-  /**
-   * Rotazione
-   */
-  rotation?: number;
+  normalScale: THREE.Vector2
 
 }
 
