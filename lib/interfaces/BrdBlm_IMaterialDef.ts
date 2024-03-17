@@ -60,7 +60,7 @@ export interface BrdBlm_IMaterialDef {
   /**
    * Trasparenza base del materiale
    */
-  trasparency?: number;
+  opacity?: number;
 
   /**
    * Il materiale ha una immagine ripetibile
@@ -87,6 +87,12 @@ export interface BrdBlm_IMaterialDef {
    * viene considerata solo se la rotazione precedente non è definita
    */
   hasRandomTextureRotation?: boolean; //@V2
+
+  /**
+   * La definizione del materiale è stata cambiata e quindi il materiale reale
+   * associato deve essere aggiornato
+   */
+  isUpdated?: boolean; //@V2
 
 }
 
