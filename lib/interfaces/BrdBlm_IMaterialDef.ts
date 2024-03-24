@@ -14,14 +14,18 @@ import {
   BrdBlm_eGlossRoughness
 } from "../enums/BrdBlm_eGlossRoughness.ts";
 import {
+  BrdBlm_IAlbedoMapDef
+} from "./BrdBlm_IAlbedoMapDef.ts";
+import {
+  BrdBlm_IAlphaMapDef
+} from "./BrdBlm_IAlphaMapDef.ts";
+import {
   BrdBlm_IBumpMapDef
 } from "./BrdBlm_IBumpMapDef.ts";
 import {
   BrdBlm_INormalMapDef
 } from "./BrdBlm_INormalMapDef.ts";
-import {
-  BrdBlm_ITextureDef
-} from "./BrdBlm_ITextureDef.ts";
+
 
 
 export const BrdBlm_IMaterialDef_Signature = "BrdBlm_IMaterialDef_Signature_V2";
@@ -53,6 +57,11 @@ export interface BrdBlm_IMaterialDef {
   color: number;
 
   /**
+   * Colori accettabili e randomizzabili
+   */
+  colors?: number[];  //@V2
+
+  /**
    * Riflettività del materiale
    */
   roughness: BrdBlm_eGlossRoughness;
@@ -65,17 +74,22 @@ export interface BrdBlm_IMaterialDef {
   /**
    * Il materiale ha una immagine ripetibile
    */
-  albedoMap?: BrdBlm_ITextureDef;
+  albedoMapDef?: BrdBlm_IAlbedoMapDef;
 
   /**
    * Il materiale ha una mappa di rugosità
    */
-  bumpMap?: BrdBlm_IBumpMapDef;
+  bumpMapDef?: BrdBlm_IBumpMapDef;
 
   /**
    * Il materiale ha una mappa delle normali in alternativa alla mappa di rugosità
    */
-  normalMap?: BrdBlm_INormalMapDef; //@V2
+  normalMapDef?: BrdBlm_INormalMapDef; //@V2
+
+  /**
+   * Il materiale ha una mappa delle trasparenze
+   */
+  alphaMapDef?: BrdBlm_IAlphaMapDef; //@V2
 
   /**
    * Le texture dei materiali hanno una rotazione in radianti

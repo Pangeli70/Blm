@@ -1,27 +1,19 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdGlb]
  * @author [APG] Angeli Paolo Giusto
- * @version 0.1 APG 20230707
- * @version 0.2 APG 20231115 Spostato nel suo file dedicato + Commenti e refactoring
- * @version 0.3 APG 20231227 Modulo BrdGlb server side
- * @version 0.4 APG 20240225 Modulo BrdBlm server side
+ * @version 0.1 APG 20240323
  * ----------------------------------------------------------------------------
  */
-import {
-    BrdBlm_ITextureDef
-} from "./BrdBlm_ITextureDef.ts";
+
+import { BrdBlm_ITextureDef } from "./BrdBlm_ITextureDef.ts";
 
 /**
- * Definizione dei dati di mappatura delle BUMPMAP.
+ * Definizione dei dati di mappatura delle texture di colorazione "albedo".
  */
-export interface BrdBlm_IBumpMapDef extends BrdBlm_ITextureDef {
+export interface BrdBlm_IAlbedoMapDef extends BrdBlm_ITextureDef {
 
-    isBumpMap: true;
 
-    /**
-     * Profondità dell'effetto di rugosità
-     */
-    depth: number;
+    isAlbedoMap: true;
 
 }
 

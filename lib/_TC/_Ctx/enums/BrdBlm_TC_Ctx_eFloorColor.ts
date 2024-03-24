@@ -6,7 +6,7 @@
  */
 
 /**
- * Colori predefiniti per la il pavimento interno
+ * Colori predefiniti per il pavimento interno del contesto
  */
 export enum BrdBlm_TC_Ctx_eFloorColor {
   OLD_LACE = "#fdf5e6",

@@ -6,7 +6,7 @@
  */
 
 /**
- * Colori predefiniti per la soglia
+ * Colori predefiniti per la soglia del contesto
  */
 export enum BrdBlm_TC_Ctx_eThresholdColor {
   OLD_LACE = "#fdf5e6",

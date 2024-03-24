@@ -1,17 +1,28 @@
 7/** ---------------------------------------------------------------------------
+import { Uts } from "../../../deps.ts";
+import { Uts } from "../../../deps.ts";
+import { Uts } from "../../../deps.ts";
  * @module [BrdBlm_TC_Ctx]
  * @author [APG] Angeli Paolo Giusto 
  * @version 0.1 APG 20240225
  * ----------------------------------------------------------------------------
  */
 
-
+import {
+    Uts
+} from "../../../deps.ts";
 import {
     BrdBlm_eGlossRoughness
 } from "../../../enums/BrdBlm_eGlossRoughness.ts";
 import {
     BrdBlm_IMaterialDef_Signature
 } from "../../../interfaces/BrdBlm_IMaterialDef.ts";
+import {
+    BrdBlm_eTextureType
+} from "../../../mod.ts";
+import {
+    BrdBlm_TC_Ctx_eFacadeColor
+} from "../enums/BrdBlm_TC_Ctx_eFacadeColor.ts";
 import {
     BrdBlm_TC_Ctx_eFacadeFinish
 } from "../enums/BrdBlm_TC_Ctx_eFacadeFinish.ts";
@@ -20,16 +31,19 @@ import {
 } from "../types/BrdBlm_TC_Ctx_TFacadeFinishRecordset.ts";
 
 
+
 export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRecordset =
 {
-    
+
     [BrdBlm_TC_Ctx_eFacadeFinish.CONCRETE]: {
         signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eFacadeFinish.CONCRETE,
         color: 0xffffff,
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eFacadeColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        bumpMap: {
-            cdnAsset: "context_outdoor_facade_Concrete_BumpMap",
+        bumpMapDef: {
+            isBumpMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eFacadeFinish.CONCRETE + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -40,9 +54,11 @@ export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRec
         signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eFacadeFinish.UGLY_PLASTER,
         color: 0xffffff,
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eFacadeColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        bumpMap: {
-            cdnAsset: "",
+        bumpMapDef: {
+            isBumpMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eFacadeFinish.UGLY_PLASTER + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -53,9 +69,11 @@ export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRec
         signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eFacadeFinish.SCRATCHED_PLASTER,
         color: 0xffffff,
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eFacadeColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        bumpMap: {
-            cdnAsset: "context_outdoor_facade_ScratchedPlaster_BumpMap",
+        bumpMapDef: {
+            isBumpMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eFacadeFinish.SCRATCHED_PLASTER + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -66,9 +84,11 @@ export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRec
         signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eFacadeFinish.RAW_PLASTER,
         color: 0xffffff,
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eFacadeColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        bumpMap: {
-            cdnAsset: "context_outdoor_facade_RawPlaster_BumpMap",
+        bumpMapDef: {
+            isBumpMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eFacadeFinish.RAW_PLASTER + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -79,9 +99,11 @@ export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRec
         signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eFacadeFinish.FINE_BLOCKS,
         color: 0xffffff,
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eFacadeColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        bumpMap: {
-            cdnAsset: "context_outdoor_facade_FineBlocks_BumpMap",
+        bumpMapDef: {
+            isBumpMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eFacadeFinish.FINE_BLOCKS + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -92,9 +114,11 @@ export const BrdBlm_TC_Ctx_FacadeFinishRecordset: BrdBlm_TC_Ctx_TFacadeFinishRec
         signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eFacadeFinish.FINE_MORTAR,
         color: 0xffffff,
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eFacadeColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        bumpMap: {
-            cdnAsset: "context_outdoor_facade_FineMortar_BumpMap",
+        bumpMapDef: {
+            isBumpMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eFacadeFinish.FINE_MORTAR + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,

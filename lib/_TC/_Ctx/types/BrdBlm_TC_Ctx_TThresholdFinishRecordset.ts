@@ -15,8 +15,8 @@ import {
 
 
 /**
- * Definizione della struttura che contiene le definizioni delle finiture 
- * per la soglia del foro
+ * Struttura che contiene le definizioni delle finiture 
+ * per la soglia del foro del conctesto delle chiusure tecniche
  */
 export type BrdBlm_TC_Ctx_TThresholdFinishRecordset = Record<
     BrdBlm_TC_Ctx_eThresholdFinish,

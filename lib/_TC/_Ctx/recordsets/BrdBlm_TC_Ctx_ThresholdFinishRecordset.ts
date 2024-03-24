@@ -5,13 +5,21 @@
  * ----------------------------------------------------------------------------
  */
 
-
+import {
+    Uts
+} from "../../../deps.ts";
 import {
     BrdBlm_eGlossRoughness
 } from "../../../enums/BrdBlm_eGlossRoughness.ts";
 import {
+    BrdBlm_eTextureType
+} from "../../../enums/BrdBlm_eTextureType.ts";
+import {
     BrdBlm_IMaterialDef_Signature
 } from "../../../interfaces/BrdBlm_IMaterialDef.ts";
+import {
+    BrdBlm_TC_Ctx_eThresholdColor
+} from "../enums/BrdBlm_TC_Ctx_eThresholdColor.ts";
 import {
     BrdBlm_TC_Ctx_eThresholdFinish
 } from "../enums/BrdBlm_TC_Ctx_eThresholdFinish.ts";
@@ -20,20 +28,24 @@ import {
 } from "../types/BrdBlm_TC_Ctx_TThresholdFinishRecordset.ts";
 
 
+
 export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFinishRecordset =
 {
     [BrdBlm_TC_Ctx_eThresholdFinish.THRE_1]: {
         signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_1,
         color: 0xffffff,
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eThresholdColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        albedoMap: {
-            cdnAsset: "",
+        albedoMapDef: {
+            isAlbedoMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eThresholdFinish.THRE_1 + BrdBlm_eTextureType.ALBEDO,
             uScale: 1,
             vScale: 1,
         },
-        bumpMap: {
-            cdnAsset: "",
+        bumpMapDef: {
+            isBumpMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eThresholdFinish.THRE_1 + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -43,14 +55,17 @@ export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFin
         signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_2,
         color: 0xffffff,
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eThresholdColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        albedoMap: {
-            cdnAsset: "",
+        albedoMapDef: {
+            isAlbedoMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eThresholdFinish.THRE_2 + BrdBlm_eTextureType.ALBEDO,
             uScale: 1,
             vScale: 1,
         },
-        bumpMap: {
-            cdnAsset: "",
+        bumpMapDef: {
+            isBumpMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eThresholdFinish.THRE_2 + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -60,14 +75,17 @@ export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFin
         signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_3,
         color: 0xffffff,
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eThresholdColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        albedoMap: {
-            cdnAsset: "",
+        albedoMapDef: {
+            isAlbedoMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eThresholdFinish.THRE_3 + BrdBlm_eTextureType.ALBEDO,
             uScale: 1,
             vScale: 1,
         },
-        bumpMap: {
-            cdnAsset: "",
+        bumpMapDef: {
+            isBumpMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eThresholdFinish.THRE_3 + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -77,14 +95,17 @@ export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFin
         signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_4,
         color: 0xffffff,
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eThresholdColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        albedoMap: {
-            cdnAsset: "",
+        albedoMapDef: {
+            isAlbedoMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eThresholdFinish.THRE_4 + BrdBlm_eTextureType.ALBEDO,
             uScale: 1,
             vScale: 1,
         },
-        bumpMap: {
-            cdnAsset: "",
+        bumpMapDef: {
+            isBumpMap   : true,
+            CDNAssetId: BrdBlm_TC_Ctx_eThresholdFinish.THRE_4 + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -92,16 +113,19 @@ export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFin
     },
     [BrdBlm_TC_Ctx_eThresholdFinish.THRE_5]: {
         signature: BrdBlm_IMaterialDef_Signature,
-        id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_4,
+        id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_5,
         color: 0xffffff,
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eThresholdColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        albedoMap: {
-            cdnAsset: "",
+        albedoMapDef: {
+            isAlbedoMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eThresholdFinish.THRE_5 + BrdBlm_eTextureType.ALBEDO,
             uScale: 1,
             vScale: 1,
         },
-        bumpMap: {
-            cdnAsset: "",
+        bumpMapDef: {
+            isBumpMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eThresholdFinish.THRE_5 + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
@@ -111,14 +135,17 @@ export const BrdBlm_TC_Ctx_ThresholdFinishRecordset: BrdBlm_TC_Ctx_TThresholdFin
         signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eThresholdFinish.THRE_6,
         color: 0xffffff,
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eThresholdColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
-        albedoMap: {
-            cdnAsset: "",
+        albedoMapDef: {
+            isAlbedoMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eThresholdFinish.THRE_6 + BrdBlm_eTextureType.ALBEDO,
             uScale: 1,
             vScale: 1,
         },
-        bumpMap: {
-            cdnAsset: "",
+        bumpMapDef: {
+            isBumpMap: true,
+            CDNAssetId: BrdBlm_TC_Ctx_eThresholdFinish.THRE_6 + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,

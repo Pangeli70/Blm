@@ -13,12 +13,18 @@ import {
 import {
   BrdBlm_IRectangle
 } from "../../../interfaces/BrdBlm_IRectangle.ts";
+import { BrdBlm_TC_Ctx_eExternBaseboardColor } from "../enums/BrdBlm_TC_Ctx_eExternBaseboardColor.ts";
+import { BrdBlm_TC_Ctx_eExternBaseboardFinish } from "../enums/BrdBlm_TC_Ctx_eExternBaseboardFinish.ts";
 import { BrdBlm_TC_Ctx_eFacadeColor } from "../enums/BrdBlm_TC_Ctx_eFacadeColor.ts";
 import { BrdBlm_TC_Ctx_eFacadeFinish } from "../enums/BrdBlm_TC_Ctx_eFacadeFinish.ts";
 import { BrdBlm_TC_Ctx_eFloorColor } from "../enums/BrdBlm_TC_Ctx_eFloorColor.ts";
 import { BrdBlm_TC_Ctx_eFloorFinish } from "../enums/BrdBlm_TC_Ctx_eFloorFinish.ts";
+import { BrdBlm_TC_Ctx_eInternBaseboardColor } from "../enums/BrdBlm_TC_Ctx_eInternBaseboardColor.ts";
+import { BrdBlm_TC_Ctx_eInternBaseboardFinish } from "../enums/BrdBlm_TC_Ctx_eInternBaseboardFinish.ts";
 import { BrdBlm_TC_Ctx_ePavementColor } from "../enums/BrdBlm_TC_Ctx_ePavementColor.ts";
 import { BrdBlm_TC_Ctx_ePavementFinish } from "../enums/BrdBlm_TC_Ctx_ePavementFinish.ts";
+import { BrdBlm_TC_Ctx_eSidewalkColor } from "../enums/BrdBlm_TC_Ctx_eSidewalkColor.ts";
+import { BrdBlm_TC_Ctx_eSidewalkFinish } from "../enums/BrdBlm_TC_Ctx_eSidewalkFinish.ts";
 import { BrdBlm_TC_Ctx_eThresholdColor } from "../enums/BrdBlm_TC_Ctx_eThresholdColor.ts";
 import { BrdBlm_TC_Ctx_eThresholdFinish } from "../enums/BrdBlm_TC_Ctx_eThresholdFinish.ts";
 import { BrdBlm_TC_Ctx_eWallColor } from "../enums/BrdBlm_TC_Ctx_eWallColor.ts";
@@ -66,14 +72,14 @@ export interface BrdBlm_TC_Ctx_IParams {
   hasExternBaseBoard?: boolean;
   externBaseboardHeight?: number;
   externBaseboardThickness?: number;
-  externBaseboardColor?: BrdBlm_TC_Ctx_eFacadeColor;
-  externBaseboardFinish?: BrdBlm_TC_Ctx_eFacadeFinish;
+  externBaseboardColor?: BrdBlm_TC_Ctx_eExternBaseboardColor;
+  externBaseboardFinish?: BrdBlm_TC_Ctx_eExternBaseboardFinish;
 
   hasSidewalk?: boolean;
   sidewalkDepth?: number;
   sidewalkHeight?: number;
-  sidewalkColor?: BrdBlm_TC_Ctx_ePavementColor;
-  sidewalkFinish?: BrdBlm_TC_Ctx_ePavementFinish;
+  sidewalkColor?: BrdBlm_TC_Ctx_eSidewalkColor;
+  sidewalkFinish?: BrdBlm_TC_Ctx_eSidewalkFinish;
 
   holeWidth: number;
   holeHeight: number;
@@ -94,8 +100,8 @@ export interface BrdBlm_TC_Ctx_IParams {
   hasInternBaseBoard?: boolean;
   internBaseboardHeight?: number;
   internBaseboardThickness?: number;
-  internBaseboardColor?: BrdBlm_TC_Ctx_eFloorColor;
-  internBaseboardFinish?: BrdBlm_TC_Ctx_eFloorFinish;
+  internBaseboardColor?: BrdBlm_TC_Ctx_eInternBaseboardColor;
+  internBaseboardFinish?: BrdBlm_TC_Ctx_eInternBaseboardFinish;
 
   ceilingOutline?: BrdBlm_IPoint2D[];
   ceilingThickness?: number;

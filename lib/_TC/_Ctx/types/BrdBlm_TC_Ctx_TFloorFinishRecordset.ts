@@ -15,8 +15,8 @@ import {
 
 
 /**
- * Definizione della struttura che contiene le definizioni delle finiture 
- * per il pavimento interno
+ * Struttura che contiene le definizioni delle finiture 
+ * per il pavimento interno del contesto delle chiusure tecniche
  */
 export type BrdBlm_TC_Ctx_TFloorFinishRecordset = Record<
     BrdBlm_TC_Ctx_eFloorFinish,

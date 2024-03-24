@@ -6,7 +6,7 @@
  */
 
 /**
- * Texture per le bumpmap del pavimento interno
+ * Texture per il pavimento interno del contesto (albedo e bump o normal maps)
  */
 export enum BrdBlm_TC_Ctx_eFloorFinish {
     FLOOR_1 = 'context_indoor_floor_1',

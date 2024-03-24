@@ -16,7 +16,7 @@ import {
 
 /**
  * Definizione della struttura che contiene le definizioni delle finiture 
- * per la soglia del foro
+ * per i muri interni del contesto delle chiusure tecniche
  */
 export type BrdBlm_TC_Ctx_TWallFinishRecordset = Record<
     BrdBlm_TC_Ctx_eWallFinish,

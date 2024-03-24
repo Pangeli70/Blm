@@ -4,13 +4,19 @@ import { BrdBlm_IMaterialDef } from "../../../interfaces/BrdBlm_IMaterialDef.ts"
 import { BrdBlm_IPoint2D } from "../../../interfaces/BrdBlm_IPoint2D.ts";
 import { BrdBlm_TC_Ctx_Component } from "../classes/BrdBlm_TC_Ctx_Component.ts";
 import { BrdBlm_TC_Ctx_DEFAULTS } from "../const/BrdBlm_TC_Ctx_DEFAULTS.ts";
+import { BrdBlm_TC_Ctx_eExternBaseboardColor } from "../enums/BrdBlm_TC_Ctx_eExternBaseboardColor.ts";
+import { BrdBlm_TC_Ctx_eExternBaseboardFinish } from "../enums/BrdBlm_TC_Ctx_eExternBaseboardFinish.ts";
 import { BrdBlm_TC_Ctx_eFacadeColor } from "../enums/BrdBlm_TC_Ctx_eFacadeColor.ts";
 import { BrdBlm_TC_Ctx_eFacadeFinish } from "../enums/BrdBlm_TC_Ctx_eFacadeFinish.ts";
 import { BrdBlm_TC_Ctx_eFloorColor } from "../enums/BrdBlm_TC_Ctx_eFloorColor.ts";
 import { BrdBlm_TC_Ctx_eFloorFinish } from "../enums/BrdBlm_TC_Ctx_eFloorFinish.ts";
+import { BrdBlm_TC_Ctx_eInternBaseboardColor } from "../enums/BrdBlm_TC_Ctx_eInternBaseboardColor.ts";
+import { BrdBlm_TC_Ctx_eInternBaseboardFinish } from "../enums/BrdBlm_TC_Ctx_eInternBaseboardFinish.ts";
 import { BrdBlm_TC_Ctx_ePartName } from "../enums/BrdBlm_TC_Ctx_ePartName.ts";
 import { BrdBlm_TC_Ctx_ePavementColor } from "../enums/BrdBlm_TC_Ctx_ePavementColor.ts";
 import { BrdBlm_TC_Ctx_ePavementFinish } from "../enums/BrdBlm_TC_Ctx_ePavementFinish.ts";
+import { BrdBlm_TC_Ctx_eSidewalkColor } from "../enums/BrdBlm_TC_Ctx_eSidewalkColor.ts";
+import { BrdBlm_TC_Ctx_eSidewalkFinish } from "../enums/BrdBlm_TC_Ctx_eSidewalkFinish.ts";
 import { BrdBlm_TC_Ctx_eThresholdColor } from "../enums/BrdBlm_TC_Ctx_eThresholdColor.ts";
 import { BrdBlm_TC_Ctx_eThresholdFinish } from "../enums/BrdBlm_TC_Ctx_eThresholdFinish.ts";
 import { BrdBlm_TC_Ctx_eWallColor } from "../enums/BrdBlm_TC_Ctx_eWallColor.ts";
@@ -191,10 +197,10 @@ export class BrdBlm_TC_Ctx_Service {
                 aparams.externBaseboardThickness = BrdBlm_TC_Ctx_DEFAULTS.EXTERN_BASEBOARD_THICKNESS;
             }
             if (!aparams.externBaseboardColor) {
-                aparams.externBaseboardColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFacadeColor>(BrdBlm_TC_Ctx_eFacadeColor);
+                aparams.externBaseboardColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eExternBaseboardColor>(BrdBlm_TC_Ctx_eExternBaseboardColor);
             }
             if (!aparams.externBaseboardFinish) {
-                aparams.externBaseboardFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFacadeFinish>(BrdBlm_TC_Ctx_eFacadeFinish);
+                aparams.externBaseboardFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eExternBaseboardFinish>(BrdBlm_TC_Ctx_eExternBaseboardFinish);
             }
         }
     }
@@ -217,10 +223,10 @@ export class BrdBlm_TC_Ctx_Service {
                 aparams.sidewalkHeight = BrdBlm_TC_Ctx_DEFAULTS.EXTERN_SIDEWALK_HEIGHT;
             }
             if (!aparams.sidewalkColor) {
-                aparams.sidewalkColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_ePavementColor>(BrdBlm_TC_Ctx_ePavementColor);
+                aparams.sidewalkColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eSidewalkColor>(BrdBlm_TC_Ctx_eSidewalkColor);
             }
             if (!aparams.sidewalkFinish) {
-                aparams.sidewalkFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_ePavementFinish>(BrdBlm_TC_Ctx_ePavementFinish);
+                aparams.sidewalkFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eSidewalkFinish>(BrdBlm_TC_Ctx_eSidewalkFinish);
             }
         }
     }
@@ -308,10 +314,10 @@ export class BrdBlm_TC_Ctx_Service {
                 aparams.internBaseboardThickness = BrdBlm_TC_Ctx_DEFAULTS.INTERN_BASEBOARD_THICKNESS;
             }
             if (!aparams.internBaseboardColor) {
-                aparams.internBaseboardColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFloorColor>(BrdBlm_TC_Ctx_eFloorColor);
+                aparams.internBaseboardColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eInternBaseboardColor>(BrdBlm_TC_Ctx_eInternBaseboardColor);
             }
             if (!aparams.internBaseboardFinish) {
-                aparams.internBaseboardFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFloorFinish>(BrdBlm_TC_Ctx_eFloorFinish);
+                aparams.internBaseboardFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eInternBaseboardFinish>(BrdBlm_TC_Ctx_eInternBaseboardFinish);
             }
         }
     }

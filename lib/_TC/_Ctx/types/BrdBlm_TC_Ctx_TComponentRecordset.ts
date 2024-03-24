@@ -12,8 +12,10 @@ import {
     BrdBlm_TC_Ctx_ePartName
 } from "../enums/BrdBlm_TC_Ctx_ePartName.ts";
 
+
+
 /**
- * Definizione della struttura che contiene i componenti del contesto
+ * Struttura che contiene i componenti del contesto
  */
 export type BrdBlm_TC_Ctx_TComponentRecordset = Record<
     BrdBlm_TC_Ctx_ePartName,

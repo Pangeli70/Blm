@@ -7,10 +7,14 @@
 */
 
 export * from "./enums/BrdBlm_eGlossRoughness.ts";
+export * from "./enums/BrdBlm_eTextureType.ts";
 
+export * from "./interfaces/BrdBlm_IAlbedoMapDef.ts";
+export * from "./interfaces/BrdBlm_IAlphaMapDef.ts";
 export * from "./interfaces/BrdBlm_IBumpMapDef.ts";
 export * from "./interfaces/BrdBlm_ICDNAsset.ts";
 export * from "./interfaces/BrdBlm_IMaterialDef.ts";
+export * from "./interfaces/BrdBlm_INormalMapDef.ts";
 export * from "./interfaces/BrdBlm_ITextureDef.ts";
 
 export * from "./recordsets/BrdBlm_CDNAssets_Recordset.ts";

@@ -18,7 +18,7 @@ import {
 
 
 /**
- * Definizione della struttura della tabella che contiene le definizioni dei
+ * Struttura della tabella che contiene le definizioni dei
  * materiali per le mesh del contesto
  */
 export type BrdBlm_TC_Ctx_TMaterialDefRecordset = Record<

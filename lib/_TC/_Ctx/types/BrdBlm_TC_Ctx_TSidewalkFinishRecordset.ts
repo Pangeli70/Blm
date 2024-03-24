@@ -9,17 +9,17 @@ import {
     BrdBlm_IMaterialDef
 } from "../../../interfaces/BrdBlm_IMaterialDef.ts";
 import {
-    BrdBlm_TC_Ctx_eFacadeFinish
-} from "../enums/BrdBlm_TC_Ctx_eFacadeFinish.ts";
+    BrdBlm_TC_Ctx_eSidewalkFinish
+} from "../enums/BrdBlm_TC_Ctx_eSidewalkFinish.ts";
 
 
 
 /**
- * Struttura dati che contiene le definizioni delle finiture 
- * per la facciata del contesto delle chiusure tecniche
+ * Struttura che contiene le definizioni delle finiture 
+ * per il marciapiede del contesto delle chiusure tecniche
  */
-export type BrdBlm_TC_Ctx_TFacadeFinishRecordset = Record<
-    BrdBlm_TC_Ctx_eFacadeFinish,
+export type BrdBlm_TC_Ctx_TSidewalkFinishRecordset = Record<
+    BrdBlm_TC_Ctx_eSidewalkFinish,
     BrdBlm_IMaterialDef
 >;
 

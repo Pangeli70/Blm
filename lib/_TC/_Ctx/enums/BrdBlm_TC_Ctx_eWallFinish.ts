@@ -6,7 +6,7 @@
  */
 
 /**
- * Texture per la bumpmap delle pareti interne
+ * Texture per i muri interni, la facciata interna ed il soffitto del contesto (albedo e bump o normal maps)
  */
 export enum BrdBlm_TC_Ctx_eWallFinish {
     /** Malta fina */

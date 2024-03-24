@@ -8,7 +8,7 @@
  */
 
 /**
- * Colori predefiniti per le pareti interne
+ * Colori predefiniti per le pareti interne , la facciata interna ed il soffitto del contesto
  */
 export enum BrdBlm_TC_Ctx_eWallColor {
     OLD_LACE = "#fdf5e6",

@@ -8,7 +8,7 @@
  */
 
 /**
- * Texture per le bumpmap della facciata
+ * Texture per la facciata esterna  del contesto (albedo e bump o normal maps)
  */
 export enum BrdBlm_TC_Ctx_eFacadeFinish {
 

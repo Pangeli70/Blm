@@ -15,7 +15,8 @@ export * from "./enums/BrdBlm_eBrand.ts";
 export * from "./enums/BrdBlm_eGlossRoughness.ts";
 export * from "./enums/BrdBlm_eMicaceousFinish.ts";
 export * from "./enums/BrdBlm_ePlacementOperation.ts";
-export * from "./enums/BrdBlm_eProductTypes.ts";
+export * from "./enums/BrdBlm_eProductType.ts";
+export * from "./enums/BrdBlm_eTextureType.ts";
 
 export * from "./interfaces/BrdBlm_IBumpMapDef.ts";
 export * from "./interfaces/BrdBlm_ICDNAsset.ts";

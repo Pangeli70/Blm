@@ -12,7 +12,7 @@
 /**
  * Tipologie di prodotti 
  */
-export enum BrdBlm_eProductTypes {
+export enum BrdBlm_eProductType {
 
     /**
      * Sezionale

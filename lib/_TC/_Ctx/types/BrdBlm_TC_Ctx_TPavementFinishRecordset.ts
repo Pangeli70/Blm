@@ -15,8 +15,8 @@ import {
 
 
 /**
- * Definizione della struttura che contiene le definizioni delle finiture 
- * per il pavimento esterno
+ * Struttura che contiene le definizioni delle finiture 
+ * per il pavimento esterno del contesto delle chiusure tecniche
  */
 export type BrdBlm_TC_Ctx_TPavementFinishRecordset = Record<
     BrdBlm_TC_Ctx_ePavementFinish,

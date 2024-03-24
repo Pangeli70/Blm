@@ -8,7 +8,7 @@
  */
 
 /**
- * Colori predefiniti per la facciata
+ * Colori predefiniti per la facciata esterna del contesto
  */
 export enum BrdBlm_TC_Ctx_eFacadeColor {
 

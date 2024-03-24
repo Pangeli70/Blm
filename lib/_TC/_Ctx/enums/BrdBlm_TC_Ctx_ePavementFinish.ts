@@ -6,7 +6,7 @@
  */
 
 /**
- * Texture per le bumpmap della pavimentazione esterna
+ * Texture per la pavimentazione esterna del contesto (albedo e bump o normal maps)
  */
 export enum BrdBlm_TC_Ctx_ePavementFinish {
     LBlocks = 'context_outdoor_pavement_1',

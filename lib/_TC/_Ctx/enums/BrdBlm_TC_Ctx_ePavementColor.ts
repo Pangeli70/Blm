@@ -6,7 +6,7 @@
  */
 
 /**
- * Colori predefiniti per la pavimentazione esterna
+ * Colori predefiniti per la pavimentazione esterna del contesto
  */
 export enum BrdBlm_TC_Ctx_ePavementColor {
   OLD_LACE = "#fdf5e6",

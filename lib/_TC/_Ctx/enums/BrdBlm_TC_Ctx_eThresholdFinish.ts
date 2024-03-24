@@ -6,7 +6,7 @@
  */
 
 /**
- * Texture per le map della soglia
+ * Texture per la soglia del contesto (albedo e bump o normal maps)
  */
 export enum BrdBlm_TC_Ctx_eThresholdFinish {
     THRE_1 = 'context_outdoor_threshold_1',

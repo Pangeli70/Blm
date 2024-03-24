@@ -18,6 +18,8 @@ import {
 export interface BrdBlm_INormalMapDef extends BrdBlm_ITextureDef {
 
 
+  isNormalMap: true;
+
   /**
    * Scala di profondità della normal map
    */

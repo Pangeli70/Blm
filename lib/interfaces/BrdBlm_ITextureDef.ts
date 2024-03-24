@@ -14,10 +14,9 @@
 export interface BrdBlm_ITextureDef {
 
   /**
-   * Nome della texture come elencato nei CDN Assets
+   * Identificatore della texture come elencato nei CDN Assets {@link BrdBlm_ICDNAsset}
    */
-  cdnAsset: string;
-
+  CDNAssetId: string;
 
   /**
    * Scala di mappatura orizzontale

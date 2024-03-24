@@ -18,28 +18,28 @@ import {
     BrdBlm_IMaterialDef_Signature
 } from "../../../interfaces/BrdBlm_IMaterialDef.ts";
 import {
-    BrdBlm_TC_Ctx_eWallColor
-} from "../enums/BrdBlm_TC_Ctx_eWallColor.ts";
+    BrdBlm_TC_Ctx_eExternBaseboardColor
+} from "../enums/BrdBlm_TC_Ctx_eExternBaseboardColor.ts";
 import {
-    BrdBlm_TC_Ctx_eWallFinish
-} from "../enums/BrdBlm_TC_Ctx_eWallFinish.ts";
+    BrdBlm_TC_Ctx_eExternBaseboardFinish
+} from "../enums/BrdBlm_TC_Ctx_eExternBaseboardFinish.ts";
 import {
-    BrdBlm_TC_Ctx_TWallFinishRecordset
-} from "../types/BrdBlm_TC_Ctx_TWallFinishRecordset.ts";
+    BrdBlm_TC_Ctx_TExternBaseboardFinishRecordset
+} from "../types/BrdBlm_TC_Ctx_TExternBaseboardFinishRecordset.ts";
 
 
 
-export const BrdBlm_TC_Ctx_WallFinishRecordset: BrdBlm_TC_Ctx_TWallFinishRecordset =
+export const BrdBlm_TC_Ctx_ExternBaseboardFinishRecordset: BrdBlm_TC_Ctx_TExternBaseboardFinishRecordset =
 {
-    [BrdBlm_TC_Ctx_eWallFinish.CONTEXT_INDOOR_WALLS_FINE_MORTAR]: {
+    [BrdBlm_TC_Ctx_eExternBaseboardFinish.BASEBOARD_1]: {
         signature: BrdBlm_IMaterialDef_Signature,
-        id: BrdBlm_TC_Ctx_eWallFinish.CONTEXT_INDOOR_WALLS_FINE_MORTAR,
+        id: BrdBlm_TC_Ctx_eExternBaseboardFinish.BASEBOARD_1,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eWallColor),
+        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eExternBaseboardColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eWallFinish.CONTEXT_INDOOR_WALLS_FINE_MORTAR + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_eExternBaseboardFinish.BASEBOARD_1 + BrdBlm_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,

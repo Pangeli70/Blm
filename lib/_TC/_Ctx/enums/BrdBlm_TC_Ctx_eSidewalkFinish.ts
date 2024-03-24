@@ -1,28 +1,20 @@
 /** ---------------------------------------------------------------------------
- * @module [BrdGlb]
- * @author [APG] Angeli Paolo Giusto
- * @version 0.1 APG 20230707
- * @version 0.2 APG 20231115 Spostato nel suo file dedicato + Commenti e refactoring
- * @version 0.3 APG 20231227 Modulo BrdGlb server side
- * @version 0.4 APG 20240225 Modulo BrdBlm server side
+ * @module [BrdBlm_TC_Ctx]
+ * @author [APG] Angeli Paolo Giusto 
+ * @version 0.1 APG 20240323
  * ----------------------------------------------------------------------------
  */
-import {
-    BrdBlm_ITextureDef
-} from "./BrdBlm_ITextureDef.ts";
 
 /**
- * Definizione dei dati di mappatura delle BUMPMAP.
+ * Texture per i marciapiedi esterni del contesto (albedo e bump o normal maps)
  */
-export interface BrdBlm_IBumpMapDef extends BrdBlm_ITextureDef {
-
-    isBumpMap: true;
-
-    /**
-     * Profondità dell'effetto di rugosità
-     */
-    depth: number;
-
+export enum BrdBlm_TC_Ctx_eSidewalkFinish {
+    SIDEWALK_1 = 'context_outdoor_sidewalk_1',
+    SIDEWALK_2 = 'context_outdoor_sidewalk_2',
+    SIDEWALK_3 = 'context_outdoor_sidewalk_3',
+    SIDEWALK_4 = 'context_outdoor_sidewalk_4',
+    SIDEWALK_5 = 'context_outdoor_sidewalk_5',
+    SIDEWALK_6 = 'context_outdoor_sidewalk_6'
 }
 
 /*! ---------------------------------------------------------------------------

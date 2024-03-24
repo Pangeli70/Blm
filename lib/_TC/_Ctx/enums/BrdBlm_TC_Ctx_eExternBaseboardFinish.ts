@@ -1,28 +1,15 @@
 /** ---------------------------------------------------------------------------
- * @module [BrdGlb]
- * @author [APG] Angeli Paolo Giusto
- * @version 0.1 APG 20230707
- * @version 0.2 APG 20231115 Spostato nel suo file dedicato + Commenti e refactoring
- * @version 0.3 APG 20231227 Modulo BrdGlb server side
- * @version 0.4 APG 20240225 Modulo BrdBlm server side
+ * @module [BrdBlm_TC_Ctx]
+ * @author [APG] Angeli Paolo Giusto 
+ * @version 0.1 APG 20240323
  * ----------------------------------------------------------------------------
  */
-import {
-    BrdBlm_ITextureDef
-} from "./BrdBlm_ITextureDef.ts";
 
 /**
- * Definizione dei dati di mappatura delle BUMPMAP.
+ * Texture per gli zoccoli esterni e la cornice del foro delcontesto (albedo e bump o normal maps)
  */
-export interface BrdBlm_IBumpMapDef extends BrdBlm_ITextureDef {
-
-    isBumpMap: true;
-
-    /**
-     * Profondità dell'effetto di rugosità
-     */
-    depth: number;
-
+export enum BrdBlm_TC_Ctx_eExternBaseboardFinish {
+    BASEBOARD_1 = 'context_outdoor_baseboard_1',
 }
 
 /*! ---------------------------------------------------------------------------
