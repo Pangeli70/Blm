@@ -9,7 +9,7 @@
 export * from "./enums/BrdBlm_eGlossRoughness.ts";
 export * from "./enums/BrdBlm_eTextureType.ts";
 
-export * from "./interfaces/BrdBlm_IAlbedoMapDef.ts";
+export type { BrdBlm_IAlbedoMapDef } from "./interfaces/BrdBlm_IAlbedoMapDef.ts";
 export * from "./interfaces/BrdBlm_IAlphaMapDef.ts";
 export * from "./interfaces/BrdBlm_IBumpMapDef.ts";
 export * from "./interfaces/BrdBlm_ICDNAsset.ts";

@@ -23,7 +23,7 @@ export interface BrdBlm_INormalMapDef extends BrdBlm_ITextureDef {
   /**
    * Scala di profondità della normal map
    */
-  normalScale: THREE.Vector2
+  normalDepth: number
 
 }
 

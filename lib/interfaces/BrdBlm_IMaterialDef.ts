@@ -92,12 +92,12 @@ export interface BrdBlm_IMaterialDef {
   alphaMapDef?: BrdBlm_IAlphaMapDef; //@V2
 
   /**
-   * Le texture dei materiali hanno una rotazione in radianti
+   * Le texture del materiale hanno una rotazione globale in gradi sessaggesimali. Valori positivi generano una rotazione antioraria 
    */
-  textureRotation?: number; //@V2
+  textureRotationInDeg?: number; //@V2
 
   /**
-   * Le texture dei materiali hanno una rotazione random. Questa impostazione
+   * Le texture del materiale hanno una rotazione random. Questa impostazione
    * viene considerata solo se la rotazione precedente non è definita
    */
   hasRandomTextureRotation?: boolean; //@V2

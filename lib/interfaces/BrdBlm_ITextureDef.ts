@@ -29,9 +29,9 @@ export interface BrdBlm_ITextureDef {
   vScale: number;
 
   /**
-   * Rotazione
+   * Rotazione in gradi sessaggesimali: valori positivi generano una rotazione antioraria
    */
-  rotation?: number;
+  rotationInDeg?: number;
 
 }
 
