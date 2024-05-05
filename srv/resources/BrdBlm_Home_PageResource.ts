@@ -29,7 +29,7 @@ export class BrdBlm_Home_PageResource extends Edr.Drash.Resource {
             links: this.#getLinks()
         }
 
-        const html = await Tng.BrdTngService.Render("/BrdBlm_Home_Page.html", data) as string;
+        const html = await Tng.BrdTng_Service.Render("/BrdBlm_Home_Page.html", data) as string;
 
         response.html(html);
     }
