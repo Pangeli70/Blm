@@ -8,26 +8,27 @@
  * ---------------------------------------------------------------------------
  */
 /** ---------------------------------------------------------------------------
- * @module [BrdGlb_TC]
+ * @module [BrdBlm_TC]
  * @author [APG] Angeli Paolo Giusto
  * @version 0.1 APG 20230707
  * @version 0.2 APG 20231108 Spostato nel suo file dedicato + Commenti e refactoring
- * @version 0.3 APG 20231227 Modulo BrdGlb server side
+ * @version 0.3 APG 20231227 Modulo BrdBlm server side
  * ----------------------------------------------------------------------------
  */
 
 /**
- * Trasparenza dei tamponamenti dei prodotti Breda (es. Visa)
+ * Colori dei tamponamenti dei prodotti Breda (es. Visa)
  */
-export enum BrdGlb_TC_eFillingTransparency {
+export enum BrdBlm_TC_eFillingColor {
 
-  TRANSPARENT = 1,
-  OPALINE = 0.2,
-  SATIN = 0.4,
-  BRONZED = 0.9,
-  DARK = 0.9,
-  SILVER = 0,
-  WHITE_C21 = 0,
-  BLACK = 0,
-  RAL = 0
+  TRANSPARENT = 0x000020,
+  OPALINE = 0xF0F0F0,
+  SATIN = 0xD0D0D0,
+  BRONZED = 0x806060,
+  DARK = 0x202020,
+  SILVER = 0x808080,
+  WHITE_C21 = 0xFAFADA,
+  BLACK = 0x202020,
+  RAL = -1
+
 }

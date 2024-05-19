@@ -1,27 +1,34 @@
 /** ---------------------------------------------------------------------------
- * @module [BrdBlm]
+ * @module [BrdBlm_TC]
  * @author [APG] Angeli Paolo Giusto
- * @version 0.1 APG 20231108
- * @version 0.2 APG 20231227 Modulo BrdBlm server side
+ * @version 0.1 APG 20240519
  * ----------------------------------------------------------------------------
  */
 
 /**
- * Tipi di lucentezza da abbinare ai materiali del visualizzatore
+ * Colori dei profili di alluminio verniciati, ossidati o decorati
  */
-export enum BrdBlm_eGlossRoughness {
-    UNDEFINED = 0,
-    VERY_SHINIY = 0.02,
-    SHINY = 0.1,
-    ALU_POWDER = 0.2,
-    ANODIZED = 0.3,
-    PRE_LAQ_25_35 = 0.4,
-    RAL_GLOSS_25_35 = 0.4,
-    RAL_GLOSS_10 = 0.6,
-    PRE_LAQ_SATIN = 0.9,
-    RAL_SATIN = 0.9,
-    ROUGH = 1
+export enum BrdBlm_TC_eAluFinishVariant {
+
+  C21 = "C21",
+  C17 = "C17",
+  C81 = "C81",
+  RAL6005 = "RAL6005",
+  RAL5010 = "RAL5010",
+  RAL3000 = "RAL3000",
+
+  SCOTCH_BRITE_SILVER = "SB_SILVER",
+  SCOTCH_BRITE_BLACK = "SB_BLACK",
+
+  SIMILARWOOD_NUT = "SW_NUT",
+  SIMILARWOOD_GOLDEN_OAK = "SW_GOLDEN_OAK",
+  SIMILARWOOD_LIGHT_OAK = "SW_LIGHT_OAK",
+
+  RAL_GLOSS_10 = "RAL_GLOSS_10",
+  RAL_GLOSS_25_35 = "RAL_GLOSS_25_35",
+
 }
+
 
 /*! ---------------------------------------------------------------------------
  * @copyright Breda Sistemi industriali S.p.A., 2023 - http://bredasys.com

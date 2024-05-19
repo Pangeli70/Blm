@@ -1,7 +1,7 @@
 import { BrdBlm_TC_SeD_eFillingType } from "../../enums/BrdBlm_TC_SeD_eFillingType.ts";
 import { BrdBlm_TC_SeD_eInsertFrameColor } from "../../enums/BrdBlm_TC_SeD_eInsertFrameColor.ts";
 import { BrdBlm_TC_SeD_eInsertHoleType } from "../../enums/BrdBlm_TC_SeD_eInsertHoleType.ts";
-import { BrdGlb_TC_eFillingColor } from "../../../enums/BrdGlb_TC_eFillingColor.ts";
+import { BrdBlm_TC_eFillingColor } from "../../../enums/BrdBlm_TC_eFillingColor.ts";
 import { BrdBlm_TC_SeD_IInsert } from "../../interfaces/BrdBlm_TC_SeD_IInsert.ts";
 
 /**
@@ -249,8 +249,8 @@ export const BrdBlm_TC_SeD_Inserts_Table: BrdBlm_TC_SeD_IInsert[] = [
     articles: [
       {
         code: "158500400006",
-        extColor: BrdGlb_TC_eFillingColor.TRANSPARENT,
-        intColor: BrdGlb_TC_eFillingColor.SATIN,
+        extColor: BrdBlm_TC_eFillingColor.TRANSPARENT,
+        intColor: BrdBlm_TC_eFillingColor.SATIN,
       },
     ]
   }
