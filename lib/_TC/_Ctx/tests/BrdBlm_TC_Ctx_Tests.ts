@@ -6,6 +6,11 @@
  */
 
 
+import { BrdBlm_TC_Ctx_eExternBaseboardColor } from "../enums/BrdBlm_TC_Ctx_eExternBaseboardColor.ts";
+import { BrdBlm_TC_Ctx_eExternBaseboardFinish } from "../enums/BrdBlm_TC_Ctx_eExternBaseboardFinish.ts";
+
+import { BrdBlm_TC_Ctx_eInternBaseboardColor } from "../enums/BrdBlm_TC_Ctx_eInternBaseboardColor.ts";
+import { BrdBlm_TC_Ctx_eInternBaseboardFinish } from "../enums/BrdBlm_TC_Ctx_eInternBaseboardFinish.ts";
 import { BrdBlm_TC_Ctx_eFacadeColor } from "../enums/BrdBlm_TC_Ctx_eFacadeColor.ts";
 import { BrdBlm_TC_Ctx_eFacadeFinish } from "../enums/BrdBlm_TC_Ctx_eFacadeFinish.ts";
 import { BrdBlm_TC_Ctx_eFloorColor } from "../enums/BrdBlm_TC_Ctx_eFloorColor.ts";
@@ -154,13 +159,13 @@ export const BrdBlm_TC_Ctx_Tests: BrdBlm_TC_Ctx_IParams[] = [
         hasThreshold: true,
         thresholdDepth: 220,
         thresholdColor: BrdBlm_TC_Ctx_eThresholdColor.OLD_LACE,
-        thresholdFinish: BrdBlm_TC_Ctx_eThresholdFinish.PAV2,
+        thresholdFinish: BrdBlm_TC_Ctx_eThresholdFinish.THRE_1,
 
         hasExternBaseBoard: true,
         externBaseboardHeight: 300,
         externBaseboardThickness: 30,
-        externBaseboardColor: BrdBlm_TC_Ctx_eFacadeColor.DARK_GRAY,
-        externBaseboardFinish: BrdBlm_TC_Ctx_eFacadeFinish.SCRATCHED_PLASTER,
+        externBaseboardColor: BrdBlm_TC_Ctx_eExternBaseboardColor.OLD_LACE,
+        externBaseboardFinish: BrdBlm_TC_Ctx_eExternBaseboardFinish.BASEBOARD_1,
 
         // hasSidewalk: true,
         // sidewalkDepth: 400,
@@ -193,8 +198,8 @@ export const BrdBlm_TC_Ctx_Tests: BrdBlm_TC_Ctx_IParams[] = [
         hasInternBaseBoard: true,
         internBaseboardHeight: 140,
         internBaseboardThickness: 15,
-        internBaseboardColor: BrdBlm_TC_Ctx_eFloorColor.OLD_LACE,
-        internBaseboardFinish: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_6,
+        internBaseboardColor: BrdBlm_TC_Ctx_eInternBaseboardColor.OLD_LACE,
+        internBaseboardFinish: BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_1,
 
         // ceilingOutline: [
         //     { x: 0, y: 2500 },
