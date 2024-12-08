@@ -7,8 +7,8 @@
  */
 
 import {
-  BrdBlm_Extrudable
-} from "../../../../../../classes/BrdBlm_Extrudable.ts";
+  ApgA3D_Extrudable
+} from "../../../../../../../../A3D/lib/classes/ApgA3D_Extrudable.ts";
 import {
   BrdBlm_TC_SeD_eSlidingTrackFinish
 } from "../../../../enums/BrdBlm_TC_SeD_eSlidingTrackFinish.ts";
@@ -28,7 +28,7 @@ import {
  * sezionali a scorrimento verticale. Può essere uno spezzone estruso
  * linearmente o una curva estrusa lungo un percorso.
  */
-export class BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal extends BrdBlm_Extrudable {
+export class BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal extends ApgA3D_Extrudable {
 
 
   /**

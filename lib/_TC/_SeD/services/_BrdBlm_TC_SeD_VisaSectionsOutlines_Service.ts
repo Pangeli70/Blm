@@ -1,5 +1,5 @@
 import { BrdBlm_IIntExtOutlinesGroups } from "../../../interfaces/BrdBlm_IIntExtOutlinesGroups.ts";
-import { BrdBlm_IPoint2D } from "../../../interfaces/BrdBlm_IPoint2D.ts";
+import { ApgA3D_IPoint2D } from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
 import { BrdBlm_TC_SeD_RULES } from "../const/BrdBlm_TC_SeD_RULES.ts";
 import { BrdBlm_TC_SeD_eSectionType } from "../enums/BrdBlm_TC_SeD_eSectionType.ts";
 import { BrdBlm_TC_SeD_ISectionParams } from "../interfaces/BrdBlm_TC_SeD_ISectionParams.ts";
@@ -97,9 +97,9 @@ export class BrdBlm_TC_SeD_VisaSectionsOutlines_Service {
     aisLow: boolean,
     afemaleHeight: number
   ) {
-    const r: BrdBlm_IPoint2D[] = [];
+    const r: ApgA3D_IPoint2D[] = [];
 
-    let portion: BrdBlm_IPoint2D[];
+    let portion: ApgA3D_IPoint2D[];
 
     // E' sezione  base
     if(aisLow) {
@@ -131,9 +131,9 @@ export class BrdBlm_TC_SeD_VisaSectionsOutlines_Service {
     aisLow: boolean,
     afemaleHeight: number
   ) {
-    const r: BrdBlm_IPoint2D[] = [];
+    const r: ApgA3D_IPoint2D[] = [];
 
-    let portion: BrdBlm_IPoint2D[];
+    let portion: ApgA3D_IPoint2D[];
 
 
     // TODO per fare un bel lavoro qui bisognerebbe mettere il profilo con la
@@ -166,9 +166,9 @@ export class BrdBlm_TC_SeD_VisaSectionsOutlines_Service {
     amaleHeight: number,
     asectionHeight: number
   ) {
-    const r: BrdBlm_IPoint2D[] = [];
+    const r: ApgA3D_IPoint2D[] = [];
 
-    let portion: BrdBlm_IPoint2D[];
+    let portion: ApgA3D_IPoint2D[];
 
     // TODO per fare un bel lavoro qui bisognerebbe mettere il profilo con la
     // sagoma del fermavetro. Ma bisogna sapere lo spessore del tamponamento. 
@@ -201,9 +201,9 @@ export class BrdBlm_TC_SeD_VisaSectionsOutlines_Service {
     amaleHeight: number,
     asectionHeight: number
   ) {
-    const r: BrdBlm_IPoint2D[] = [];
+    const r: ApgA3D_IPoint2D[] = [];
 
-    let portion: BrdBlm_IPoint2D[];
+    let portion: ApgA3D_IPoint2D[];
 
     // TODO per fare un bel lavoro qui bisognerebbe mettere il profilo con la
     // sagoma del fermavetro. Ma bisogna sapere lo spessore del tamponamento. 

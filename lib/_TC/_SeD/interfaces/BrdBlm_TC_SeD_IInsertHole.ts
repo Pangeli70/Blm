@@ -1,5 +1,5 @@
 import { BrdBlm_TC_SeD_eInsertHoleType } from "../enums/BrdBlm_TC_SeD_eInsertHoleType.ts";
-import { BrdBlm_IPoint2D } from "../../../interfaces/BrdBlm_IPoint2D.ts";
+import { ApgA3D_IPoint2D } from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
 
 /**
  * Caratteristiche geometriche del foro dell'inserto della chiusura tecnica
@@ -28,5 +28,5 @@ export interface BrdBlm_TC_SeD_IInsertHole {
   /**
    * Profilo speciale per fori non rettangolari
    */
-  outline?: BrdBlm_IPoint2D[];
+  outline?: ApgA3D_IPoint2D[];
 }

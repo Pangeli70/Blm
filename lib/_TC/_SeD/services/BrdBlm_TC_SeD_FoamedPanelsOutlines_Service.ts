@@ -26,8 +26,8 @@ import {
     BrdBlm_IIntExtOutlines
 } from "../../../interfaces/BrdBlm_IIntExtOutlines.ts";
 import {
-    BrdBlm_IPoint2D
-} from "../../../interfaces/BrdBlm_IPoint2D.ts";
+    ApgA3D_IPoint2D
+} from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
 import {
     BrdBlm_TC_SeD_RULES
 } from "../const/BrdBlm_TC_SeD_RULES.ts";
@@ -92,14 +92,14 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
      * @returns Un nuovo array, i punti vengono copiati in un nuovo oggetto
      */
     static #offsetPointsOnYAxis(
-        apoints: BrdBlm_IPoint2D[],
+        apoints: ApgA3D_IPoint2D[],
         adeltaY: number
     ) {
 
-        const r: BrdBlm_IPoint2D[] = [];
+        const r: ApgA3D_IPoint2D[] = [];
 
         for (const point of apoints) {
-            const newPoint: BrdBlm_IPoint2D = { x: point.x, y: point.y + adeltaY };
+            const newPoint: ApgA3D_IPoint2D = { x: point.x, y: point.y + adeltaY };
             r.push(newPoint);
         }
 
@@ -402,14 +402,14 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
      */
     static #buildExtOutlineForFoamedPanel(
         aparams: BrdBlm_TC_SeD_ISectionParams,
-        aextVertOutline: BrdBlm_IPoint2D[]
+        aextVertOutline: ApgA3D_IPoint2D[]
     ) {
 
         const recordset = this.#init();
 
-        const r: BrdBlm_IPoint2D[] = [];
+        const r: ApgA3D_IPoint2D[] = [];
 
-        let portionOfOutline: BrdBlm_IPoint2D[];
+        let portionOfOutline: ApgA3D_IPoint2D[];
 
         // E' tagliato sotto selezione il profilo di taglio basso
         if (aparams.bottomCut !== 0) {
@@ -455,14 +455,14 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
      */
     static #buildIntOutlineForFoamedPanel(
         aparams: BrdBlm_TC_SeD_ISectionParams,
-        aintVertOutline: BrdBlm_IPoint2D[]
+        aintVertOutline: ApgA3D_IPoint2D[]
     ) {
 
         const recordset = this.#init();
 
-        const r: BrdBlm_IPoint2D[] = [];
+        const r: ApgA3D_IPoint2D[] = [];
 
-        let portionOfOutline: BrdBlm_IPoint2D[];
+        let portionOfOutline: ApgA3D_IPoint2D[];
 
         // E' tagliato sotto
         if (aparams.bottomCut !== 0) {

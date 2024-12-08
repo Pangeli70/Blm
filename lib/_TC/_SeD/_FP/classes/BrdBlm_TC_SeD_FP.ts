@@ -6,8 +6,8 @@
  */
 
 import {
-    BrdBlm_Extrudable
-} from "../../../../classes/BrdBlm_Extrudable.ts";
+    ApgA3D_Extrudable
+} from "../../../../../../A3D/lib/classes/ApgA3D_Extrudable.ts";
 import {
     Uts
 } from "../../../../deps.ts";
@@ -15,8 +15,8 @@ import {
     BrdBlm_IIntExtOutlines
 } from "../../../../interfaces/BrdBlm_IIntExtOutlines.ts";
 import {
-    BrdBlm_IPoint2D
-} from "../../../../interfaces/BrdBlm_IPoint2D.ts";
+    ApgA3D_IPoint2D
+} from "../../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
 import {
     BrdBlm_TC_SeD_ISectionParams
 } from "../../interfaces/BrdBlm_TC_SeD_ISectionParams.ts";
@@ -34,7 +34,7 @@ const MODULE_NAME = import.meta.url;
 /**
  * Pannello coibentato per i portoni sezionali
  */
-export class BrdBlm_TC_SeD_FP extends BrdBlm_Extrudable {
+export class BrdBlm_TC_SeD_FP extends ApgA3D_Extrudable {
 
     /**
      * Sagome di estrusione delle mesh esterna ed interna del pannello coibentato
@@ -44,7 +44,7 @@ export class BrdBlm_TC_SeD_FP extends BrdBlm_Extrudable {
     /**
      * Sagome di estrusione dei fori per le operazioni booleane sul pannello coibentato
      */
-    insertsOutlines: BrdBlm_IPoint2D[][] = [];
+    insertsOutlines: ApgA3D_IPoint2D[][] = [];
 
     /**
      * Stato di questo oggetto
@@ -77,7 +77,7 @@ export class BrdBlm_TC_SeD_FP extends BrdBlm_Extrudable {
             this.status = nr;
             return;
         }
-        this.insertsOutlines = nr.payload as BrdBlm_IPoint2D[][];
+        this.insertsOutlines = nr.payload as ApgA3D_IPoint2D[][];
     }
 
 
@@ -86,7 +86,7 @@ export class BrdBlm_TC_SeD_FP extends BrdBlm_Extrudable {
 
         let r = new Uts.BrdUts_Result();
 
-        const outlines: BrdBlm_IPoint2D[][] = [];
+        const outlines: ApgA3D_IPoint2D[][] = [];
         if (!aparams.inserts) {
             r.setPayload(outlines, "");
             return r;
@@ -103,7 +103,7 @@ export class BrdBlm_TC_SeD_FP extends BrdBlm_Extrudable {
                 return r;
             }
             else {
-                outlines.push(nr.payload as BrdBlm_IPoint2D[]);
+                outlines.push(nr.payload as ApgA3D_IPoint2D[]);
             }
         }
 

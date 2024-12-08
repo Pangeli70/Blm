@@ -6,17 +6,12 @@
  */
 
 import {
-    Uts
-} from "../../../deps.ts";
-import {
     BrdBlm_eGlossRoughness
 } from "../../../enums/BrdBlm_eGlossRoughness.ts";
 import {
-    BrdBlm_eTextureType
-} from "../../../enums/BrdBlm_eTextureType.ts";
-import {
-    BrdBlm_IMaterialDef_Signature
-} from "../../../interfaces/BrdBlm_IMaterialDef.ts";
+    A3D,
+    Uts
+} from "../deps.ts";
 import {
     BrdBlm_TC_Ctx_ePavementColor
 } from "../enums/BrdBlm_TC_Ctx_ePavementColor.ts";
@@ -32,84 +27,78 @@ import {
 export const BrdBlm_TC_Ctx_PavementFinishRecordset: BrdBlm_TC_Ctx_TPavementFinishRecordset =
 {
     [BrdBlm_TC_Ctx_ePavementFinish.LBlocks]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_ePavementFinish.LBlocks,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_ePavementColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_ePavementColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_ePavementFinish.LBlocks + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_ePavementFinish.LBlocks + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
         }
     },
     [BrdBlm_TC_Ctx_ePavementFinish.MixedSquares]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_ePavementFinish.MixedSquares,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_ePavementColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_ePavementColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_ePavementFinish.MixedSquares + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_ePavementFinish.MixedSquares + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
         }
     },
     [BrdBlm_TC_Ctx_ePavementFinish.Octagons]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_ePavementFinish.Octagons,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_ePavementColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_ePavementColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_ePavementFinish.Octagons + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_ePavementFinish.Octagons + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
         }
     },
     [BrdBlm_TC_Ctx_ePavementFinish.LBlocksTwirled]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_ePavementFinish.LBlocksTwirled,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_ePavementColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_ePavementColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_ePavementFinish.LBlocksTwirled + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_ePavementFinish.LBlocksTwirled + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
         }
     },
     [BrdBlm_TC_Ctx_ePavementFinish.LBlocksSmall]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_ePavementFinish.LBlocksSmall,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_ePavementColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_ePavementColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_ePavementFinish.LBlocksSmall + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_ePavementFinish.LBlocksSmall + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
         }
     },
     [BrdBlm_TC_Ctx_ePavementFinish.MickeySquares]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_ePavementFinish.MickeySquares,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_ePavementColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_ePavementColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_ePavementFinish.MickeySquares + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_ePavementFinish.MickeySquares + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,

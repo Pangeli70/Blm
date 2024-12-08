@@ -1,6 +1,6 @@
 import {
-  BrdBlm_IPoint2D
-} from "../../../../interfaces/BrdBlm_IPoint2D.ts";
+  ApgA3D_IPoint2D
+} from "../../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
 
 /**
  *  DA VERIFICARE COMPLETARE E SISTEMARE
@@ -8,6 +8,6 @@ import {
 
 
 export interface BrdBlm_TC_SeD_V_IWicketDoorParams {
-  origin: BrdBlm_IPoint2D;
+  origin: ApgA3D_IPoint2D;
   width: number;
 }

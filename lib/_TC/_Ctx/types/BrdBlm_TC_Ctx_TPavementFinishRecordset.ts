@@ -6,8 +6,8 @@
  */
 
 import {
-    BrdBlm_IMaterialDef
-} from "../../../interfaces/BrdBlm_IMaterialDef.ts";
+    ApgA3D_IMaterialDef
+} from "../../../../../A3D/lib/interfaces/ApgA3D_IMaterialDef.ts";
 import {
     BrdBlm_TC_Ctx_ePavementFinish
 } from "../enums/BrdBlm_TC_Ctx_ePavementFinish.ts";
@@ -20,7 +20,7 @@ import {
  */
 export type BrdBlm_TC_Ctx_TPavementFinishRecordset = Record<
     BrdBlm_TC_Ctx_ePavementFinish,
-    BrdBlm_IMaterialDef
+    ApgA3D_IMaterialDef
 >;
 
 /*! ---------------------------------------------------------------------------

@@ -8,7 +8,7 @@
 
 import {
     Uts
-} from "../../../deps.ts";
+} from "../deps.ts";
 import {
     BrdBlm_TC_Ctx_IParams
 } from "../interfaces/BrdBlm_TC_Ctx_IParams.ts";
@@ -35,7 +35,7 @@ export class BrdBlm_TC_Ctx {
 
     readonly signature = BrdBlm_TC_Ctx_Signature;
 
-    status = new Uts.BrdUts_Result();
+    status = new Uts.ApgUts_Result<BrdBlm_TC_Ctx_IParams>();
 
     params?: BrdBlm_TC_Ctx_IParams
 
@@ -54,7 +54,6 @@ export class BrdBlm_TC_Ctx {
             this.params = this.status.payload as BrdBlm_TC_Ctx_IParams;
             this.components = BrdBlm_TC_Ctx_Service.GetComponents(this.params);
             this.materialDefs = BrdBlm_TC_Ctx_Service.GetMaterials(this.params);
-            this.status.setPayload(undefined, "")
         }
 
 

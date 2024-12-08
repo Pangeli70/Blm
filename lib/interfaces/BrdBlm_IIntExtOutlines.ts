@@ -8,16 +8,16 @@
  */
 
 import {
-  BrdBlm_IPoint2D
-} from "./BrdBlm_IPoint2D.ts";
+  ApgA3D_IPoint2D
+} from "../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
 
 /**
  * Profili di estrusione accoppiati interno/esterno.
  * Usati ad esempio per i pannelli coibentati del portone sezionale.
  */
 export interface BrdBlm_IIntExtOutlines {
-  int: BrdBlm_IPoint2D[];
-  ext: BrdBlm_IPoint2D[];
+  int: ApgA3D_IPoint2D[];
+  ext: ApgA3D_IPoint2D[];
 }
 
 /*! ---------------------------------------------------------------------------

@@ -5,12 +5,8 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-    BrdBlm_Extrudable
-} from "../../../classes/BrdBlm_Extrudable.ts";
-import {
-    BrdBlm_IPoint2D
-} from "../../../interfaces/BrdBlm_IPoint2D.ts";
+
+import { A3D } from "../deps.ts";
 import {
     BrdBlm_TC_Ctx_ePartName
 } from "../enums/BrdBlm_TC_Ctx_ePartName.ts";
@@ -20,12 +16,12 @@ import {
 /**
  * Parte estrudibile e posizionabile per la creazione del contesto
  */
-export class BrdBlm_TC_Ctx_Component extends BrdBlm_Extrudable {
+export class BrdBlm_TC_Ctx_Component extends A3D.ApgA3D_Extrudable {
 
     
     name: BrdBlm_TC_Ctx_ePartName;
 
-    outline: BrdBlm_IPoint2D[] = [];
+    outline: A3D.ApgA3D_IPoint2D[] = [];
 
 
     constructor(aname: BrdBlm_TC_Ctx_ePartName) {

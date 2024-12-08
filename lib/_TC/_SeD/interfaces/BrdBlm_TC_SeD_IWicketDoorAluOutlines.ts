@@ -1,4 +1,4 @@
-import { BrdBlm_IPoint2D } from "../../../interfaces/BrdBlm_IPoint2D.ts";
+import { ApgA3D_IPoint2D } from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
 
 /**
  * Profili di estrusione dei profili alu della porta pedonale
@@ -9,7 +9,7 @@ import { BrdBlm_IPoint2D } from "../../../interfaces/BrdBlm_IPoint2D.ts";
 
 
 export interface BrdBlm_TC_SeD_IWicketDoorAluOutlines{
-  int: BrdBlm_IPoint2D[];
-  ext: BrdBlm_IPoint2D[];
+  int: ApgA3D_IPoint2D[];
+  ext: ApgA3D_IPoint2D[];
   vertical: boolean;
 }

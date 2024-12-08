@@ -6,17 +6,11 @@
  */
 
 import {
-    Uts
-} from "../../../deps.ts";
+    Uts,A3D
+} from "../deps.ts";
 import {
     BrdBlm_eGlossRoughness
 } from "../../../enums/BrdBlm_eGlossRoughness.ts";
-import {
-    BrdBlm_eTextureType
-} from "../../../enums/BrdBlm_eTextureType.ts";
-import {
-    BrdBlm_IMaterialDef_Signature
-} from "../../../interfaces/BrdBlm_IMaterialDef.ts";
 import {
     BrdBlm_TC_Ctx_eInternBaseboardColor
 } from "../enums/BrdBlm_TC_Ctx_eInternBaseboardColor.ts";
@@ -32,42 +26,39 @@ import {
 export const BrdBlm_TC_Ctx_InternBaseboardFinishRecordset: BrdBlm_TC_Ctx_TInternBaseboardFinishRecordset =
 {
     [BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_1]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_1,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eInternBaseboardColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_eInternBaseboardColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_1 + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_1 + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
         }
     },
     [BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_2]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_2,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eInternBaseboardColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_eInternBaseboardColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_2 + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_2 + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
         }
     },
     [BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_3]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_3,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eInternBaseboardColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_eInternBaseboardColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_3 + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_eInternBaseboardFinish.BASEBOARD_3 + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,

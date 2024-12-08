@@ -7,8 +7,8 @@
  */
 
 import {
-    BrdBlm_IPoint3D
-} from "../../../../../../../interfaces/BrdBlm_IPoint3D.ts";
+    ApgA3D_IPoint3D
+} from "../../../../../../../../../A3D/lib/interfaces/ApgA3D_IPoint3D.ts";
 import {
     BrdBlm_TC_SeD_V_eSlidingSystem
 } from "../../../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
@@ -120,7 +120,7 @@ export class BrdBlm_TC_SeD_V_ST_NormalLift extends BrdBlm_TC_SeD_V_ST_GenericLif
     ) {
         const MIN_ANGLE_SLICE_IN_DEG = 5;
 
-        const r: BrdBlm_IPoint3D[] = [];
+        const r: ApgA3D_IPoint3D[] = [];
 
         r.push({
             x: 0,

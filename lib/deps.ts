@@ -5,5 +5,6 @@
  * ----------------------------------------------------------------------------
  */
 
-// Local repo
-export * from "../../Uts/modFor3Dv.ts";
+/** Internal dependencies */
+
+export * from "./monorepo.ts";

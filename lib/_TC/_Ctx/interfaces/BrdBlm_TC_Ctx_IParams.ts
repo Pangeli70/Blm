@@ -7,12 +7,8 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-  BrdBlm_IPoint2D
-} from "../../../interfaces/BrdBlm_IPoint2D.ts";
-import {
-  BrdBlm_IRectangle
-} from "../../../interfaces/BrdBlm_IRectangle.ts";
+
+import { A3D } from "../deps.ts";
 import { BrdBlm_TC_Ctx_eExternBaseboardColor } from "../enums/BrdBlm_TC_Ctx_eExternBaseboardColor.ts";
 import { BrdBlm_TC_Ctx_eExternBaseboardFinish } from "../enums/BrdBlm_TC_Ctx_eExternBaseboardFinish.ts";
 import { BrdBlm_TC_Ctx_eFacadeColor } from "../enums/BrdBlm_TC_Ctx_eFacadeColor.ts";
@@ -83,7 +79,7 @@ export interface BrdBlm_TC_Ctx_IParams {
 
   holeWidth: number;
   holeHeight: number;
-  holeTopOutline?: BrdBlm_IPoint2D[];
+  holeTopOutline?: A3D.ApgA3D_IPoint2D[];
 
   lintel: number;
   lintelAdditionalHeight?: number;
@@ -103,20 +99,20 @@ export interface BrdBlm_TC_Ctx_IParams {
   internBaseboardColor?: BrdBlm_TC_Ctx_eInternBaseboardColor;
   internBaseboardFinish?: BrdBlm_TC_Ctx_eInternBaseboardFinish;
 
-  ceilingOutline?: BrdBlm_IPoint2D[];
+  ceilingOutline?: A3D.ApgA3D_IPoint2D[];
   ceilingThickness?: number;
   ceilingColor?: BrdBlm_TC_Ctx_eWallColor;
   ceilingFinish?: BrdBlm_TC_Ctx_eWallFinish;
 
-  wallRightOutline?: BrdBlm_IPoint2D[];
-  wallLeftOutline?: BrdBlm_IPoint2D[];
+  wallRightOutline?: A3D.ApgA3D_IPoint2D[];
+  wallLeftOutline?: A3D.ApgA3D_IPoint2D[];
   wallThickness?: number;
   wallColor?: BrdBlm_TC_Ctx_eWallColor;
   wallFinish?: BrdBlm_TC_Ctx_eWallFinish;
 
-  trasversalBeams?: BrdBlm_IRectangle[];
+  trasversalBeams?: A3D.ApgA3D_IRectangle[];
 
-  columns?: BrdBlm_IRectangle[];
+  columns?: A3D.ApgA3D_IRectangle[];
 }
 
 /*! ---------------------------------------------------------------------------

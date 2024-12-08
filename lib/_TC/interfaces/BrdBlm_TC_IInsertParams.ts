@@ -8,8 +8,8 @@
  */
 
 import {
-  BrdBlm_IPoint2D
-} from "../../interfaces/BrdBlm_IPoint2D.ts";
+  ApgA3D_IPoint2D
+} from "../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
 
 /**
  * Dati dell'inserto nel manto della Chiusura Tecnica
@@ -26,7 +26,7 @@ export interface BrdBlm_TC_IInsertParams {
   /**
    * Coordinate di posizionamento dell'inserto nel manto della chiusura tecnica
    */
-  position: BrdBlm_IPoint2D;
+  position: ApgA3D_IPoint2D;
 
 }
 

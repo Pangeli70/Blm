@@ -12,8 +12,8 @@ import {
     Uts
 } from "../../../deps.ts";
 import {
-    BrdBlm_IPoint2D
-} from "../../../interfaces/BrdBlm_IPoint2D.ts";
+    ApgA3D_IPoint2D
+} from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
 import {
     BrdBlm_TC_SeD_InsertHoleDimensions_Table
 } from "../data/tables/BrdBlm_TC_SeD_InsertHoleDimensions_Table.ts";
@@ -58,14 +58,14 @@ export class BrdBlm_TC_SeD_HolesOutlinesService {
      * Sposta il profilo nella posizione indicata
      */
     static #moveHole(
-        aoutline: BrdBlm_IPoint2D[],
-        aposition: BrdBlm_IPoint2D,
+        aoutline: ApgA3D_IPoint2D[],
+        aposition: ApgA3D_IPoint2D,
     ) {
 
-        const r: BrdBlm_IPoint2D[] = [];
+        const r: ApgA3D_IPoint2D[] = [];
 
         for (const point of aoutline) {
-            const newPoint: BrdBlm_IPoint2D = {
+            const newPoint: ApgA3D_IPoint2D = {
                 x: point.x + aposition.x,
                 y: point.y + aposition.y,
             };
@@ -84,10 +84,10 @@ export class BrdBlm_TC_SeD_HolesOutlinesService {
      */
     static getOutlineByInsertCode(
         ainsertCode: string,
-        aposition: BrdBlm_IPoint2D
+        aposition: ApgA3D_IPoint2D
     ) {
 
-        let outline: BrdBlm_IPoint2D[] = [];
+        let outline: ApgA3D_IPoint2D[] = [];
         const r = new Uts.BrdUts_Result();
 
         const insertHoleType = this.#getInsertHoleTypeByArticleCode(ainsertCode);

@@ -1,7 +1,5 @@
 
-import { Uts } from "../../../deps.ts";
-import { BrdBlm_IMaterialDef } from "../../../interfaces/BrdBlm_IMaterialDef.ts";
-import { BrdBlm_IPoint2D } from "../../../interfaces/BrdBlm_IPoint2D.ts";
+import { Uts, A3D } from "../deps.ts";
 import { BrdBlm_TC_Ctx_Component } from "../classes/BrdBlm_TC_Ctx_Component.ts";
 import { BrdBlm_TC_Ctx_DEFAULTS } from "../const/BrdBlm_TC_Ctx_DEFAULTS.ts";
 import { BrdBlm_TC_Ctx_eExternBaseboardColor } from "../enums/BrdBlm_TC_Ctx_eExternBaseboardColor.ts";
@@ -31,7 +29,6 @@ import { BrdBlm_TC_Ctx_TComponentRecordset } from "../types/BrdBlm_TC_Ctx_TCompo
 import { BrdBlm_TC_Ctx_TMaterialDefRecordset } from "../types/BrdBlm_TC_Ctx_TMaterialDefRecordset.ts";
 
 
-const MODULE_NAME = "BrdBlm_TC_Ctx_Service";
 
 
 export class BrdBlm_TC_Ctx_Service {
@@ -45,7 +42,7 @@ export class BrdBlm_TC_Ctx_Service {
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
 
-        const r = new Uts.BrdUts_Result();
+        const r = new Uts.ApgUts_Result<BrdBlm_TC_Ctx_IParams>();
 
         const aparams = structuredClone(acontext) as BrdBlm_TC_Ctx_IParams;
 
@@ -101,10 +98,10 @@ export class BrdBlm_TC_Ctx_Service {
             aparams.facadeThickness = BrdBlm_TC_Ctx_DEFAULTS.FACADE_THICKNESS;
         }
         if (!aparams.facadeColor) {
-            aparams.facadeColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFacadeColor>(BrdBlm_TC_Ctx_eFacadeColor);
+            aparams.facadeColor = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eFacadeColor>(BrdBlm_TC_Ctx_eFacadeColor);
         }
         if (!aparams.facadeFinish) {
-            aparams.facadeFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFacadeFinish>(BrdBlm_TC_Ctx_eFacadeFinish);
+            aparams.facadeFinish = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eFacadeFinish>(BrdBlm_TC_Ctx_eFacadeFinish);
         }
 
     }
@@ -119,21 +116,21 @@ export class BrdBlm_TC_Ctx_Service {
 
         if (aparams.hasExternFrame) {
             if (!aparams.externFrameWidth) {
-                const k = Uts.BrdUts.GetRandomInRange(0.5, 1, 1);
+                const k = Uts.ApgUts_Math.GetRandomInRange(0.5, 1, 1);
                 aparams.externFrameWidth = k * BrdBlm_TC_Ctx_DEFAULTS.EXTERN_FRAME_MAX_WIDTH;
             }
 
             if (!aparams.externFrameThickness) {
-                const k = Uts.BrdUts.GetRandomInRange(0.5, 1, 1);
+                const k = Uts.ApgUts_Math.GetRandomInRange(0.5, 1, 1);
                 aparams.externFrameThickness = k * BrdBlm_TC_Ctx_DEFAULTS.EXTERN_FRAME_MAX_THICKNESS;
             }
 
             if (!aparams.externFrameColor) {
-                aparams.externFrameColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFacadeColor>(BrdBlm_TC_Ctx_eFacadeColor);
+                aparams.externFrameColor = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eFacadeColor>(BrdBlm_TC_Ctx_eFacadeColor);
             }
 
             if (!aparams.externFrameFinish) {
-                aparams.externFrameFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFacadeFinish>(BrdBlm_TC_Ctx_eFacadeFinish);
+                aparams.externFrameFinish = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eFacadeFinish>(BrdBlm_TC_Ctx_eFacadeFinish);
             }
         }
     }
@@ -149,10 +146,10 @@ export class BrdBlm_TC_Ctx_Service {
             aparams.pavementThickness = BrdBlm_TC_Ctx_DEFAULTS.PAVEMENT_THICKNESS;
         }
         if (!aparams.pavementColor) {
-            aparams.pavementColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_ePavementColor>(BrdBlm_TC_Ctx_ePavementColor);
+            aparams.pavementColor = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_ePavementColor>(BrdBlm_TC_Ctx_ePavementColor);
         }
         if (!aparams.pavementFinish) {
-            aparams.pavementFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_ePavementFinish>(BrdBlm_TC_Ctx_ePavementFinish);
+            aparams.pavementFinish = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_ePavementFinish>(BrdBlm_TC_Ctx_ePavementFinish);
         }
     }
 
@@ -167,14 +164,14 @@ export class BrdBlm_TC_Ctx_Service {
         if (aparams.hasThreshold) {
 
             if (!aparams.thresholdDepth) {
-                const k = Uts.BrdUts.GetRandomInRange(0.5, 1, 1);
+                const k = Uts.ApgUts_Math.GetRandomInRange(0.5, 1, 1);
                 aparams.thresholdDepth = k * aparams.facadeThickness!;
             }
             if (!aparams.thresholdColor) {
-                aparams.thresholdColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eThresholdColor>(BrdBlm_TC_Ctx_eThresholdColor);
+                aparams.thresholdColor = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eThresholdColor>(BrdBlm_TC_Ctx_eThresholdColor);
             }
             if (!aparams.thresholdFinish) {
-                aparams.thresholdFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eThresholdFinish>(BrdBlm_TC_Ctx_eThresholdFinish);
+                aparams.thresholdFinish = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eThresholdFinish>(BrdBlm_TC_Ctx_eThresholdFinish);
             }
         }
     }
@@ -190,17 +187,17 @@ export class BrdBlm_TC_Ctx_Service {
         if (aparams.hasExternBaseBoard) {
 
             if (!aparams.externBaseboardHeight) {
-                const k = Uts.BrdUts.GetRandomInRange(0.5, 1, 1);
+                const k = Uts.ApgUts_Math.GetRandomInRange(0.5, 1, 1);
                 aparams.externBaseboardHeight = k * BrdBlm_TC_Ctx_DEFAULTS.EXTERN_BASEBOARD_MAX_HEIGHT;
             }
             if (!aparams.externBaseboardThickness) {
                 aparams.externBaseboardThickness = BrdBlm_TC_Ctx_DEFAULTS.EXTERN_BASEBOARD_THICKNESS;
             }
             if (!aparams.externBaseboardColor) {
-                aparams.externBaseboardColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eExternBaseboardColor>(BrdBlm_TC_Ctx_eExternBaseboardColor);
+                aparams.externBaseboardColor = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eExternBaseboardColor>(BrdBlm_TC_Ctx_eExternBaseboardColor);
             }
             if (!aparams.externBaseboardFinish) {
-                aparams.externBaseboardFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eExternBaseboardFinish>(BrdBlm_TC_Ctx_eExternBaseboardFinish);
+                aparams.externBaseboardFinish = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eExternBaseboardFinish>(BrdBlm_TC_Ctx_eExternBaseboardFinish);
             }
         }
     }
@@ -216,17 +213,17 @@ export class BrdBlm_TC_Ctx_Service {
         if (aparams.hasSidewalk) {
 
             if (!aparams.sidewalkDepth) {
-                const k = Uts.BrdUts.GetRandomInRange(0.5, 1, 1);
+                const k = Uts.ApgUts_Math.GetRandomInRange(0.5, 1, 1);
                 aparams.sidewalkDepth = k * BrdBlm_TC_Ctx_DEFAULTS.EXTERN_SIDEWALK_MAX_DEPTH;
             }
             if (!aparams.sidewalkHeight) {
                 aparams.sidewalkHeight = BrdBlm_TC_Ctx_DEFAULTS.EXTERN_SIDEWALK_HEIGHT;
             }
             if (!aparams.sidewalkColor) {
-                aparams.sidewalkColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eSidewalkColor>(BrdBlm_TC_Ctx_eSidewalkColor);
+                aparams.sidewalkColor = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eSidewalkColor>(BrdBlm_TC_Ctx_eSidewalkColor);
             }
             if (!aparams.sidewalkFinish) {
-                aparams.sidewalkFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eSidewalkFinish>(BrdBlm_TC_Ctx_eSidewalkFinish);
+                aparams.sidewalkFinish = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eSidewalkFinish>(BrdBlm_TC_Ctx_eSidewalkFinish);
             }
         }
     }
@@ -235,7 +232,7 @@ export class BrdBlm_TC_Ctx_Service {
 
     static #validateHoleTopOutline(
         aparams: BrdBlm_TC_Ctx_IParams,
-        ar: Uts.BrdUts_Result
+        ar: Uts.ApgUts_Result<BrdBlm_TC_Ctx_IParams>
     ) {
 
         if (!aparams.holeTopOutline) {
@@ -254,7 +251,7 @@ export class BrdBlm_TC_Ctx_Service {
 
     static #validateAdditionalLintel(
         aparams: BrdBlm_TC_Ctx_IParams,
-        ar: Uts.BrdUts_Result
+        ar: Uts.ApgUts_Result<BrdBlm_TC_Ctx_IParams>
     ) {
         if (!aparams.lintelAdditionalHeight) {
             aparams.lintelAdditionalHeight = 0;
@@ -288,10 +285,10 @@ export class BrdBlm_TC_Ctx_Service {
             aparams.floorThickness = BrdBlm_TC_Ctx_DEFAULTS.FLOOR_THICKNESS;
         }
         if (!aparams.floorColor) {
-            aparams.floorColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFloorColor>(BrdBlm_TC_Ctx_eFloorColor);
+            aparams.floorColor = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eFloorColor>(BrdBlm_TC_Ctx_eFloorColor);
         }
         if (!aparams.floorFinish) {
-            aparams.floorFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eFloorFinish>(BrdBlm_TC_Ctx_eFloorFinish);
+            aparams.floorFinish = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eFloorFinish>(BrdBlm_TC_Ctx_eFloorFinish);
         }
 
     }
@@ -307,17 +304,17 @@ export class BrdBlm_TC_Ctx_Service {
         if (aparams.hasInternBaseBoard) {
 
             if (!aparams.internBaseboardHeight) {
-                const k = Uts.BrdUts.GetRandomInRange(0.7, 1, 1);
+                const k = Uts.ApgUts_Math.GetRandomInRange(0.7, 1, 1);
                 aparams.internBaseboardHeight = k * BrdBlm_TC_Ctx_DEFAULTS.INTERN_BASEBOARD_MAX_HEIGHT;
             }
             if (!aparams.internBaseboardThickness) {
                 aparams.internBaseboardThickness = BrdBlm_TC_Ctx_DEFAULTS.INTERN_BASEBOARD_THICKNESS;
             }
             if (!aparams.internBaseboardColor) {
-                aparams.internBaseboardColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eInternBaseboardColor>(BrdBlm_TC_Ctx_eInternBaseboardColor);
+                aparams.internBaseboardColor = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eInternBaseboardColor>(BrdBlm_TC_Ctx_eInternBaseboardColor);
             }
             if (!aparams.internBaseboardFinish) {
-                aparams.internBaseboardFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eInternBaseboardFinish>(BrdBlm_TC_Ctx_eInternBaseboardFinish);
+                aparams.internBaseboardFinish = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eInternBaseboardFinish>(BrdBlm_TC_Ctx_eInternBaseboardFinish);
             }
         }
     }
@@ -326,7 +323,7 @@ export class BrdBlm_TC_Ctx_Service {
 
     static #validateCeiling(
         aparams: BrdBlm_TC_Ctx_IParams,
-        ar: Uts.BrdUts_Result
+        ar: Uts.ApgUts_Result<BrdBlm_TC_Ctx_IParams>
     ) {
 
         if (!aparams.ceilingOutline) {
@@ -347,10 +344,10 @@ export class BrdBlm_TC_Ctx_Service {
         }
 
         if (!aparams.ceilingColor) {
-            aparams.ceilingColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eWallColor>(BrdBlm_TC_Ctx_eWallColor);
+            aparams.ceilingColor = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eWallColor>(BrdBlm_TC_Ctx_eWallColor);
         }
         if (!aparams.ceilingFinish) {
-            aparams.ceilingFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eWallFinish>(BrdBlm_TC_Ctx_eWallFinish);
+            aparams.ceilingFinish = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eWallFinish>(BrdBlm_TC_Ctx_eWallFinish);
         }
     }
 
@@ -358,7 +355,7 @@ export class BrdBlm_TC_Ctx_Service {
 
     static #validateWalls(
         aparams: BrdBlm_TC_Ctx_IParams,
-        ar: Uts.BrdUts_Result
+        ar: Uts.ApgUts_Result<BrdBlm_TC_Ctx_IParams>
     ) {
 
         // NOTE Qui stianmo lavorando per l'estrusione su XY quindi
@@ -393,11 +390,11 @@ export class BrdBlm_TC_Ctx_Service {
         }
 
         if (!aparams.wallColor) {
-            aparams.wallColor = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eWallColor>(BrdBlm_TC_Ctx_eWallColor);
+            aparams.wallColor = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eWallColor>(BrdBlm_TC_Ctx_eWallColor);
         }
 
         if (!aparams.wallFinish) {
-            aparams.wallFinish = Uts.BrdUts.GetRandomFromEnum<BrdBlm_TC_Ctx_eWallFinish>(BrdBlm_TC_Ctx_eWallFinish);
+            aparams.wallFinish = Uts.ApgUts_Enum.GetRandom<BrdBlm_TC_Ctx_eWallFinish>(BrdBlm_TC_Ctx_eWallFinish);
         }
 
     }
@@ -648,11 +645,11 @@ export class BrdBlm_TC_Ctx_Service {
         ];
 
         r[0].length = acontext.externBaseboardHeight!;
-        r[0].addRotateXOp(-Uts.BrdUts.RAD_90, false);
+        r[0].addRotateXOp(-Uts.ApgUts_Math.DegToRad(90), false);
         r[0].addTranslateZOp(acontext.facadeThickness!, false);
 
         r[1].length = acontext.externBaseboardHeight!;
-        r[1].addRotateXOp(-Uts.BrdUts.RAD_90, false);
+        r[1].addRotateXOp(-Uts.ApgUts_Math.DegToRad(90), false);
         r[1].addTranslateZOp(acontext.facadeThickness!, false);
 
         return r;
@@ -699,7 +696,7 @@ export class BrdBlm_TC_Ctx_Service {
 
         r.length = this.#getMaxY(acontext.ceilingOutline!);
 
-        r.addRotateXOp(-Uts.BrdUts.RAD_90, false);
+        r.addRotateXOp(-Uts.ApgUts_Math.DegToRad(90), false);
 
         return r;
     }
@@ -729,7 +726,7 @@ export class BrdBlm_TC_Ctx_Service {
 
         r.length = this.#getMaxY(acontext.ceilingOutline!);
 
-        r.addRotateXOp(-Uts.BrdUts.RAD_90, false);
+        r.addRotateXOp(-Uts.ApgUts_Math.DegToRad(90), false);
 
         return r;
     }
@@ -764,7 +761,7 @@ export class BrdBlm_TC_Ctx_Service {
         r.length = minx * -1 + maxx;
 
         r.addTranslateZOp(minx, false);
-        r.addRotateYOp(Uts.BrdUts.RAD_90, false);
+        r.addRotateYOp(Uts.ApgUts_Math.DegToRad(90), false);
 
         return r;
 
@@ -796,7 +793,7 @@ export class BrdBlm_TC_Ctx_Service {
 
         r.length = acontext.floorThickness!;
 
-        r.addRotateXOp(-Uts.BrdUts.RAD_90, false);
+        r.addRotateXOp(-Uts.ApgUts_Math.DegToRad(90), false);
         r.addTranslateYOp(-acontext.floorThickness!, false);
 
         return r;
@@ -907,7 +904,7 @@ export class BrdBlm_TC_Ctx_Service {
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
         const finish = acontext.facadeFinish! as BrdBlm_TC_Ctx_eFacadeFinish
-        const r: BrdBlm_IMaterialDef = structuredClone(
+        const r: A3D.ApgA3D_IMaterialDef = structuredClone(
             BrdBlm_TC_Ctx_FacadeFinishRecordset[finish]
         )
         r.color = this.#getColor(acontext.facadeColor!);
@@ -920,7 +917,7 @@ export class BrdBlm_TC_Ctx_Service {
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
         const finish = acontext.pavementFinish! as BrdBlm_TC_Ctx_ePavementFinish
-        const r: BrdBlm_IMaterialDef = structuredClone(
+        const r: A3D.ApgA3D_IMaterialDef = structuredClone(
             BrdBlm_TC_Ctx_PavementFinishRecordset[finish]
         )
         r.color = this.#getColor(acontext.pavementColor!);
@@ -933,7 +930,7 @@ export class BrdBlm_TC_Ctx_Service {
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
         const finish = acontext.thresholdFinish! as BrdBlm_TC_Ctx_eThresholdFinish
-        const r: BrdBlm_IMaterialDef = structuredClone(
+        const r: A3D.ApgA3D_IMaterialDef = structuredClone(
             BrdBlm_TC_Ctx_ThresholdFinishRecordset[finish]
         )
         r.color = this.#getColor(acontext.thresholdColor!);
@@ -946,7 +943,7 @@ export class BrdBlm_TC_Ctx_Service {
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
         const finish = acontext.floorFinish! as BrdBlm_TC_Ctx_eFloorFinish
-        const r: BrdBlm_IMaterialDef = structuredClone(
+        const r: A3D.ApgA3D_IMaterialDef = structuredClone(
             BrdBlm_TC_Ctx_FloorFinishRecordset[finish]
         )
         r.color = this.#getColor(acontext.floorColor!);
@@ -959,7 +956,7 @@ export class BrdBlm_TC_Ctx_Service {
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
         const finish = acontext.wallFinish! as BrdBlm_TC_Ctx_eWallFinish
-        const r: BrdBlm_IMaterialDef = structuredClone(
+        const r: A3D.ApgA3D_IMaterialDef = structuredClone(
             BrdBlm_TC_Ctx_WallFinishRecordset[finish]
         )
         r.color = this.#getColor(acontext.wallColor!);
@@ -972,7 +969,7 @@ export class BrdBlm_TC_Ctx_Service {
         acontext: BrdBlm_TC_Ctx_IParams
     ) {
         const finish = acontext.ceilingFinish! as BrdBlm_TC_Ctx_eWallFinish
-        const r: BrdBlm_IMaterialDef = structuredClone(
+        const r: A3D.ApgA3D_IMaterialDef = structuredClone(
             BrdBlm_TC_Ctx_WallFinishRecordset[finish]
         )
         r.color = this.#getColor(acontext.ceilingColor!);
@@ -982,7 +979,7 @@ export class BrdBlm_TC_Ctx_Service {
     // #endregion
     //--------------------------------------------------------------------------
 
-    static #getMaxY(aoutline: BrdBlm_IPoint2D[]) {
+    static #getMaxY(aoutline: A3D.ApgA3D_IPoint2D[]) {
         let r = 0;
         for (const p of aoutline) {
             if (r < p.y) {
@@ -992,7 +989,7 @@ export class BrdBlm_TC_Ctx_Service {
         return r;
     }
 
-    static #getMaxX(aoutline: BrdBlm_IPoint2D[]) {
+    static #getMaxX(aoutline: A3D.ApgA3D_IPoint2D[]) {
         let r = 0;
         for (const p of aoutline) {
             if (r < p.x) {
@@ -1002,7 +999,7 @@ export class BrdBlm_TC_Ctx_Service {
         return r;
     }
 
-    static #getMinX(aoutline: BrdBlm_IPoint2D[]) {
+    static #getMinX(aoutline: A3D.ApgA3D_IPoint2D[]) {
         let r = 0;
         for (const p of aoutline) {
             if (r > p.x) {

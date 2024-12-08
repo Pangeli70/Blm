@@ -6,17 +6,11 @@
  */
 
 import {
-    Uts
-} from "../../../deps.ts";
+    Uts, A3D
+} from "../deps.ts";
 import {
     BrdBlm_eGlossRoughness
 } from "../../../enums/BrdBlm_eGlossRoughness.ts";
-import {
-    BrdBlm_eTextureType
-} from "../../../enums/BrdBlm_eTextureType.ts";
-import {
-    BrdBlm_IMaterialDef_Signature
-} from "../../../interfaces/BrdBlm_IMaterialDef.ts";
 import {
     BrdBlm_TC_Ctx_eWallColor
 } from "../enums/BrdBlm_TC_Ctx_eWallColor.ts";
@@ -32,14 +26,13 @@ import {
 export const BrdBlm_TC_Ctx_WallFinishRecordset: BrdBlm_TC_Ctx_TWallFinishRecordset =
 {
     [BrdBlm_TC_Ctx_eWallFinish.CONTEXT_INDOOR_WALLS_FINE_MORTAR]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eWallFinish.CONTEXT_INDOOR_WALLS_FINE_MORTAR,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eWallColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_eWallColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eWallFinish.CONTEXT_INDOOR_WALLS_FINE_MORTAR + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_eWallFinish.CONTEXT_INDOOR_WALLS_FINE_MORTAR + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,

@@ -6,8 +6,8 @@
  */
 
 import {
-    BrdBlm_IMaterialDef
-} from "../../../interfaces/BrdBlm_IMaterialDef.ts";
+    ApgA3D_IMaterialDef
+} from "../../../../../A3D/lib/interfaces/ApgA3D_IMaterialDef.ts";
 import {
     BrdBlm_TC_Ctx_eSidewalkFinish
 } from "../enums/BrdBlm_TC_Ctx_eSidewalkFinish.ts";
@@ -20,7 +20,7 @@ import {
  */
 export type BrdBlm_TC_Ctx_TSidewalkFinishRecordset = Record<
     BrdBlm_TC_Ctx_eSidewalkFinish,
-    BrdBlm_IMaterialDef
+    ApgA3D_IMaterialDef
 >;
 
 /*! ---------------------------------------------------------------------------

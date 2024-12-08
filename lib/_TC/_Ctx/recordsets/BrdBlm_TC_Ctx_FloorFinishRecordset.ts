@@ -6,17 +6,12 @@
  */
 
 import {
-    Uts
-} from "../../../deps.ts";
-import {
     BrdBlm_eGlossRoughness
 } from "../../../enums/BrdBlm_eGlossRoughness.ts";
 import {
-    BrdBlm_eTextureType
-} from "../../../enums/BrdBlm_eTextureType.ts";
-import {
-    BrdBlm_IMaterialDef_Signature
-} from "../../../interfaces/BrdBlm_IMaterialDef.ts";
+    A3D,
+    Uts
+} from "../deps.ts";
 import {
     BrdBlm_TC_Ctx_eFloorColor
 } from "../enums/BrdBlm_TC_Ctx_eFloorColor.ts";
@@ -32,120 +27,114 @@ import {
 export const BrdBlm_TC_Ctx_FloorFinishRecordset: BrdBlm_TC_Ctx_TFloorFinishRecordset =
 {
     [BrdBlm_TC_Ctx_eFloorFinish.FLOOR_1]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_1,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eFloorColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_eFloorColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         albedoMapDef: {
             isAlbedoMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_1 + BrdBlm_eTextureType.ALBEDO,
+            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_1 + A3D.ApgA3D_eTextureType.ALBEDO,
             uScale: 1,
             vScale: 1,
         },
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_1 + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_1 + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
         }
     },
     [BrdBlm_TC_Ctx_eFloorFinish.FLOOR_2]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_2,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eFloorColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_eFloorColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         albedoMapDef: {
             isAlbedoMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_2 + BrdBlm_eTextureType.ALBEDO,
+            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_2 + A3D.ApgA3D_eTextureType.ALBEDO,
             uScale: 1,
             vScale: 1,
         },
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_2 + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_2 + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
         }
     },
     [BrdBlm_TC_Ctx_eFloorFinish.FLOOR_3]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_3,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eFloorColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_eFloorColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         albedoMapDef: {
             isAlbedoMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_3 + BrdBlm_eTextureType.ALBEDO,
+            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_3 + A3D.ApgA3D_eTextureType.ALBEDO,
             uScale: 1,
             vScale: 1,
         },
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_3 + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_3 + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
         }
     },
     [BrdBlm_TC_Ctx_eFloorFinish.FLOOR_4]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_4,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eFloorColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_eFloorColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         albedoMapDef: {
             isAlbedoMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_4 + BrdBlm_eTextureType.ALBEDO,
+            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_4 + A3D.ApgA3D_eTextureType.ALBEDO,
             uScale: 1,
             vScale: 1,
         },
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_4+ BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_4+ A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
         }
     },
     [BrdBlm_TC_Ctx_eFloorFinish.FLOOR_5]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_5,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eFloorColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_eFloorColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         albedoMapDef: {
             isAlbedoMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_4 + BrdBlm_eTextureType.ALBEDO,
+            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_4 + A3D.ApgA3D_eTextureType.ALBEDO,
             uScale: 1,
             vScale: 1,
         },
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_4 + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_4 + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,
         }
     },
     [BrdBlm_TC_Ctx_eFloorFinish.FLOOR_6]: {
-        signature: BrdBlm_IMaterialDef_Signature,
         id: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_6,
         color: 0xffffff,
-        colors: Uts.BrdUts.GetEnumAsArray(BrdBlm_TC_Ctx_eFloorColor),
+        colors: Uts.ApgUts_Enum.GetAsArray(BrdBlm_TC_Ctx_eFloorColor),
         roughness: BrdBlm_eGlossRoughness.ROUGH,
         albedoMapDef: {
             isAlbedoMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_6 + BrdBlm_eTextureType.ALBEDO,
+            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_6 + A3D.ApgA3D_eTextureType.ALBEDO,
             uScale: 1,
             vScale: 1,
         },
         bumpMapDef: {
             isBumpMap: true,
-            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_6 + BrdBlm_eTextureType.BUMP,
+            CDNAssetId: BrdBlm_TC_Ctx_eFloorFinish.FLOOR_6 + A3D.ApgA3D_eTextureType.BUMP,
             uScale: 1,
             vScale: 1,
             depth: 1,

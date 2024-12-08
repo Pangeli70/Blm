@@ -9,34 +9,34 @@
  */
 
 
-export * from "./classes/BrdBlm_Extrudable.ts";
+export * from "../../A3D/lib/classes/ApgA3D_Extrudable.ts";
 
 export * from "./enums/BrdBlm_eBrand.ts";
 export * from "./enums/BrdBlm_eGlossRoughness.ts";
 export * from "./enums/BrdBlm_eMicaceousFinish.ts";
-export * from "./enums/BrdBlm_ePlacementOperation.ts";
+export * from "../../A3D/lib/enums/ApgA3D_ePlacementOperation.ts";
 export * from "./enums/BrdBlm_eProductType.ts";
-export * from "./enums/BrdBlm_eTextureType.ts";
+export * from "../../A3D/lib/enums/ApgA3D_eTextureType.ts";
 
-export * from "./interfaces/BrdBlm_IBumpMapDef.ts";
-export * from "./interfaces/BrdBlm_ICDNAsset.ts";
+export * from "../../A3D/lib/interfaces/ApgA3D_IBumpMapDef.ts";
+export * from "../../A3D/lib/interfaces/ApgA3D_ICDNAsset.ts";
 export * from "./interfaces/BrdBlm_IIntExtMaterialDef.ts";
 export * from "./interfaces/BrdBlm_IIntExtOutlines.ts";
 export * from "./interfaces/BrdBlm_IIntExtOutlinesGroups.ts";
-export * from "./interfaces/BrdBlm_IMaterialDef.ts";
+export * from "../../A3D/lib/interfaces/ApgA3D_IMaterialDef.ts";
 export * from "./interfaces/BrdBlm_IMultilanguage.ts";
-export * from "./interfaces/BrdBlm_IPlacementOperation.ts";
-export * from "./interfaces/BrdBlm_IPoint2D.ts";
-export * from "./interfaces/BrdBlm_IPoint3D.ts";
-export * from "./interfaces/BrdBlm_IRalColorDef.ts";
-export * from "./interfaces/BrdBlm_IRectangle.ts";
-export * from "./interfaces/BrdBlm_ITextureDef.ts";
+export * from "../../A3D/lib/interfaces/ApgA3D_IPlacementOperation.ts";
+export * from "../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
+export * from "../../A3D/lib/interfaces/ApgA3D_IPoint3D.ts";
+export * from "../../A3D/lib/interfaces/ApgA3D_IRalColorDef.ts";
+export * from "../../A3D/lib/interfaces/ApgA3D_IRectangle.ts";
+export * from "../../A3D/lib/mod.ts";
 
 
 export * from "./recordsets/BrdBlm_CDNAssets_Recordset.ts";
 export * from "./recordsets/BrdBlm_MicaeousFinishes_MultilangRecordset.ts";
 
-export * from "./services/BrdBlm_RalColorsService.ts";
+export * from "../../A3D/lib/services/ApgA3D_RalColors_Service.ts";
 
 
 export * as TC from "./_TC/mod.ts";

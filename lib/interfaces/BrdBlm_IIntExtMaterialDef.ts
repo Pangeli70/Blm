@@ -9,16 +9,16 @@
  */
 
 import {
-  BrdBlm_IMaterialDef
-} from "./BrdBlm_IMaterialDef.ts";
+  ApgA3D_IMaterialDef
+} from "../../../A3D/lib/interfaces/ApgA3D_IMaterialDef.ts";
 
 /**
  * Definizioni dei Materiali per le mesh estruse accoppiate interno/esterno
  * Usati ad esempio per i pannelli schiumati del portone sezionale.
  */
 export interface BrdBlm_IIntExtMaterialDef {
-  int: BrdBlm_IMaterialDef;
-  ext: BrdBlm_IMaterialDef;
+  int: ApgA3D_IMaterialDef;
+  ext: ApgA3D_IMaterialDef;
 }
 
 /*! ---------------------------------------------------------------------------
