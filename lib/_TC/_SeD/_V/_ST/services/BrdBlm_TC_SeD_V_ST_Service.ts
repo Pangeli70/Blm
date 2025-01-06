@@ -1,6 +1,6 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdBlm_TC_SeD_V_ST]
- * @author [APG] Angeli Paolo Giusto 
+ * @author [APG] ANGELI Paolo Giusto 
  * @version 0.1 APG 20231114
  * @version 0.2 APG 20231226 Estratto tutti gli altri tipi in file separati
  * ----------------------------------------------------------------------------

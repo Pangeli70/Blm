@@ -1,7 +1,7 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdBlm_CT_Ctx]
  * @description Business Logic module for Technical closures Context management
- * @author [APG] Angeli Paolo Giusto
+ * @author [APG] ANGELI Paolo Giusto
  * @version 0.1 APG 20220620
  * @version 0.2 APG 20231227 Ristrutturato tutta la libreria Ctx
  * ----------------------------------------------------------------------------

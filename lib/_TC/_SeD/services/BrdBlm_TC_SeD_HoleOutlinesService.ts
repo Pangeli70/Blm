@@ -1,6 +1,6 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdBlm_TC_SeD]
- * @author [APG] Angeli Paolo Giusto
+ * @author [APG] ANGELI Paolo Giusto
  * @author [DLV] De Luca Valentina
  * @version 0.1 DLV+APG 20230801
  * @version 0.2 DLV 20231013 - fori Oblò, Maniglia, Griglie di Ventilazione ed eventuali tamponamenti

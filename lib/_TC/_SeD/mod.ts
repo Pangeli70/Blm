@@ -1,7 +1,7 @@
 /** ---------------------------------------------------------------------------
  * @module [Blm_TC_SeD]
  * @description Business Logic module for Sectional Doors Products
- * @author [APG] Angeli Paolo Giusto
+ * @author [APG] ANGELI Paolo Giusto
  * @version 0.1 APG 20220620
  * @version 0.2 APG 20230622
  * @version 0.3 APG 20231226 Ristrutturato tutta la libreria

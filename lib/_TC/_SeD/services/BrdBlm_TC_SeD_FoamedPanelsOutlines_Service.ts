@@ -10,7 +10,7 @@
 /** ---------------------------------------------------------------------------
  * @module [Brd/3Dv]
  * @author [DLV] De Luca Valentina
- * @author [APG] Angeli Paolo Giusto
+ * @author [APG] ANGELI Paolo Giusto
  * @version 0.1 DLV 20230626
  * @version 0.2 APG 20230720 Integrazione in Brd3Dv + Refactoring e documentazione
  * @version 0.3 APG 20231110 Refactoring e pulizia

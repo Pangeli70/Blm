@@ -10,7 +10,7 @@
 /** ---------------------------------------------------------------------------
  * @module [Brd/3Dv]
  * @author [DLV] De Luca Valentina
- * @author [APG] Angeli Paolo Giusto
+ * @author [APG] ANGELI Paolo Giusto
  * @version 0.1 DLV 20231102
  * @version 0.2 APG 20231108 Sistemazione commenti e riformattazione 
  * ----------------------------------------------------------------------------

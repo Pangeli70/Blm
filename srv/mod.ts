@@ -17,12 +17,12 @@ import {
 
 
 export const BrdBlm_Services: Edr.Drash.Service[] = [
-    new Edr.BrdEdr_AnyRequest_Service(),
+    new Edr.ApgEdr_AnyRequest_Service(),
 ]
 
 export const BrdBlm_Resources: typeof Edr.Drash.Resource[] = [
 
-    Edr.BrdEdr_AnyAsset_FileResource,
+    Edr.ApgEdr_AnyAsset_FileResource,
 
     BrdBlm_Home_PageResource,
 

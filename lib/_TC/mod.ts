@@ -1,6 +1,6 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdBlm_TC]
- * @author [APG] Angeli Paolo Giusto
+ * @author [APG] ANGELI Paolo Giusto
  * ----------------------------------------------------------------------------
  * @description Logica di business per le chiusure tecniche Breda. 
  * ----------------------------------------------------------------------------

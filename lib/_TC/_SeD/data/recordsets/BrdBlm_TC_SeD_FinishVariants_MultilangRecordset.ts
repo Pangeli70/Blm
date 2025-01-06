@@ -1,6 +1,6 @@
 /** ---------------------------------------------------------------------------
  * @module [BrdBlm]
- * @author [APG] Angeli Paolo Giusto 
+ * @author [APG] ANGELI Paolo Giusto 
  * @version 0.1 APG 20230707
  * @version 0.2 APG 20231113 Spostato nel proprio file nella cartella data/multilang
  * @version 0.3 APG 20231229 Modulo BrdBlm server side

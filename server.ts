@@ -1,6 +1,6 @@
 /** ---------------------------------------------------------------------------
  * @module [Brd/3Dv]
- * @author [APG] Angeli Paolo Giusto 
+ * @author [APG] ANGELI Paolo Giusto 
  * @version 0.1 APG 20230626
  * ----------------------------------------------------------------------------
  */
@@ -10,7 +10,7 @@ import { BrdBlm_Resources, BrdBlm_Services } from "./srv/mod.ts";
 
 
 // Setup Edr
-Edr.BrdEdr_Service.ClientCacheMaxAge = 1 * 60; // One minute 
+Edr.ApgEdr_Service.ClientCacheMaxAge = 1 * 60; // One minute 
 
 
 // Overwrite default Tengine settings
@@ -27,4 +27,4 @@ const server = new Edr.Drash.Server({
 
 server.run();
 
-Edr.BrdEdr_Service.ServerStartupResume(BrdBlm_Microservice, server.address);
+Edr.ApgEdr_Service.ServerStartupResume(BrdBlm_Microservice, server.address);
