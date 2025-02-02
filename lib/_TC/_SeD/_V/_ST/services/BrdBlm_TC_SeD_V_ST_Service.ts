@@ -6,18 +6,10 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-    BrdBlm_TC_SeD_V_eSlidingSystem
-} from "../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
-import {
-    BrdBlm_TC_SeD_V_ST_GenericLift
-} from "../classes/lifts/abstract/BrdBlm_TC_SeD_V_ST_GenericLift.ts";
-import {
-    BrdBlm_TC_SeD_V_ST_S2
-} from "../classes/lifts/concrete/BrdBlm_TC_SeD_V_ST_S2.ts";
-import {
-    BrdBlm_TC_SeD_V_ST_IParams
-} from "../interfaces/BrdBlm_TC_SeD_V_ST_IParams.ts";
+import { BrdBlm_TC_SeD_V_eSlidingSystem } from "../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
+import { BrdBlm_TC_SeD_V_ST_GenericLift } from "../classes/lifts/abstract/BrdBlm_TC_SeD_V_ST_GenericLift.ts";
+import { BrdBlm_TC_SeD_V_ST_S2 } from "../classes/lifts/concrete/BrdBlm_TC_SeD_V_ST_S2.ts";
+import { BrdBlm_TC_SeD_V_ST_IParams } from "../interfaces/BrdBlm_TC_SeD_V_ST_IParams.ts";
 
 
 /**

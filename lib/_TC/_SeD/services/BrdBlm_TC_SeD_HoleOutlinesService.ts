@@ -8,21 +8,11 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-    Uts
-} from "../../../deps.ts";
-import {
-    ApgA3D_IPoint2D
-} from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
-import {
-    BrdBlm_TC_SeD_InsertHoleDimensions_Table
-} from "../data/tables/BrdBlm_TC_SeD_InsertHoleDimensions_Table.ts";
-import {
-    BrdBlm_TC_SeD_Inserts_Table
-} from "../data/tables/BrdBlm_TC_SeD_Inserts_Table.ts";
-import {
-    BrdBlm_TC_SeD_eInsertHoleType
-} from "../enums/BrdBlm_TC_SeD_eInsertHoleType.ts";
+import { Uts } from "../../../deps.ts";
+import { ApgA3D_IPoint2D } from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
+import { BrdBlm_TC_SeD_InsertHoleDimensions_Table } from "../data/tables/BrdBlm_TC_SeD_InsertHoleDimensions_Table.ts";
+import { BrdBlm_TC_SeD_Inserts_Table } from "../data/tables/BrdBlm_TC_SeD_Inserts_Table.ts";
+import { BrdBlm_TC_SeD_eInsertHoleType } from "../enums/BrdBlm_TC_SeD_eInsertHoleType.ts";
 
 
 const MODULE_NAME = import.meta.url;

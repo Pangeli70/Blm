@@ -7,20 +7,15 @@
  */
 
 import {
-  ApgA3D_Extrudable
-} from "../../../../../../../../A3D/lib/classes/ApgA3D_Extrudable.ts";
+  ApgA3D_Extrudable } from "../../../../../../../../A3D/lib/classes/ApgA3D_Extrudable.ts";
 import {
-  BrdBlm_TC_SeD_eSlidingTrackFinish
-} from "../../../../enums/BrdBlm_TC_SeD_eSlidingTrackFinish.ts";
+  BrdBlm_TC_SeD_eSlidingTrackFinish } from "../../../../enums/BrdBlm_TC_SeD_eSlidingTrackFinish.ts";
 import {
-  BrdBlm_TC_SeD_eSlidingTracksOutlineType
-} from "../../../../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
+  BrdBlm_TC_SeD_eSlidingTracksOutlineType } from "../../../../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
 import {
-  BrdBlm_TC_SeD_V_ST_RULES
-} from "../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
+  BrdBlm_TC_SeD_V_ST_RULES } from "../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
 import {
-  BrdBlm_TC_SeD_V_ST_ePartName
-} from "../../enums/BrdBlm_TC_SeD_V_ST_ePartName.ts";
+  BrdBlm_TC_SeD_V_ST_ePartName } from "../../enums/BrdBlm_TC_SeD_V_ST_ePartName.ts";
 
 
 /**

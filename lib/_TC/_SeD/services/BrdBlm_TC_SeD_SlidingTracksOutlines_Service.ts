@@ -8,14 +8,11 @@
 
 
 import {
-  ApgA3D_IPoint2D
-} from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
+  ApgA3D_IPoint2D } from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
 import {
-  BrdBlm_TC_SeD_eSlidingTracksOutlineType
-} from "../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
+  BrdBlm_TC_SeD_eSlidingTracksOutlineType } from "../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
 import {
-  BrdBlm_TC_SeD_TSlidingTracksOutlines_Recordset
-} from "../types/BrdBlm_TC_SeD_TSlidingTracksOutlines_Recordset.ts";
+  BrdBlm_TC_SeD_TSlidingTracksOutlines_Recordset } from "../types/BrdBlm_TC_SeD_TSlidingTracksOutlines_Recordset.ts";
 
 
 /**

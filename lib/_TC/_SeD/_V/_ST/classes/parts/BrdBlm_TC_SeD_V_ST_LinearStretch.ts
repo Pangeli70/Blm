@@ -7,8 +7,7 @@
  */
 
 import {
-  BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal
-} from "./BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal.ts";
+  BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal } from "./BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal.ts";
 
 
 /**

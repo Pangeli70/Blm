@@ -8,11 +8,9 @@
  */
 
 import {
-  BrdBlm_TC_SeD_eFinishVariant
-} from "../../enums/BrdBlm_TC_SeD_eFinishVariant.ts";
+  BrdBlm_TC_SeD_eFinishVariant } from "../../enums/BrdBlm_TC_SeD_eFinishVariant.ts";
 import {
-  BrdBlm_IMultilanguage
-} from "../../../../interfaces/BrdBlm_IMultilanguage.ts";
+  BrdBlm_IMultilanguage } from "../../../../interfaces/BrdBlm_IMultilanguage.ts";
 
 
 type BrdBlm_TC_SeD_TFinishVariants_MultilangRecordset = Record<

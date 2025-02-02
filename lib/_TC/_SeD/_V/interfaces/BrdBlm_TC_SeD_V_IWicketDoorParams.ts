@@ -1,6 +1,5 @@
 import {
-  ApgA3D_IPoint2D
-} from "../../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
+  ApgA3D_IPoint2D } from "../../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
 
 /**
  *  DA VERIFICARE COMPLETARE E SISTEMARE

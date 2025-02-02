@@ -8,8 +8,7 @@
  */
 
 import {
-  BrdBlm_TC_SeD_V_eModel
-} from "../enums/BrdBlm_TC_SeD_V_eModel.ts";
+  BrdBlm_TC_SeD_V_eModel } from "../enums/BrdBlm_TC_SeD_V_eModel.ts";
 
 /**
  * Definizione della configurazione della porta pedonale inserita nel portone sezionale

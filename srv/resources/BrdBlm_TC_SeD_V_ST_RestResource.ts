@@ -5,11 +5,9 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-    Blm, BrdBlm_Microservice,
+import { Blm, BrdBlm_Microservice,
     Edr,
-    Uts
-} from "../deps.ts";
+    Uts } from "../deps.ts";
 
 
 

@@ -7,11 +7,9 @@
  */
 
 import {
-  BrdBlm_TC_SeD_V_ST_ePartName
-} from "../enums/BrdBlm_TC_SeD_V_ST_ePartName.ts";
+  BrdBlm_TC_SeD_V_ST_ePartName } from "../enums/BrdBlm_TC_SeD_V_ST_ePartName.ts";
 import {
-  BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal
-} from "../classes/parts/BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal.ts";
+  BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal } from "../classes/parts/BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal.ts";
 
 /**
  * Definizione della mappa che contiene i vari profilati che compongono il 

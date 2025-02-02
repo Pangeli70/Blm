@@ -6,24 +6,12 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-    ApgA3D_IPoint3D
-} from "../../../../../../../../../A3D/lib/interfaces/ApgA3D_IPoint3D.ts";
-import {
-    BrdBlm_TC_SeD_V_eSlidingSystem
-} from "../../../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
-import {
-    BrdBlm_TC_SeD_V_ST_RULES
-} from "../../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
-import {
-    BrdBlm_TC_SeD_V_ST_ePartName
-} from "../../../enums/BrdBlm_TC_SeD_V_ST_ePartName.ts";
-import {
-    BrdBlm_TC_SeD_V_ST_RegularCurve
-} from "../../parts/BrdBlm_TC_SeD_V_ST_RegularCurve.ts";
-import {
-    BrdBlm_TC_SeD_V_ST_GenericLift
-} from "./BrdBlm_TC_SeD_V_ST_GenericLift.ts";
+import { ApgA3D_IPoint3D } from "../../../../../../../../../A3D/lib/interfaces/ApgA3D_IPoint3D.ts";
+import { BrdBlm_TC_SeD_V_eSlidingSystem } from "../../../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
+import { BrdBlm_TC_SeD_V_ST_RULES } from "../../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
+import { BrdBlm_TC_SeD_V_ST_ePartName } from "../../../enums/BrdBlm_TC_SeD_V_ST_ePartName.ts";
+import { BrdBlm_TC_SeD_V_ST_RegularCurve } from "../../parts/BrdBlm_TC_SeD_V_ST_RegularCurve.ts";
+import { BrdBlm_TC_SeD_V_ST_GenericLift } from "./BrdBlm_TC_SeD_V_ST_GenericLift.ts";
 
 
 

@@ -8,14 +8,11 @@
  */
 
 import {
-  BrdBlm_TC_IAccessoryConfig
-} from "../../../interfaces/BrdBlm_TC_IAccessoryConfig.ts";
+  BrdBlm_TC_IAccessoryConfig } from "../../../interfaces/BrdBlm_TC_IAccessoryConfig.ts";
 import {
-  BrdBlm_TC_SeD_ISectionConfig
-} from "../../interfaces/BrdBlm_TC_SeD_ISectionConfig.ts";
+  BrdBlm_TC_SeD_ISectionConfig } from "../../interfaces/BrdBlm_TC_SeD_ISectionConfig.ts";
 import {
-  BrdBlm_TC_SeD_V_IWicketDoorConfig
-} from "./BrdBlm_TC_SeD_V_IWicketDoorConfig.ts";
+  BrdBlm_TC_SeD_V_IWicketDoorConfig } from "./BrdBlm_TC_SeD_V_IWicketDoorConfig.ts";
 
 /**
  * Definizione della configurazione del portone sezionale completo di accessori.

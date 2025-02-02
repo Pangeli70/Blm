@@ -7,11 +7,9 @@
  * ----------------------------------------------------------------------------
  */
 import {
-  BrdBlm_TC_SeD_V_eModel
-} from "../enums/BrdBlm_TC_SeD_V_eModel.ts";
+  BrdBlm_TC_SeD_V_eModel } from "../enums/BrdBlm_TC_SeD_V_eModel.ts";
 import {
-  BrdBlm_IMultilanguage
-} from "../../../../interfaces/BrdBlm_IMultilanguage.ts";
+  BrdBlm_IMultilanguage } from "../../../../interfaces/BrdBlm_IMultilanguage.ts";
 
 
 export type BrdBlm_TC_SeD_V_TModels_MultilangRecordset = Record<

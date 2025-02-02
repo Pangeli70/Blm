@@ -8,14 +8,11 @@
  */
 
 import {
-  BrdBlm_TC_SeD_eSectionFamily
-} from "../enums/BrdBlm_TC_SeD_eSectionFamily.ts";
+  BrdBlm_TC_SeD_eSectionFamily } from "../enums/BrdBlm_TC_SeD_eSectionFamily.ts";
 import {
-  BrdBlm_TC_SeD_ISectionFillingConfig
-} from "./BrdBlm_TC_SeD_ISectionFillingConfig.ts";
+  BrdBlm_TC_SeD_ISectionFillingConfig } from "./BrdBlm_TC_SeD_ISectionFillingConfig.ts";
 import {
-  BrdBlm_TC_SeD_ISectionHoleConfig
-} from "./BrdBlm_TC_SeD_ISectionHoleConfig.ts";
+  BrdBlm_TC_SeD_ISectionHoleConfig } from "./BrdBlm_TC_SeD_ISectionHoleConfig.ts";
 
 /**
  * Definizione della configurazione della sezione del portone sezionale

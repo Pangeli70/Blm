@@ -5,12 +5,8 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-    BrdBlm_TC_Ctx_Component
-} from "../classes/BrdBlm_TC_Ctx_Component.ts";
-import {
-    BrdBlm_TC_Ctx_ePartName
-} from "../enums/BrdBlm_TC_Ctx_ePartName.ts";
+import { BrdBlm_TC_Ctx_Component } from "../classes/BrdBlm_TC_Ctx_Component.ts";
+import { BrdBlm_TC_Ctx_ePartName } from "../enums/BrdBlm_TC_Ctx_ePartName.ts";
 
 
 

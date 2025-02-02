@@ -7,8 +7,7 @@
  */
 
 import {
-  BrdBlm_TC_SeD_V_ST_VerticalLift
-} from "./BrdBlm_TC_SeD_V_ST_VerticalLift.ts";
+  BrdBlm_TC_SeD_V_ST_VerticalLift } from "./BrdBlm_TC_SeD_V_ST_VerticalLift.ts";
 
 /**
  * Classe base per guide di scorrimento dei portoni sezionali a scorrimento

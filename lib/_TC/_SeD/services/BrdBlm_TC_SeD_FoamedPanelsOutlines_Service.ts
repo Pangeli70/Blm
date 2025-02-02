@@ -19,33 +19,15 @@
 
 
 
-import {
-    Uts
-} from "../../../deps.ts";
-import {
-    BrdBlm_IIntExtOutlines
-} from "../../../interfaces/BrdBlm_IIntExtOutlines.ts";
-import {
-    ApgA3D_IPoint2D
-} from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
-import {
-    BrdBlm_TC_SeD_RULES
-} from "../const/BrdBlm_TC_SeD_RULES.ts";
-import {
-    BrdBlm_TC_SeD_eFoamedPanelsOutline
-} from "../enums/BrdBlm_TC_SeD_eFoamedPanelsOutline.ts";
-import {
-    BrdBlm_TC_SeD_eSectionFamily
-} from "../enums/BrdBlm_TC_SeD_eSectionFamily.ts";
-import {
-    BrdBlm_TC_SeD_eSectionType
-} from "../enums/BrdBlm_TC_SeD_eSectionType.ts";
-import {
-    BrdBlm_TC_SeD_ISectionParams
-} from "../interfaces/BrdBlm_TC_SeD_ISectionParams.ts";
-import {
-    BrdBlm_TC_SeD_TSectionsOutlines_Recordset
-} from "../types/BrdBlm_TC_SeD_TSectionsOutlines_Recordset.ts";
+import { Uts } from "../../../deps.ts";
+import { ApgA3D_IIntExtOutlines } from "../../../../../A3D/lib/interfaces/ApgA3D_IIntExtOutlines.ts";
+import { ApgA3D_IPoint2D } from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
+import { BrdBlm_TC_SeD_RULES } from "../const/BrdBlm_TC_SeD_RULES.ts";
+import { BrdBlm_TC_SeD_eFoamedPanelsOutline } from "../enums/BrdBlm_TC_SeD_eFoamedPanelsOutline.ts";
+import { BrdBlm_TC_SeD_eSectionFamily } from "../enums/BrdBlm_TC_SeD_eSectionFamily.ts";
+import { BrdBlm_TC_SeD_eSectionType } from "../enums/BrdBlm_TC_SeD_eSectionType.ts";
+import { BrdBlm_TC_SeD_ISectionParams } from "../interfaces/BrdBlm_TC_SeD_ISectionParams.ts";
+import { BrdBlm_TC_SeD_TSectionsOutlines_Recordset } from "../types/BrdBlm_TC_SeD_TSectionsOutlines_Recordset.ts";
 
 
 
@@ -110,7 +92,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
 
     static #initFemaleOutlines() {
 
-        const r: BrdBlm_IIntExtOutlines = { int: [], ext: [] };
+        const r: ApgA3D_IIntExtOutlines = { int: [], ext: [] };
         const W = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.SECTION_WIDTH;
         const H = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.MALE_FEMALE_HEIGHT;
 
@@ -137,7 +119,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
 
 
     static #initMaleOutlines() {
-        const r: BrdBlm_IIntExtOutlines = { int: [], ext: [] };
+        const r: ApgA3D_IIntExtOutlines = { int: [], ext: [] };
         const W = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.SECTION_WIDTH;
         const H = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.MALE_FEMALE_HEIGHT;
 
@@ -171,7 +153,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
 
 
     static #initTopCutOutlines() {
-        const r: BrdBlm_IIntExtOutlines = { int: [], ext: [] };
+        const r: ApgA3D_IIntExtOutlines = { int: [], ext: [] };
         const W = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.SECTION_WIDTH;
 
         r.ext = [
@@ -189,7 +171,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
 
 
     static #initBottomCutOutlines() {
-        const r: BrdBlm_IIntExtOutlines = { int: [], ext: [] };
+        const r: ApgA3D_IIntExtOutlines = { int: [], ext: [] };
         const W = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.SECTION_WIDTH;
 
         r.ext = [
@@ -207,7 +189,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
 
 
     static #initStaveOutlines() {
-        const r: BrdBlm_IIntExtOutlines = { int: [], ext: [] };
+        const r: ApgA3D_IIntExtOutlines = { int: [], ext: [] };
         const W = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.SECTION_WIDTH;
 
         r.ext = [
@@ -291,7 +273,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
         const recordset = this.#init();
 
         // TODO Refactor this method is too large and complex -- APG 20230720
-        const r: BrdBlm_IIntExtOutlines = { int: [], ext: [] };
+        const r: ApgA3D_IIntExtOutlines = { int: [], ext: [] };
 
         // Per i pannelli schiumati
         if (aparams.family == BrdBlm_TC_SeD_eSectionFamily.FOAMED) {
@@ -519,7 +501,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
 
         const verticalOutlines = this.#getFoamedPanelsVerticalOutlines(aparams);
 
-        const r: BrdBlm_IIntExtOutlines = {
+        const r: ApgA3D_IIntExtOutlines = {
             ext: this.#buildExtOutlineForFoamedPanel(aparams, verticalOutlines.ext),
             int: this.#buildIntOutlineForFoamedPanel(aparams, verticalOutlines.int)
         };

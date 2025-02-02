@@ -8,20 +8,15 @@
  */
 
 import {
-  BrdBlm_TC_SeD_eDesign
-} from "../../enums/BrdBlm_TC_SeD_eDesign.ts";
+  BrdBlm_TC_SeD_eDesign } from "../../enums/BrdBlm_TC_SeD_eDesign.ts";
 import {
-  BrdBlm_TC_SeD_eFinish
-} from "../../enums/BrdBlm_TC_SeD_eFinish.ts";
+  BrdBlm_TC_SeD_eFinish } from "../../enums/BrdBlm_TC_SeD_eFinish.ts";
 import {
-  BrdBlm_TC_SeD_eVisaType
-} from "../../enums/BrdBlm_TC_SeD_eVisaType.ts";
+  BrdBlm_TC_SeD_eVisaType } from "../../enums/BrdBlm_TC_SeD_eVisaType.ts";
 import {
-  BrdBlm_TC_SeD_ISectionParams
-} from "../../interfaces/BrdBlm_TC_SeD_ISectionParams.ts";
+  BrdBlm_TC_SeD_ISectionParams } from "../../interfaces/BrdBlm_TC_SeD_ISectionParams.ts";
 import {
-  BrdBlm_TC_SeD_V_IWicketDoorParams
-} from "./BrdBlm_TC_SeD_V_IWicketDoorParams.ts";
+  BrdBlm_TC_SeD_V_IWicketDoorParams } from "./BrdBlm_TC_SeD_V_IWicketDoorParams.ts";
 
 /**
  * Definizione dei dati per la costruzione del portone sezionale a scorrimento

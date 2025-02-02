@@ -1,7 +1,5 @@
 import { ApgA3D_eTextureType } from "../../../A3D/lib/enums/ApgA3D_eTextureType.ts";
-import {
-    ApgA3D_ICDNAsset
-} from "../../../A3D/lib/interfaces/ApgA3D_ICDNAsset.ts";
+import { ApgA3D_ICDNAsset } from "../../../A3D/lib/interfaces/ApgA3D_ICDNAsset.ts";
 
 
 type BrdBlm_TCDNAsset_Recordset = Record<

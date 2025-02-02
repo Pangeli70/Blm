@@ -5,18 +5,10 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-    BrdBlm_TC_SeD_eSlidingTrackFinish
-} from "../../../enums/BrdBlm_TC_SeD_eSlidingTrackFinish.ts";
-import {
-    BrdBlm_TC_SeD_V_eSlidingSystem
-} from "../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
-import {
-    BrdBlm_TC_SeD_V_ST_IParams
-} from "../interfaces/BrdBlm_TC_SeD_V_ST_IParams.ts";
-import {
-    BrdBlm_TC_SeD_V_ST_IParams_Signature
-} from "../mod.ts";
+import { BrdBlm_TC_SeD_eSlidingTrackFinish } from "../../../enums/BrdBlm_TC_SeD_eSlidingTrackFinish.ts";
+import { BrdBlm_TC_SeD_V_eSlidingSystem } from "../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
+import { BrdBlm_TC_SeD_V_ST_IParams } from "../interfaces/BrdBlm_TC_SeD_V_ST_IParams.ts";
+import { BrdBlm_TC_SeD_V_ST_IParams_Signature } from "../mod.ts";
 
 
 

@@ -7,12 +7,8 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-    BrdBlm_TC_SeD_eDesign
-} from "../../enums/BrdBlm_TC_SeD_eDesign.ts";
-import {
-    BrdBlm_IMultilanguage
-} from "../../../../interfaces/BrdBlm_IMultilanguage.ts";
+import { BrdBlm_TC_SeD_eDesign } from "../../enums/BrdBlm_TC_SeD_eDesign.ts";
+import { BrdBlm_IMultilanguage } from "../../../../interfaces/BrdBlm_IMultilanguage.ts";
 
 
 type BrdBlm_TC_SeD_TDesigns_MultilangRecordset = Record<

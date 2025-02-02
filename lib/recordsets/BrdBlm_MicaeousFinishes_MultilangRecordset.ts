@@ -7,12 +7,8 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-    BrdBlm_eMicaceousFinish
-} from "../enums/BrdBlm_eMicaceousFinish.ts";
-import {
-    BrdBlm_IMultilanguage
-} from "../interfaces/BrdBlm_IMultilanguage.ts";
+import { BrdBlm_eMicaceousFinish } from "../enums/BrdBlm_eMicaceousFinish.ts";
+import { BrdBlm_IMultilanguage } from "../interfaces/BrdBlm_IMultilanguage.ts";
 
 
 

@@ -5,12 +5,8 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-    ApgA3D_IMaterialDef
-} from "../../../../../A3D/lib/interfaces/ApgA3D_IMaterialDef.ts";
-import {
-    BrdBlm_TC_Ctx_eExternBaseboardFinish
-} from "../enums/BrdBlm_TC_Ctx_eExternBaseboardFinish.ts";
+import { ApgA3D_IMaterialDef } from "../../../../../A3D/lib/interfaces/ApgA3D_IMaterialDef.ts";
+import { BrdBlm_TC_Ctx_eExternBaseboardFinish } from "../enums/BrdBlm_TC_Ctx_eExternBaseboardFinish.ts";
 
 
 

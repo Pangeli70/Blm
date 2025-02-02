@@ -6,11 +6,9 @@
  */
 
 import {
-  BrdBlm_IIntExtOutlines
-} from "../../../interfaces/BrdBlm_IIntExtOutlines.ts";
+  ApgA3D_IIntExtOutlines } from "../../../../../A3D/lib/interfaces/ApgA3D_IIntExtOutlines.ts";
 import {
-  BrdBlm_TC_SeD_eFoamedPanelsOutline
-} from "../enums/BrdBlm_TC_SeD_eFoamedPanelsOutline.ts";
+  BrdBlm_TC_SeD_eFoamedPanelsOutline } from "../enums/BrdBlm_TC_SeD_eFoamedPanelsOutline.ts";
 
 
 /**
@@ -19,5 +17,5 @@ import {
  */
 export type BrdBlm_TC_SeD_TSectionsOutlines_Recordset = Record<
   BrdBlm_TC_SeD_eFoamedPanelsOutline,
-  BrdBlm_IIntExtOutlines
+  ApgA3D_IIntExtOutlines
 >;

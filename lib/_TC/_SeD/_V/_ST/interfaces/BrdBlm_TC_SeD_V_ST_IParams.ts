@@ -8,11 +8,9 @@
 
 
 import {
-  BrdBlm_TC_SeD_eSlidingTrackFinish
-} from "../../../enums/BrdBlm_TC_SeD_eSlidingTrackFinish.ts";
+  BrdBlm_TC_SeD_eSlidingTrackFinish } from "../../../enums/BrdBlm_TC_SeD_eSlidingTrackFinish.ts";
 import {
-  BrdBlm_TC_SeD_V_eSlidingSystem
-} from "../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
+  BrdBlm_TC_SeD_V_eSlidingSystem } from "../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
 
 
 export const BrdBlm_TC_SeD_V_ST_IParams_Signature = "BrdBlm_TC_SeD_V_ST_IParams_Signature_V1"

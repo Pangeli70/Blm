@@ -6,12 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-    BrdBlm_TC_SeD_V_eClutterType
-} from "../enums/BrdBlm_TC_SeD_V_eClutterType.ts";
-import {
-    BrdBlm_TC_SeD_V_eLiftingAidType
-} from "../enums/BrdBlm_TC_SeD_V_eLiftingAidType.ts";
+import { BrdBlm_TC_SeD_V_eClutterType } from "../enums/BrdBlm_TC_SeD_V_eClutterType.ts";
+import { BrdBlm_TC_SeD_V_eLiftingAidType } from "../enums/BrdBlm_TC_SeD_V_eLiftingAidType.ts";
 
 
 /**

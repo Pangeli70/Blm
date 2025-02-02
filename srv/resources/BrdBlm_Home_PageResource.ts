@@ -4,11 +4,9 @@
  * @version 0.1 APG 20240105
  * ----------------------------------------------------------------------------
  */
-import {
-    BrdBlm_Microservice,
+import { BrdBlm_Microservice,
     Edr,
-    Tng
-} from "../deps.ts";
+    Tng } from "../deps.ts";
 
 
 /**

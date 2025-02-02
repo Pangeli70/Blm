@@ -5,21 +5,11 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-    BrdBlm_TC_SeD_eFinish
-} from "../../enums/BrdBlm_TC_SeD_eFinish.ts";
-import {
-    BrdBlm_TC_SeD_eFinishVariant
-} from "../../enums/BrdBlm_TC_SeD_eFinishVariant.ts";
-import {
-    BrdBlm_TC_SeD_eSectionFamily
-} from "../../enums/BrdBlm_TC_SeD_eSectionFamily.ts";
-import {
-    BrdBlm_TC_SeD_eSectionType
-} from "../../enums/BrdBlm_TC_SeD_eSectionType.ts";
-import {
-    BrdBlm_TC_SeD_ISectionParams, BrdBlm_TC_SeD_ISectionParams_Signature
-} from "../../interfaces/BrdBlm_TC_SeD_ISectionParams.ts";
+import { BrdBlm_TC_SeD_eFinish } from "../../enums/BrdBlm_TC_SeD_eFinish.ts";
+import { BrdBlm_TC_SeD_eFinishVariant } from "../../enums/BrdBlm_TC_SeD_eFinishVariant.ts";
+import { BrdBlm_TC_SeD_eSectionFamily } from "../../enums/BrdBlm_TC_SeD_eSectionFamily.ts";
+import { BrdBlm_TC_SeD_eSectionType } from "../../enums/BrdBlm_TC_SeD_eSectionType.ts";
+import { BrdBlm_TC_SeD_ISectionParams, BrdBlm_TC_SeD_ISectionParams_Signature } from "../../interfaces/BrdBlm_TC_SeD_ISectionParams.ts";
 
 
 

@@ -7,17 +7,13 @@
  */
 
 import {
-  ApgA3D_IPoint3D
-} from "../../../../../../../../A3D/lib/interfaces/ApgA3D_IPoint3D.ts";
+  ApgA3D_IPoint3D } from "../../../../../../../../A3D/lib/interfaces/ApgA3D_IPoint3D.ts";
 import {
-  BrdBlm_TC_SeD_V_ST_RULES
-} from "../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
+  BrdBlm_TC_SeD_V_ST_RULES } from "../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
 import {
-  BrdBlm_TC_SeD_eSlidingTracksOutlineType
-} from "../../../../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
+  BrdBlm_TC_SeD_eSlidingTracksOutlineType } from "../../../../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
 import {
-  BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal
-} from "./BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal.ts";
+  BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal } from "./BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal.ts";
 
 
 

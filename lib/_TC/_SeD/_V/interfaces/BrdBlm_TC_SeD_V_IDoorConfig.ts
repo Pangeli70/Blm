@@ -9,38 +9,27 @@
 
 
 import {
-  BrdBlm_eBrand
-} from "../../../../enums/BrdBlm_eBrand.ts";
+  BrdBlm_eBrand } from "../../../../enums/BrdBlm_eBrand.ts";
 import {
-  BrdBlm_TC_IAccessoryConfig
-} from "../../../interfaces/BrdBlm_TC_IAccessoryConfig.ts";
+  BrdBlm_TC_IAccessoryConfig } from "../../../interfaces/BrdBlm_TC_IAccessoryConfig.ts";
 import {
-  BrdBlm_TC_SeD_eConfiguration
-} from "../../enums/BrdBlm_TC_SeD_eConfiguration.ts";
+  BrdBlm_TC_SeD_eConfiguration } from "../../enums/BrdBlm_TC_SeD_eConfiguration.ts";
 import {
-  BrdBlm_TC_SeD_eDesign
-} from "../../enums/BrdBlm_TC_SeD_eDesign.ts";
+  BrdBlm_TC_SeD_eDesign } from "../../enums/BrdBlm_TC_SeD_eDesign.ts";
 import {
-  BrdBlm_TC_SeD_eFinish
-} from "../../enums/BrdBlm_TC_SeD_eFinish.ts";
+  BrdBlm_TC_SeD_eFinish } from "../../enums/BrdBlm_TC_SeD_eFinish.ts";
 import {
-  BrdBlm_TC_SeD_eFinishVariant
-} from "../../enums/BrdBlm_TC_SeD_eFinishVariant.ts";
+  BrdBlm_TC_SeD_eFinishVariant } from "../../enums/BrdBlm_TC_SeD_eFinishVariant.ts";
 import {
-  BrdBlm_TC_SeD_eVisaType
-} from "../../enums/BrdBlm_TC_SeD_eVisaType.ts";
+  BrdBlm_TC_SeD_eVisaType } from "../../enums/BrdBlm_TC_SeD_eVisaType.ts";
 import {
-  BrdBlm_TC_SeD_ISectionConfig
-} from "../../interfaces/BrdBlm_TC_SeD_ISectionConfig.ts";
+  BrdBlm_TC_SeD_ISectionConfig } from "../../interfaces/BrdBlm_TC_SeD_ISectionConfig.ts";
 import {
-  BrdBlm_TC_SeD_V_eModel
-} from "../enums/BrdBlm_TC_SeD_V_eModel.ts";
+  BrdBlm_TC_SeD_V_eModel } from "../enums/BrdBlm_TC_SeD_V_eModel.ts";
 import {
-  BrdBlm_TC_SeD_V_eSlidingSystem
-} from "../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
+  BrdBlm_TC_SeD_V_eSlidingSystem } from "../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
 import {
-  BrdBlm_TC_SeD_V_IWicketDoorConfig
-} from "./BrdBlm_TC_SeD_V_IWicketDoorConfig.ts";
+  BrdBlm_TC_SeD_V_IWicketDoorConfig } from "./BrdBlm_TC_SeD_V_IWicketDoorConfig.ts";
 
 /**
  * Configurazione del portone sezionale compresi gli accessori.
