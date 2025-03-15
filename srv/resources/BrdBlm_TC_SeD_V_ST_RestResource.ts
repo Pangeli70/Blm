@@ -16,12 +16,12 @@ import { Blm, BrdBlm_Microservice,
  * Route per la gestione dei delle guide dei sistemi di scorrimento dei portoni 
  * sezionali a scorrimento verticale
  */
-export class BrdBlm_TC_SeD_V_ST_RestResource extends Edr.BrdEdr_Base_RestResource {
+export class BrdBlm_TC_SeD_V_ST_RestResource extends Edr.ApgEdr_RestResource_Base {
 
 
     static ROUTE = "/Brd/Blm/TC/SeD/V/ST";
 
-    public paths = [BrdBlm_TC_SeD_V_ST_RestResource.ROUTE];
+    override paths = [BrdBlm_TC_SeD_V_ST_RestResource.ROUTE];
 
 
     public GET(

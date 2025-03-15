@@ -12,10 +12,10 @@ import { BrdBlm_Microservice,
 /**
  * Homepage del sito del microservice
  */
-export class BrdBlm_Home_PageResource extends Edr.Drash.Resource {
+export class BrdBlm_Home_PageResource extends Edr.ApgEdr_TngResource_Base {
 
 
-    public paths = ["/", "/Brd/Blm/index"];
+    override paths = ["/", "/Brd/Blm/index"];
 
 
     public async GET(_request: Edr.Drash.Request, response: Edr.Drash.Response) {

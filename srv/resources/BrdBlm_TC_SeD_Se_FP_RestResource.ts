@@ -14,11 +14,11 @@ import { Blm, BrdBlm_Microservice,
 /**
  * Route per ottenere e testare i pannelli schiumati per i portoni sezionali
  */
-export class BrdBlm_TC_SeD_Se_FP_RestResource extends Edr.BrdEdr_Base_RestResource {
+export class BrdBlm_TC_SeD_Se_FP_RestResource extends Edr.ApgEdr_RestResource_Base {
 
 
     static ROUTE = "/Brd/Blm/TC/SeD/Se/FP"
-    public paths = [BrdBlm_TC_SeD_Se_FP_RestResource.ROUTE];
+    override paths = [BrdBlm_TC_SeD_Se_FP_RestResource.ROUTE];
 
 
 
