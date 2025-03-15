@@ -7,52 +7,53 @@
  * ----------------------------------------------------------------------------
  */
 
+import { Uts } from "../deps.ts";
 import { BrdBlm_eMicaceousFinish } from "../enums/BrdBlm_eMicaceousFinish.ts";
-import { BrdBlm_IMultilanguage } from "../interfaces/BrdBlm_IMultilanguage.ts";
+
 
 
 
 type BrdBlm_TMicaeousFinishes_MultilangRecordset = Record<
     BrdBlm_eMicaceousFinish,
-    BrdBlm_IMultilanguage
+    Uts.ApgUts_IMultilanguage
 >;
 
 
 export const BrdBlm_MicaeousFinishes_MultilangRecordset: BrdBlm_TMicaeousFinishes_MultilangRecordset = {
     
     [BrdBlm_eMicaceousFinish.SIVER_GRAY]: {
-        it: "Verniciato Grigio Argento Micaceo",
-        en: "Silver gray micaceous coating"
+        IT: "Verniciato Grigio ArgENto Micaceo",
+        EN: "Silver gray micaceous coating"
     },
 
     [BrdBlm_eMicaceousFinish.METALLIC_GRAY]: {
-        it: "Verniciato Grigio Metallico Micaceo",
-        en: "Metallic gray micaceous coating"
+        IT: "Verniciato Grigio Metallico Micaceo",
+        EN: "Metallic gray micaceous coating"
     },
 
     [BrdBlm_eMicaceousFinish.GRAPHITE_GRAY]: {
-        it: "Verniciato Grigio Grafite Micaceo",
-        en: "Grahite gray micaceous coating"
+        IT: "Verniciato Grigio Grafite Micaceo",
+        EN: "Grahite gray micaceous coating"
     },
 
     [BrdBlm_eMicaceousFinish.SMOKE_BLACK]: {
-        it: "Verniciato Nero Fumo Micaceo",
-        en: "Smoke black micaceous coating"
+        IT: "Verniciato Nero Fumo Micaceo",
+        EN: "Smoke black micaceous coating"
     },
 
     [BrdBlm_eMicaceousFinish.PINE_GREEN]: {
-        it: "Verniciato Verde Pino Micaceo",
-        en: "Pine green micaceous coating"
+        IT: "Verniciato Verde Pino Micaceo",
+        EN: "Pine greEN micaceous coating"
     },
 
     [BrdBlm_eMicaceousFinish.ANCIENT_RED]: {
-        it: "Verniciato Rosso Antico Micaceo",
-        en: "Ancient red micaceous coating"
+        IT: "Verniciato Rosso Antico Micaceo",
+        EN: "AnciENt red micaceous coating"
     },
 
     [BrdBlm_eMicaceousFinish.BURNT_SOIL]: {
-        it: "Verniciato Terra Bruciata Micaceo",
-        en: "Burnt soil micaceous coating"
+        IT: "Verniciato Terra Bruciata Micaceo",
+        EN: "Burnt soil micaceous coating"
     }
 };
 
@@ -60,7 +61,7 @@ export const BrdBlm_MicaeousFinishes_MultilangRecordset: BrdBlm_TMicaeousFinishe
 /*! ---------------------------------------------------------------------------
  * @copyright Breda Sistemi industriali S.p.A., 2023 - http://bredasys.com
  * All rights reserved 
- * @licence You cannot host, display, distribute or share this Work in any 
+ * @licENce You cannot host, display, distribute or share this Work in any 
  * form, both physical and digital. You cannot use this Work in any commercial
  * or non-commercial product, website or project. You cannot sell this Work
  * and you cannot mint an NFTs out of it.
