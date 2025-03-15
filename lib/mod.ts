@@ -14,8 +14,6 @@ export * from "./enums/BrdBlm_eGlossRoughness.ts";
 export * from "./enums/BrdBlm_eMicaceousFinish.ts";
 export * from "./enums/BrdBlm_eProductType.ts";
 
-export * from "./interfaces/BrdBlm_IMultilanguage.ts";
-
 export * from "./recordsets/BrdBlm_CDNAssets_Recordset.ts";
 export * from "./recordsets/BrdBlm_MicaeousFinishes_MultilangRecordset.ts";
 
