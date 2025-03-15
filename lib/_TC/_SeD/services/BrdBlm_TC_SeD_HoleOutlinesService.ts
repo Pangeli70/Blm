@@ -8,8 +8,7 @@
  * ----------------------------------------------------------------------------
  */
 
-import { Uts } from "../../../deps.ts";
-import { ApgA3D_IPoint2D } from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
+import { Uts, A3D } from "../../../deps.ts";
 import { BrdBlm_TC_SeD_InsertHoleDimensions_Table } from "../data/tables/BrdBlm_TC_SeD_InsertHoleDimensions_Table.ts";
 import { BrdBlm_TC_SeD_Inserts_Table } from "../data/tables/BrdBlm_TC_SeD_Inserts_Table.ts";
 import { BrdBlm_TC_SeD_eInsertHoleType } from "../enums/BrdBlm_TC_SeD_eInsertHoleType.ts";
@@ -48,14 +47,14 @@ export class BrdBlm_TC_SeD_HolesOutlinesService {
      * Sposta il profilo nella posizione indicata
      */
     static #moveHole(
-        aoutline: ApgA3D_IPoint2D[],
-        aposition: ApgA3D_IPoint2D,
+        aoutline: A3D.ApgA3D_IPoint2D[],
+        aposition: A3D.ApgA3D_IPoint2D,
     ) {
 
-        const r: ApgA3D_IPoint2D[] = [];
+        const r: A3D.ApgA3D_IPoint2D[] = [];
 
         for (const point of aoutline) {
-            const newPoint: ApgA3D_IPoint2D = {
+            const newPoint: A3D.ApgA3D_IPoint2D = {
                 x: point.x + aposition.x,
                 y: point.y + aposition.y,
             };
@@ -74,17 +73,17 @@ export class BrdBlm_TC_SeD_HolesOutlinesService {
      */
     static getOutlineByInsertCode(
         ainsertCode: string,
-        aposition: ApgA3D_IPoint2D
+        aposition: A3D.ApgA3D_IPoint2D
     ) {
 
-        let outline: ApgA3D_IPoint2D[] = [];
-        const r = new Uts.BrdUts_Result();
+        let outline: A3D.ApgA3D_IPoint2D[] = [];
+        const r = new Uts.ApgUts_Result();
 
         const insertHoleType = this.#getInsertHoleTypeByArticleCode(ainsertCode);
         
         if (insertHoleType == BrdBlm_TC_SeD_eInsertHoleType.ERROR) { 
             r.ok = false;
-            r.addMessage(
+            r.message(
                 this.getOutlineByInsertCode.name,
                 `Codice inserto [${ainsertCode}] non trovato`
             );
@@ -97,7 +96,7 @@ export class BrdBlm_TC_SeD_HolesOutlinesService {
 
         if (index == -1) {
             r.ok = false;
-            r.addMessage(
+            r.message(
                 this.getOutlineByInsertCode.name,
                 `${MODULE_NAME}: Dati foro per inserto non trovati per tipo foro [${insertHoleType}]`
             );

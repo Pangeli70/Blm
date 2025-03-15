@@ -7,68 +7,69 @@
  * ----------------------------------------------------------------------------
  */
 
+import { Uts } from "../../../../deps.ts";
 import { BrdBlm_TC_SeD_eDesign } from "../../enums/BrdBlm_TC_SeD_eDesign.ts";
-import { BrdBlm_IMultilanguage } from "../../../../interfaces/BrdBlm_IMultilanguage.ts";
+
 
 
 type BrdBlm_TC_SeD_TDesigns_MultilangRecordset = Record<
     BrdBlm_TC_SeD_eDesign,
-    BrdBlm_IMultilanguage
+    Uts.ApgUts_IMultilanguage
 >;
 
 
 export const BrdBlm_TC_SeD_Designs_MultilangRecordset: BrdBlm_TC_SeD_TDesigns_MultilangRecordset = {
     
     [BrdBlm_TC_SeD_eDesign.FLAT]: {
-        it: "Flat",
+        EN: "Flat",
     },
 
     [BrdBlm_TC_SeD_eDesign.FLAT_VERT]: {
-        it: "Flat verticale",
+        EN: "Flat verticale",
     },
 
     [BrdBlm_TC_SeD_eDesign.SINGLE]: {
-        it: "Single",
+        EN: "Single",
     },
 
     [BrdBlm_TC_SeD_eDesign.SINGLE_VERT]: {
-        it: "Single verticale",
+        EN: "Single verticale",
     },
 
     [BrdBlm_TC_SeD_eDesign.MULTI]: {
-        it: "Multi",
+        EN: "Multi",
     },
 
     [BrdBlm_TC_SeD_eDesign.MULTI_VERT]: {
-        it: "Multi verticale",
+        EN: "Multi verticale",
     },
 
     [BrdBlm_TC_SeD_eDesign.BLOCKS]: {
-        it: "Cassettato",
+        EN: "Cassettato",
     },
 
     [BrdBlm_TC_SeD_eDesign.BLOCKS_VERT]: {
-        it: "Cassettato verticale",
+        EN: "Cassettato verticale",
     },
 
     [BrdBlm_TC_SeD_eDesign.MULTIRIB]: {
-        it: "Multirib",
+        EN: "Multirib",
     },
 
     [BrdBlm_TC_SeD_eDesign.MULTIRIB_VERT]: {
-        it: "Multirib verticale",
+        EN: "Multirib verticale",
     },
 
     [BrdBlm_TC_SeD_eDesign.VISA_LUX]: {
-        it: "Visa Lux",
+        EN: "Visa Lux",
     },
 
     [BrdBlm_TC_SeD_eDesign.VISA_LUXOR]: {
-        it: "Visa Luxor",
+        EN: "Visa Luxor",
     },
 
     [BrdBlm_TC_SeD_eDesign.VISA_FULL_VISION]: {
-        it: "Visa Full vision",
+        EN: "Visa Full vision",
     },
 };
 

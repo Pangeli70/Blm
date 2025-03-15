@@ -22,7 +22,7 @@ export class BrdBlm_TC_SeD_V_ST_LinearStretch extends BrdBlm_TC_SeD_V_ST_Profile
   /**
    * Questo è un tratto rettilineo di tipo di guida
    */
-  readonly isStretch = true;
+  override readonly isStretch = true;
 
 
 }

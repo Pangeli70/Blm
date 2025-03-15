@@ -5,7 +5,7 @@
  * ----------------------------------------------------------------------------
  */
 
-import { ApgA3D_IMaterialDef } from "../../../../../A3D/lib/interfaces/ApgA3D_IMaterialDef.ts";
+import { A3D } from "../../../deps.ts";
 import { BrdBlm_TC_Ctx_eWallFinish } from "../enums/BrdBlm_TC_Ctx_eWallFinish.ts";
 
 
@@ -16,7 +16,7 @@ import { BrdBlm_TC_Ctx_eWallFinish } from "../enums/BrdBlm_TC_Ctx_eWallFinish.ts
  */
 export type BrdBlm_TC_Ctx_TWallFinishRecordset = Record<
     BrdBlm_TC_Ctx_eWallFinish,
-    ApgA3D_IMaterialDef
+    A3D.ApgA3D_IMaterialDef
 >;
 
 /*! ---------------------------------------------------------------------------

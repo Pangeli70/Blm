@@ -5,10 +5,9 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-  ApgA3D_IIntExtOutlines } from "../../../../../A3D/lib/interfaces/ApgA3D_IIntExtOutlines.ts";
-import {
-  BrdBlm_TC_SeD_eFoamedPanelsOutline } from "../enums/BrdBlm_TC_SeD_eFoamedPanelsOutline.ts";
+
+import { A3D } from "../../../deps.ts";
+import {  BrdBlm_TC_SeD_eFoamedPanelsOutline } from "../enums/BrdBlm_TC_SeD_eFoamedPanelsOutline.ts";
 
 
 /**
@@ -17,5 +16,5 @@ import {
  */
 export type BrdBlm_TC_SeD_TSectionsOutlines_Recordset = Record<
   BrdBlm_TC_SeD_eFoamedPanelsOutline,
-  ApgA3D_IIntExtOutlines
+  A3D.ApgA3D_IIntExtOutlines
 >;

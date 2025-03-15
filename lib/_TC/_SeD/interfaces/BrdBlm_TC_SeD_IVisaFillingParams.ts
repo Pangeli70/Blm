@@ -7,8 +7,9 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-  ApgA3D_IPoint2D } from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
+import { A3D } from "../../../deps.ts";
+
+
 
 /**
  * Dati del tamponamento nella sezione VISA per le chiusure tecniche
@@ -24,12 +25,12 @@ export interface BrdBlm_TC_SeD_IVisaFillingParams {
   /**
    * Coordinate di posizionamento del tamponamento
    */
-  positions: ApgA3D_IPoint2D;
+  positions: A3D.ApgA3D_IPoint2D;
 
   /**
    * Dimensioni del tamponamento x=larghezza e y=altezza
    */
-  dimensions: ApgA3D_IPoint2D;
+  dimensions: A3D.ApgA3D_IPoint2D;
 }
 
 /*! ---------------------------------------------------------------------------

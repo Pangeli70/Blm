@@ -7,31 +7,32 @@
  * ----------------------------------------------------------------------------
  */
 
+import { Uts } from "../../../../deps.ts";
 import { BrdBlm_TC_SeD_eConfiguration } from "../../enums/BrdBlm_TC_SeD_eConfiguration.ts";
-import { BrdBlm_IMultilanguage } from "../../../../interfaces/BrdBlm_IMultilanguage.ts";
+
 
 
 type BrdBlm_TC_SeD_TConfigurations_MultilangRecordset = Record<
     BrdBlm_TC_SeD_eConfiguration,
-    BrdBlm_IMultilanguage
+    Uts.ApgUts_IMultilanguage
 >;
 
 export const BrdBlm_TC_SeD_Configurations_MultilangRecordset: BrdBlm_TC_SeD_TConfigurations_MultilangRecordset = {
     
     [BrdBlm_TC_SeD_eConfiguration.BASE]: {
-        it: "Base",
+        EN: "Base",
     },
 
     [BrdBlm_TC_SeD_eConfiguration.STOP_AND_GO]: {
-        it: "Stop&Go",
+        EN: "Stop&Go",
     },
 
     [BrdBlm_TC_SeD_eConfiguration.VISA]: {
-        it: "Visa",
+        EN: "Visa",
     },
     
     [BrdBlm_TC_SeD_eConfiguration.VISA_STOP_AND_GO]: {
-        it: "Visa Stop&Go",
+        EN: "Visa Stop&Go",
     },
 };
 

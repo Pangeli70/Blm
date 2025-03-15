@@ -6,12 +6,9 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-  BrdBlm_TC_SeD_V_ST_RULES } from "../../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
-import {
-  BrdBlm_TC_SeD_V_eSlidingSystem } from "../../../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
-import {
-  BrdBlm_TC_SeD_V_ST_GenericLift } from "./BrdBlm_TC_SeD_V_ST_GenericLift.ts";
+import { BrdBlm_TC_SeD_V_eSlidingSystem } from "../../../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
+import { BrdBlm_TC_SeD_V_ST_RULES } from "../../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
+import { BrdBlm_TC_SeD_V_ST_GenericLift } from "./BrdBlm_TC_SeD_V_ST_GenericLift.ts";
 
 /**
  * Classe base per guide di scorrimento dei portoni sezionali a scorrimento
@@ -81,7 +78,7 @@ export class BrdBlm_TC_SeD_V_ST_VerticalLift extends BrdBlm_TC_SeD_V_ST_GenericL
 
 
 
-  getComponents() {
+  override getComponents() {
 
     this.getAngleBarFirstStretch();
     this.getVerticalTrackFirstStretch();

@@ -6,8 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-  ApgA3D_IPoint2D } from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
+
+import { A3D } from "../../../deps.ts";
 import {
   BrdBlm_TC_SeD_eSlidingTracksOutlineType } from "../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
 
@@ -18,5 +18,5 @@ import {
  */
 export type BrdBlm_TC_SeD_TSlidingTracksOutlines_Recordset = Record<
   BrdBlm_TC_SeD_eSlidingTracksOutlineType,
-  ApgA3D_IPoint2D[]
+  A3D.ApgA3D_IPoint2D[]
 >;

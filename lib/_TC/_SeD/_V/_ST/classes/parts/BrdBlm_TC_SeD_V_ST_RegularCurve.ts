@@ -6,14 +6,11 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-  ApgA3D_IPoint3D } from "../../../../../../../../A3D/lib/interfaces/ApgA3D_IPoint3D.ts";
-import {
-  BrdBlm_TC_SeD_V_ST_RULES } from "../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
-import {
-  BrdBlm_TC_SeD_eSlidingTracksOutlineType } from "../../../../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
-import {
-  BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal } from "./BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal.ts";
+
+import { A3D } from "../../../../../../deps.ts";
+import { BrdBlm_TC_SeD_eSlidingTracksOutlineType } from "../../../../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
+import { BrdBlm_TC_SeD_V_ST_RULES } from "../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
+import { BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal } from "./BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal.ts";
 
 
 
@@ -28,12 +25,12 @@ export class BrdBlm_TC_SeD_V_ST_RegularCurve extends BrdBlm_TC_SeD_V_ST_Profiled
   /**
    * Questo oggetto è una curva
    */
-  readonly isCurve = true;
+  override readonly isCurve = true;
 
   /**
    * Tipo di profilo
    */
-  outlineType = BrdBlm_TC_SeD_eSlidingTracksOutlineType.TRACK;
+  override outlineType = BrdBlm_TC_SeD_eSlidingTracksOutlineType.TRACK;
 
 
   /**
@@ -49,11 +46,11 @@ export class BrdBlm_TC_SeD_V_ST_RegularCurve extends BrdBlm_TC_SeD_V_ST_Profiled
   /**
    * Centro della curva per i calcoli di estrusione e posizionamento
    */
-  center: ApgA3D_IPoint3D = { x: 0, y: 0, z: 0 };
+  center: A3D.ApgA3D_IPoint3D = { x: 0, y: 0, z: 0 };
 
   /**
    * Percorso di estrusione della curva
    */
-  path: ApgA3D_IPoint3D[] = [];
+  path: A3D.ApgA3D_IPoint3D[] = [];
 
 }

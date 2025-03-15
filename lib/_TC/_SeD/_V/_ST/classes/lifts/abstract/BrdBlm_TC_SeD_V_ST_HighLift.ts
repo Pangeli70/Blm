@@ -6,8 +6,7 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-  BrdBlm_TC_SeD_V_ST_VerticalLift } from "./BrdBlm_TC_SeD_V_ST_VerticalLift.ts";
+import { BrdBlm_TC_SeD_V_ST_VerticalLift } from "./BrdBlm_TC_SeD_V_ST_VerticalLift.ts";
 
 /**
  * Classe base per guide di scorrimento dei portoni sezionali a scorrimento
@@ -33,7 +32,7 @@ export class BrdBlm_TC_SeD_V_ST_HighLift extends BrdBlm_TC_SeD_V_ST_VerticalLift
 
 
 
-  getComponents() {
+  override getComponents() {
 
     super.getComponents();
 

@@ -19,9 +19,7 @@
 
 
 
-import { Uts } from "../../../deps.ts";
-import { ApgA3D_IIntExtOutlines } from "../../../../../A3D/lib/interfaces/ApgA3D_IIntExtOutlines.ts";
-import { ApgA3D_IPoint2D } from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
+import { Uts, A3D } from "../../../deps.ts";
 import { BrdBlm_TC_SeD_RULES } from "../const/BrdBlm_TC_SeD_RULES.ts";
 import { BrdBlm_TC_SeD_eFoamedPanelsOutline } from "../enums/BrdBlm_TC_SeD_eFoamedPanelsOutline.ts";
 import { BrdBlm_TC_SeD_eSectionFamily } from "../enums/BrdBlm_TC_SeD_eSectionFamily.ts";
@@ -74,14 +72,14 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
      * @returns Un nuovo array, i punti vengono copiati in un nuovo oggetto
      */
     static #offsetPointsOnYAxis(
-        apoints: ApgA3D_IPoint2D[],
+        apoints: A3D.ApgA3D_IPoint2D[],
         adeltaY: number
     ) {
 
-        const r: ApgA3D_IPoint2D[] = [];
+        const r: A3D.ApgA3D_IPoint2D[] = [];
 
         for (const point of apoints) {
-            const newPoint: ApgA3D_IPoint2D = { x: point.x, y: point.y + adeltaY };
+            const newPoint: A3D.ApgA3D_IPoint2D = { x: point.x, y: point.y + adeltaY };
             r.push(newPoint);
         }
 
@@ -92,7 +90,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
 
     static #initFemaleOutlines() {
 
-        const r: ApgA3D_IIntExtOutlines = { int: [], ext: [] };
+        const r: A3D.ApgA3D_IIntExtOutlines = { int: [], ext: [] };
         const W = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.SECTION_WIDTH;
         const H = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.MALE_FEMALE_HEIGHT;
 
@@ -119,7 +117,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
 
 
     static #initMaleOutlines() {
-        const r: ApgA3D_IIntExtOutlines = { int: [], ext: [] };
+        const r: A3D.ApgA3D_IIntExtOutlines = { int: [], ext: [] };
         const W = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.SECTION_WIDTH;
         const H = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.MALE_FEMALE_HEIGHT;
 
@@ -153,7 +151,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
 
 
     static #initTopCutOutlines() {
-        const r: ApgA3D_IIntExtOutlines = { int: [], ext: [] };
+        const r: A3D.ApgA3D_IIntExtOutlines = { int: [], ext: [] };
         const W = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.SECTION_WIDTH;
 
         r.ext = [
@@ -171,7 +169,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
 
 
     static #initBottomCutOutlines() {
-        const r: ApgA3D_IIntExtOutlines = { int: [], ext: [] };
+        const r: A3D.ApgA3D_IIntExtOutlines = { int: [], ext: [] };
         const W = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.SECTION_WIDTH;
 
         r.ext = [
@@ -189,7 +187,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
 
 
     static #initStaveOutlines() {
-        const r: ApgA3D_IIntExtOutlines = { int: [], ext: [] };
+        const r: A3D.ApgA3D_IIntExtOutlines = { int: [], ext: [] };
         const W = BrdBlm_TC_SeD_RULES.PANEL_CONSTRUCTION.SECTION_WIDTH;
 
         r.ext = [
@@ -273,7 +271,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
         const recordset = this.#init();
 
         // TODO Refactor this method is too large and complex -- APG 20230720
-        const r: ApgA3D_IIntExtOutlines = { int: [], ext: [] };
+        const r: A3D.ApgA3D_IIntExtOutlines = { int: [], ext: [] };
 
         // Per i pannelli schiumati
         if (aparams.family == BrdBlm_TC_SeD_eSectionFamily.FOAMED) {
@@ -362,7 +360,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
             }
 
             // Taglio basso
-            Uts.BrdUts.Assert(
+            Uts.ApgUts.PanicIf(
                 aparams.bottomCut == 0,
                 `Taglio basso non implementato`
             );
@@ -384,14 +382,14 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
      */
     static #buildExtOutlineForFoamedPanel(
         aparams: BrdBlm_TC_SeD_ISectionParams,
-        aextVertOutline: ApgA3D_IPoint2D[]
+        aextVertOutline: A3D.ApgA3D_IPoint2D[]
     ) {
 
         const recordset = this.#init();
 
-        const r: ApgA3D_IPoint2D[] = [];
+        const r: A3D.ApgA3D_IPoint2D[] = [];
 
-        let portionOfOutline: ApgA3D_IPoint2D[];
+        let portionOfOutline: A3D.ApgA3D_IPoint2D[];
 
         // E' tagliato sotto selezione il profilo di taglio basso
         if (aparams.bottomCut !== 0) {
@@ -437,14 +435,14 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
      */
     static #buildIntOutlineForFoamedPanel(
         aparams: BrdBlm_TC_SeD_ISectionParams,
-        aintVertOutline: ApgA3D_IPoint2D[]
+        aintVertOutline: A3D.ApgA3D_IPoint2D[]
     ) {
 
         const recordset = this.#init();
 
-        const r: ApgA3D_IPoint2D[] = [];
+        const r: A3D.ApgA3D_IPoint2D[] = [];
 
-        let portionOfOutline: ApgA3D_IPoint2D[];
+        let portionOfOutline: A3D.ApgA3D_IPoint2D[];
 
         // E' tagliato sotto
         if (aparams.bottomCut !== 0) {
@@ -501,7 +499,7 @@ export class BrdBlm_TC_SeD_FoamedPanelsOutlines_Service {
 
         const verticalOutlines = this.#getFoamedPanelsVerticalOutlines(aparams);
 
-        const r: ApgA3D_IIntExtOutlines = {
+        const r: A3D.ApgA3D_IIntExtOutlines = {
             ext: this.#buildExtOutlineForFoamedPanel(aparams, verticalOutlines.ext),
             int: this.#buildIntOutlineForFoamedPanel(aparams, verticalOutlines.int)
         };

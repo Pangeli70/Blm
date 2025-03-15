@@ -6,72 +6,72 @@
  * @version 0.3 APG 20231229 Modulo BrdBlm server side
  * ----------------------------------------------------------------------------
  */
-import {
-  BrdBlm_TC_SeD_V_eModel } from "../enums/BrdBlm_TC_SeD_V_eModel.ts";
-import {
-  BrdBlm_IMultilanguage } from "../../../../interfaces/BrdBlm_IMultilanguage.ts";
+
+import { Uts } from "../../../../deps.ts";
+import {  BrdBlm_TC_SeD_V_eModel } from "../enums/BrdBlm_TC_SeD_V_eModel.ts";
+
 
 
 export type BrdBlm_TC_SeD_V_TModels_MultilangRecordset = Record<
   BrdBlm_TC_SeD_V_eModel,
-  BrdBlm_IMultilanguage
+  Uts.ApgUts_IMultilanguage
 >;
 
 
 export const BrdBlm_TC_SeD_V_Models_MultilangRecordset: BrdBlm_TC_SeD_V_TModels_MultilangRecordset = {
 
   [BrdBlm_TC_SeD_V_eModel.SIRIO]: {
-    it: "Sirio",
+    EN: "Sirio",
   },
   [BrdBlm_TC_SeD_V_eModel.IRIS]: {
-    it: "Iris",
+    EN: "Iris",
   },
 
   [BrdBlm_TC_SeD_V_eModel.PERSUS]: {
-    it: "Persus",
+    EN: "Persus",
   },
   [BrdBlm_TC_SeD_V_eModel.ATHES]: {
-    it: "Athes",
+    EN: "Athes",
   },
 
   [BrdBlm_TC_SeD_V_eModel.CUPIS]: {
-    it: "Cupis",
+    EN: "Cupis",
   },
   [BrdBlm_TC_SeD_V_eModel.VENUS]: {
-    it: "Venus",
+    EN: "Venus",
   },
 
   [BrdBlm_TC_SeD_V_eModel.ARES]: {
-    it: "Ares",
+    EN: "Ares",
   },
   [BrdBlm_TC_SeD_V_eModel.ANTARES]: {
-    it: "Antares",
+    EN: "Antares",
   },
 
   [BrdBlm_TC_SeD_V_eModel.ORUS]: {
-    it: "Orus",
+    EN: "Orus",
   },
 
   [BrdBlm_TC_SeD_V_eModel.SECURA]: {
-    it: "Secura",
+    EN: "Secura",
   },
 
   [BrdBlm_TC_SeD_V_eModel.DOCK]: {
-    it: "Dock",
+    EN: "Dock",
   },
 
   [BrdBlm_TC_SeD_V_eModel.CARGO]: {
-    it: "Cargo",
+    EN: "Cargo",
   },
 
   [BrdBlm_TC_SeD_V_eModel.LUX]: {
-    it: "Lux",
+    EN: "Lux",
   },
   [BrdBlm_TC_SeD_V_eModel.LUXOR]: {
-    it: "Luxor",
+    EN: "Luxor",
   },
   [BrdBlm_TC_SeD_V_eModel.FULL_VISION]: {
-    it: "Full vision",
+    EN: "Full vision",
   },
 
 };

@@ -7,12 +7,10 @@
  */
 
 
-import {
-  ApgA3D_IPoint2D } from "../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
-import {
-  BrdBlm_TC_SeD_eSlidingTracksOutlineType } from "../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
-import {
-  BrdBlm_TC_SeD_TSlidingTracksOutlines_Recordset } from "../types/BrdBlm_TC_SeD_TSlidingTracksOutlines_Recordset.ts";
+
+import { A3D } from "../../../deps.ts";
+import {  BrdBlm_TC_SeD_eSlidingTracksOutlineType } from "../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
+import {  BrdBlm_TC_SeD_TSlidingTracksOutlines_Recordset } from "../types/BrdBlm_TC_SeD_TSlidingTracksOutlines_Recordset.ts";
 
 
 /**
@@ -29,7 +27,7 @@ export class BrdBlm_TC_SeD_SlidingTracksOutlines_Service {
     if(this._isInited) return;
 
 
-    const angleBarPoints: ApgA3D_IPoint2D[] = [
+    const angleBarPoints: A3D.ApgA3D_IPoint2D[] = [
       { x: 0, y: -3 },
       { x: 15, y: -3 },
       { x: 25, y: 0 },
@@ -44,7 +42,7 @@ export class BrdBlm_TC_SeD_SlidingTracksOutlines_Service {
     ];
 
 
-    const trackPoints: ApgA3D_IPoint2D[] = [
+    const trackPoints: A3D.ApgA3D_IPoint2D[] = [
       { x: 0, y: 0 },
       { x: 0, y: -25 },
       { x: -2, y: -55 },
@@ -59,7 +57,7 @@ export class BrdBlm_TC_SeD_SlidingTracksOutlines_Service {
       { x: -25, y: 0 },
     ];
 
-    const cProfilePoints: ApgA3D_IPoint2D[] = [
+    const cProfilePoints: A3D.ApgA3D_IPoint2D[] = [
       { x: 0, y: 0 },
       { x: 25, y: 0 },
       { x: 25, y: -25 },

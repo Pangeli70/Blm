@@ -5,7 +5,7 @@
  * ----------------------------------------------------------------------------
  */
 
-import { ApgA3D_IMaterialDef } from "../../../../../A3D/lib/interfaces/ApgA3D_IMaterialDef.ts";
+import { A3D } from "../../../deps.ts";
 import { BrdBlm_TC_Ctx_eThresholdFinish } from "../enums/BrdBlm_TC_Ctx_eThresholdFinish.ts";
 
 
@@ -16,7 +16,7 @@ import { BrdBlm_TC_Ctx_eThresholdFinish } from "../enums/BrdBlm_TC_Ctx_eThreshol
  */
 export type BrdBlm_TC_Ctx_TThresholdFinishRecordset = Record<
     BrdBlm_TC_Ctx_eThresholdFinish,
-    ApgA3D_IMaterialDef
+    A3D.ApgA3D_IMaterialDef
 >;
 
 /*! ---------------------------------------------------------------------------

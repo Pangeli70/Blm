@@ -6,7 +6,8 @@
  * ----------------------------------------------------------------------------
  */
 
-import { ApgA3D_IPoint3D } from "../../../../../../../../../A3D/lib/interfaces/ApgA3D_IPoint3D.ts";
+
+import { A3D } from "../../../../../../../deps.ts";
 import { BrdBlm_TC_SeD_V_eSlidingSystem } from "../../../../enums/BrdBlm_TC_SeD_V_eSlidingSystem.ts";
 import { BrdBlm_TC_SeD_V_ST_RULES } from "../../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
 import { BrdBlm_TC_SeD_V_ST_ePartName } from "../../../enums/BrdBlm_TC_SeD_V_ST_ePartName.ts";
@@ -108,7 +109,7 @@ export class BrdBlm_TC_SeD_V_ST_NormalLift extends BrdBlm_TC_SeD_V_ST_GenericLif
     ) {
         const MIN_ANGLE_SLICE_IN_DEG = 5;
 
-        const r: ApgA3D_IPoint3D[] = [];
+        const r: A3D.ApgA3D_IPoint3D[] = [];
 
         r.push({
             x: 0,
@@ -181,7 +182,7 @@ export class BrdBlm_TC_SeD_V_ST_NormalLift extends BrdBlm_TC_SeD_V_ST_GenericLif
 
 
 
-    getComponents() {
+    override getComponents() {
 
         this.getAngleBarFirstStretch();
         this.getVerticalTrackFirstStretch();

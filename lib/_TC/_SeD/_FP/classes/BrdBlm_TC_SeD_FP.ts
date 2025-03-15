@@ -5,37 +5,32 @@
  * ----------------------------------------------------------------------------
  */
 
-import { ApgA3D_Extrudable } from "../../../../../../A3D/lib/classes/ApgA3D_Extrudable.ts";
-import { Uts } from "../../../../deps.ts";
-import { ApgA3D_IIntExtOutlines } from "../../../../../../A3D/lib/interfaces/ApgA3D_IIntExtOutlines.ts";
-import { ApgA3D_IPoint2D } from "../../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
+
+import { Uts , A3D} from "../../../../deps.ts";
 import { BrdBlm_TC_SeD_ISectionParams } from "../../interfaces/BrdBlm_TC_SeD_ISectionParams.ts";
 import { BrdBlm_TC_SeD_FoamedPanelsOutlines_Service } from "../../services/BrdBlm_TC_SeD_FoamedPanelsOutlines_Service.ts";
 import { BrdBlm_TC_SeD_HolesOutlinesService } from "../../services/BrdBlm_TC_SeD_HoleOutlinesService.ts";
-
-const MODULE_NAME = import.meta.url;
-
 
 
 /**
  * Pannello coibentato per i portoni sezionali
  */
-export class BrdBlm_TC_SeD_FP extends ApgA3D_Extrudable {
+export class BrdBlm_TC_SeD_FP extends A3D.ApgA3D_Extrudable {
 
     /**
      * Sagome di estrusione delle mesh esterna ed interna del pannello coibentato
      */
-    panelOutlines: ApgA3D_IIntExtOutlines;
+    panelOutlines: A3D.ApgA3D_IIntExtOutlines;
 
     /**
      * Sagome di estrusione dei fori per le operazioni booleane sul pannello coibentato
      */
-    insertsOutlines: ApgA3D_IPoint2D[][] = [];
+    insertsOutlines: A3D.ApgA3D_IPoint2D[][] = [];
 
     /**
      * Stato di questo oggetto
      */
-    status = new Uts.BrdUts_Result();
+    status = new Uts.ApgUts_Result();
 
 
     /**
@@ -49,7 +44,7 @@ export class BrdBlm_TC_SeD_FP extends ApgA3D_Extrudable {
 
         this.panelOutlines = BrdBlm_TC_SeD_FoamedPanelsOutlines_Service.getOutlines(aparams);
 
-        const ry = Uts.BrdUts.RAD_90;
+        const ry = Uts.ApgUts_Math.TO_RAD * 90;
         this.addRotateYOp(ry, false);
 
         const tz = -aparams.length / 2;
@@ -63,16 +58,16 @@ export class BrdBlm_TC_SeD_FP extends ApgA3D_Extrudable {
             this.status = nr;
             return;
         }
-        this.insertsOutlines = nr.payload as ApgA3D_IPoint2D[][];
+        this.insertsOutlines = nr.payload as A3D.ApgA3D_IPoint2D[][];
     }
 
 
 
     #getInsertsHolesOutlines(aparams: BrdBlm_TC_SeD_ISectionParams) {
 
-        let r = new Uts.BrdUts_Result();
+        let r = new Uts.ApgUts_Result();
 
-        const outlines: ApgA3D_IPoint2D[][] = [];
+        const outlines: A3D.ApgA3D_IPoint2D[][] = [];
         if (!aparams.inserts) {
             r.setPayload(outlines, "");
             return r;
@@ -89,7 +84,7 @@ export class BrdBlm_TC_SeD_FP extends ApgA3D_Extrudable {
                 return r;
             }
             else {
-                outlines.push(nr.payload as ApgA3D_IPoint2D[]);
+                outlines.push(nr.payload as A3D.ApgA3D_IPoint2D[]);
             }
         }
 

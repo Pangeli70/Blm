@@ -5,7 +5,7 @@
  * ----------------------------------------------------------------------------
  */
 
-import { ApgA3D_IMaterialDef } from "../../../../../A3D/lib/interfaces/ApgA3D_IMaterialDef.ts";
+import { A3D } from "../../../deps.ts";
 import { BrdBlm_TC_Ctx_eExternBaseboardFinish } from "../enums/BrdBlm_TC_Ctx_eExternBaseboardFinish.ts";
 
 
@@ -16,7 +16,7 @@ import { BrdBlm_TC_Ctx_eExternBaseboardFinish } from "../enums/BrdBlm_TC_Ctx_eEx
  */
 export type BrdBlm_TC_Ctx_TExternBaseboardFinishRecordset = Record<
     BrdBlm_TC_Ctx_eExternBaseboardFinish,
-    ApgA3D_IMaterialDef
+    A3D.ApgA3D_IMaterialDef
 >;
 
 /*! ---------------------------------------------------------------------------

@@ -6,16 +6,12 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-  ApgA3D_Extrudable } from "../../../../../../../../A3D/lib/classes/ApgA3D_Extrudable.ts";
-import {
-  BrdBlm_TC_SeD_eSlidingTrackFinish } from "../../../../enums/BrdBlm_TC_SeD_eSlidingTrackFinish.ts";
-import {
-  BrdBlm_TC_SeD_eSlidingTracksOutlineType } from "../../../../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
-import {
-  BrdBlm_TC_SeD_V_ST_RULES } from "../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
-import {
-  BrdBlm_TC_SeD_V_ST_ePartName } from "../../enums/BrdBlm_TC_SeD_V_ST_ePartName.ts";
+
+import { A3D } from "../../../../../../deps.ts";
+import { BrdBlm_TC_SeD_eSlidingTrackFinish } from "../../../../enums/BrdBlm_TC_SeD_eSlidingTrackFinish.ts";
+import { BrdBlm_TC_SeD_eSlidingTracksOutlineType } from "../../../../enums/BrdBlm_TC_SeD_eSlidingTracksOutlineType.ts";
+import { BrdBlm_TC_SeD_V_ST_RULES } from "../../consts/BrdBlm_TC_SeD_V_ST_RULES.ts";
+import { BrdBlm_TC_SeD_V_ST_ePartName } from "../../enums/BrdBlm_TC_SeD_V_ST_ePartName.ts";
 
 
 /**
@@ -23,7 +19,7 @@ import {
  * sezionali a scorrimento verticale. Può essere uno spezzone estruso
  * linearmente o una curva estrusa lungo un percorso.
  */
-export class BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal extends ApgA3D_Extrudable {
+export class BrdBlm_TC_SeD_V_ST_ProfiledSheetMetal extends A3D.ApgA3D_Extrudable {
 
 
   /**

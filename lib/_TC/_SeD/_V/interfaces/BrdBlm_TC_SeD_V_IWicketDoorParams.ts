@@ -1,12 +1,13 @@
-import {
-  ApgA3D_IPoint2D } from "../../../../../../A3D/lib/interfaces/ApgA3D_IPoint2D.ts";
+
 
 /**
- *  DA VERIFICARE COMPLETARE E SISTEMARE
+ *  TODO DA VERIFICARE COMPLETARE E SISTEMARE
  */
+
+import { A3D } from "../../../../deps.ts";
 
 
 export interface BrdBlm_TC_SeD_V_IWicketDoorParams {
-  origin: ApgA3D_IPoint2D;
+  origin: A3D.ApgA3D_IPoint2D;
   width: number;
 }

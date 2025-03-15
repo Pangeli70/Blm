@@ -8,7 +8,7 @@
  * ----------------------------------------------------------------------------
  */
 
-import { ApgA3D_IMaterialDef } from "../../../../../A3D/lib/interfaces/ApgA3D_IMaterialDef.ts";
+import { A3D } from "../../../deps.ts";
 import { BrdBlm_TC_Ctx_ePartName } from "../enums/BrdBlm_TC_Ctx_ePartName.ts";
 
 
@@ -19,7 +19,7 @@ import { BrdBlm_TC_Ctx_ePartName } from "../enums/BrdBlm_TC_Ctx_ePartName.ts";
  */
 export type BrdBlm_TC_Ctx_TMaterialDefRecordset = Record<
     BrdBlm_TC_Ctx_ePartName,
-    ApgA3D_IMaterialDef | null
+    A3D.ApgA3D_IMaterialDef | null
 >;
 
 /*! ---------------------------------------------------------------------------
