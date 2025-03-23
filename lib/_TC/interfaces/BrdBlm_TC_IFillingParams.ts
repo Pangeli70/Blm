@@ -7,12 +7,9 @@
  * ----------------------------------------------------------------------------
  */
 
-import {
-  BrdBlm_TC_eFillingColor } from "../enums/BrdBlm_TC_eFillingColor.ts";
-import {
-  BrdBlm_TC_eFillingTransparency } from "../enums/BrdBlm_TC_eFillingTransparency.ts";
-import {
-  BrdBlm_TC_eFillingType } from "../enums/BrdBlm_TC_eFillingType.ts";
+import { BrdBlm_TC_eFillingColor } from "../enums/BrdBlm_TC_eFillingColor.ts";
+import { BrdBlm_TC_eFillingTransparency } from "../enums/BrdBlm_TC_eFillingTransparency.ts";
+import { BrdBlm_TC_eFillingType } from "../enums/BrdBlm_TC_eFillingType.ts";
 
 /**
  * Dati del tamponamento dell'inserto (oblò o griglia) o della sezione vetrata 

@@ -18,3 +18,4 @@ export * from "./recordsets/BrdBlm_CDNAssets_Recordset.ts";
 export * from "./recordsets/BrdBlm_MicaeousFinishes_MultilangRecordset.ts";
 
 
+export * as TC from "./_TC/mod.ts"

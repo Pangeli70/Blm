@@ -5,7 +5,7 @@
  * ----------------------------------------------------------------------------
  */
 
-import { Uts, A3D } from "../deps.ts";
+import { A3D, Uts } from "../../../deps.ts";
 import { BrdBlm_eGlossRoughness } from "../../../enums/BrdBlm_eGlossRoughness.ts";
 import { BrdBlm_TC_Ctx_eWallColor } from "../enums/BrdBlm_TC_Ctx_eWallColor.ts";
 import { BrdBlm_TC_Ctx_eWallFinish } from "../enums/BrdBlm_TC_Ctx_eWallFinish.ts";

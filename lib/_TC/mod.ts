@@ -11,6 +11,7 @@ export * from "./enums/BrdBlm_TC_eFillingTransparency.ts"
 export * from "./enums/BrdBlm_TC_eAluFinishVariant.ts"
 
 export * from "./interfaces/BrdBlm_TC_IAccessoryConfig.ts"
+export * from "./interfaces/BrdBlm_TC_IFillingParams.ts"
 export * from "./interfaces/BrdBlm_TC_IInsertArticle.ts"
 export * from "./interfaces/BrdBlm_TC_IInsertParams.ts"
 

@@ -6,7 +6,8 @@
  */
 
 
-import { A3D } from "../deps.ts";
+
+import { A3D } from "../../../deps.ts";
 import { BrdBlm_TC_Ctx_ePartName } from "../enums/BrdBlm_TC_Ctx_ePartName.ts";
 
 
